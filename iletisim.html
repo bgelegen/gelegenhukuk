@@ -121,7 +121,15 @@
           </div>
 
           <!-- novalidate: doğrulama mesajlarını js/form.js tek elden yönetir -->
-          <form class="form reveal" id="iletisimForm" novalidate autocomplete="on">
+          <!-- Netlify Forms: gönderimler Netlify sunucusunda işlenir, panelde
+               saklanır ve e-posta olarak iletilir. Sunucu/şifre gerekmez.
+               data-netlify-honeypot → "website" alanı dolu gelirse Netlify eler. -->
+          <form class="form reveal" id="iletisimForm" name="randevu" method="POST"
+                data-netlify="true" data-netlify-honeypot="website"
+                novalidate autocomplete="on">
+
+            <!-- Netlify'ın formu tanıması için zorunlu gizli alan -->
+            <input type="hidden" name="form-name" value="randevu">
 
             <!-- Bot tuzağı (honeypot) — gerçek kullanıcı göremez -->
             <div class="hp-field" aria-hidden="true">

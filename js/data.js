@@ -73,17 +73,13 @@
     // Taleplerin düşeceği e-posta (Python backend yolunda kullanılır)
     bildirimEposta: "batuhangelegen44@gmail.com",
 
-    /* YOL A — Web3Forms (KOLAY, sunucu/hosting gerektirmez, ücretsiz).
-       1) https://web3forms.com adresine gidin
-       2) "batuhangelegen44@gmail.com" yazıp ücretsiz "Access Key" alın
-       3) Gelen anahtarı tırnak içine yapıştırın. Hepsi bu kadar.
-       Not: Bu anahtar gizli DEĞİLDİR, istemcide bulunması güvenlidir. */
-    web3formsKey: "",   // örn: "a1b2c3d4-0000-0000-0000-abcdef123456"
-
-    /* YOL B — Kendi Python backend'iniz (TAM KONTROL + en güzel e-posta şablonu).
-       gonder.py (Flask) dosyası hazır: branded HTML e-postayı SMTP ile gönderir.
-       Backend'in /gonder adresini buraya yazın; web3formsKey'i boş bırakın. */
-    formEndpoint: "http://localhost:5000/gonder",
+    /* Form altyapısı: NETLIFY FORMS.
+       Gönderimler sitenin kendi alan adına yapılır, Netlify sunucu tarafında
+       işler; panelde saklanır ve bildirimEposta adresine iletilir.
+       API anahtarı veya ayrı sunucu GEREKMEZ — bu yüzden aşağıdaki iki ayar
+       artık kullanılmıyor, geriye dönük uyumluluk için boş bırakıldı. */
+    web3formsKey: "",
+    formEndpoint: "",
 
     // Form gönderim sınırları (istemci tarafı kötüye kullanım freni)
     formLimit: {

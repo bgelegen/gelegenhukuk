@@ -197,22 +197,8 @@
       gonderimZamani: new Date().toISOString()
     };
 
-    // (6) Gönderim yolu belirleme (Web3Forms mı, kendi Python endpoint'i mi?)
-    const web3key = site.web3formsKey;
-    const endpoint = site.formEndpoint;
-
-    if (!web3key && !endpoint) {
-      // Hiçbir yol yapılandırılmamış → gönderme, alternatif sun (güvenli varsayılan)
-      durum(
-        "info",
-        "Form altyapısı henüz bağlanmadı (kurulum: docs/FORM-KURULUM.md). " +
-        "Bu aşamada mesajınız iletilmez. Lütfen " + (site.telefonGosterim || "") +
-        " numarasından veya " + (site.eposta || "") + " adresinden bize ulaşın."
-      );
-      return;
-    }
-
-    // (7) Gönder
+    // (6) Gönder — altyapı Netlify Forms'tur; API anahtarı veya
+    //     ayrı bir sunucu adresi gerektirmez.
     const eskiMetin = submitBtn ? submitBtn.textContent : "";
     if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Gönderiliyor…"; }
     durum("info", "Mesajınız iletiliyor…");
@@ -224,50 +210,38 @@
     const zaman = new Date().toLocaleString("tr-TR", { dateStyle: "long", timeStyle: "short" });
     const konuBasligi = "Yeni Randevu Talebi — " + veri.adSoyad + " (" + veri.konu + ")";
 
-    // Hedef adres ve gövdeyi yola göre hazırla
-    let url, gonderim;
-    if (web3key) {
-      // --- YOL A: Web3Forms ---
-      // Alan adları e-postada BU başlıklarla görünür → Türkçe ve düzenli.
-      url = "https://api.web3forms.com/submit";
-      gonderim = {
-        access_key: web3key,
-        subject: konuBasligi,
-        from_name: "Gelegen Hukuk — Web Sitesi Formu",
-        replyto: veri.eposta,                 // "Yanıtla" doğrudan müvekkile gider
-        botcheck: "",                          // Web3Forms honeypot alanı
-        "Ad Soyad": veri.adSoyad,
-        "E-posta": veri.eposta,
-        "Telefon": veri.telefon || "—",
-        "Hukuk Alanı": veri.konu,
-        "Görüşülecek Avukat": veri.avukat,
-        "Talep": veri.mesaj,
-        "Gönderim Zamanı": zaman
-      };
-    } else {
-      // --- YOL B: Kendi Python endpoint'i (gonder.py / Flask) ---
-      url = endpoint;
-      gonderim = Object.assign({}, veri, { konuBasligi: konuBasligi, zamanMetni: zaman });
-    }
+    /* --- Netlify Forms gönderimi -----------------------------------------
+       Gönderim kendi alan adımıza (same-origin) yapılır; Netlify sunucu
+       tarafında işler, panelde saklar ve e-posta bildirimi gönderir.
+       Biçim: application/x-www-form-urlencoded + zorunlu "form-name" alanı.
+       Açıkta duran API anahtarı YOKTUR → anahtar toplayan spam botları
+       doğrudan API'ye istek atamaz. Ayrıca Netlify honeypot + Akismet süzer. */
+    const alanlar = {
+      "form-name": "randevu",
+      "Ad Soyad": veri.adSoyad,
+      "E-posta": veri.eposta,
+      "Telefon": veri.telefon || "—",
+      "Hukuk Alanı": veri.konu,
+      "Görüşülecek Avukat": veri.avukat,
+      "Talep": veri.mesaj,
+      "Gönderim Zamanı": zaman,
+      "Konu Başlığı": konuBasligi
+    };
+
+    const govde = new URLSearchParams();
+    Object.keys(alanlar).forEach(function (k) { govde.append(k, alanlar[k]); });
 
     try {
-      const yanit = await fetch(url, {
+      const yanit = await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        body: JSON.stringify(gonderim),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: govde.toString(),
         signal: controller.signal,
         credentials: "omit",       // çerez gönderme → CSRF yüzeyini daraltır
-        referrerPolicy: "strict-origin-when-cross-origin",
-        mode: "cors"
+        referrerPolicy: "strict-origin-when-cross-origin"
       });
 
-      // Web3Forms { success: true/false } döndürür; Python { ok: true } döndürür.
-      let ok = yanit.ok;
-      try {
-        const j = await yanit.clone().json();
-        if (j && (j.success === false || j.ok === false)) ok = false;
-      } catch (_) { /* JSON değilse HTTP durumuna güven */ }
-      if (!ok) throw new Error("HTTP " + yanit.status);
+      if (!yanit.ok) throw new Error("HTTP " + yanit.status);
 
       try { sessionStorage.setItem("gelegen_form_ts", String(Date.now())); } catch (_) {}
       form.reset();

@@ -205,7 +205,11 @@
 
             <div class="field checkbox-wrap">
               <label class="checkbox" for="kvkk">
-                <input type="checkbox" id="kvkk" name="kvkk" required aria-describedby="kvkkHata">
+                <!-- name="kvkk" BİLEREK yok: name verilirse Netlify bunu bir form
+                     alanı sayar ve uzun onay metnini bildirim e-postasına ekler.
+                     Doğrulama id üzerinden yapılır (form.elements id ile de bulur),
+                     onay kutusu zorunlu olmayı sürdürür. -->
+                <input type="checkbox" id="kvkk" required aria-describedby="kvkkHata">
                 <span>
                   <a href="kvkk.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>'ni
                   okudum; iletişim bilgilerimin talebimin değerlendirilmesi amacıyla işlenmesine

@@ -101,7 +101,9 @@
   }
 
   function alanDogrula(el) {
-    const kural = KURALLAR[el.name];
+    // name yoksa id'ye düş: KVKK onay kutusunda name bilerek yoktur
+    // (Netlify'ın onu bir form alanı sayıp e-postaya eklememesi için).
+    const kural = KURALLAR[el.name || el.id];
     if (!kural) return true;
     const deger = el.type === "checkbox" ? "" : temizle(el.value);
     const gecerli = kural.test(deger, el);
@@ -227,8 +229,7 @@
       telefon: veri.telefon || "—",
       konu:    veri.konu,
       avukat:  veri.avukat,
-      mesaj:   veri.mesaj,
-      kvkk:    "Onaylandı — " + zaman
+      mesaj:   veri.mesaj
     };
 
     const govde = new URLSearchParams();

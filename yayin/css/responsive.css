@@ -34,6 +34,26 @@
   .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--sp-6) var(--sp-5); }
   .footer-grid > .footer-about,
   .footer-grid > div:last-child { grid-column: 1 / -1; }
+
+  /* ---- ORTALAMA (yalnızca çalışma alanı kartları ve footer) ----
+     Hem metin hem yerleşim ortalanır. */
+
+  /* Çalışma alanı kartları */
+  .card,
+  .card p { text-align: center; }
+
+  /* Footer: başlıklar, metinler, logo ve bağlantı listeleri.
+     .footer-links li / .footer-contact li style.css'te "text-align: left"
+     ile sabitlenmiş (yaslama istisna listesi); aynı özgüllükte ve daha sonra
+     yüklendiği için buradan ezilir. */
+  .site-footer { text-align: center; }
+  .site-footer p,
+  .footer-links li,
+  .footer-contact li { text-align: center; }
+  .footer-about p { margin-inline: auto; }
+  .footer-about .brand { justify-content: center; }
+  .footer-links a,
+  .footer-contact a { justify-content: center; }
 }
 
 /* ==========================================================================

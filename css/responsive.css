@@ -21,7 +21,7 @@
    ========================================================================== */
 @media (min-width: 480px) {
   .hero__actions .btn,
-  .cta-band__actions .btn { min-width: 190px; }
+  .cta-band__actions .btn { width: auto; min-width: 190px; }
 
   .form__row--2 { grid-template-columns: 1fr 1fr; }
 
@@ -42,6 +42,15 @@
    ========================================================================== */
 @media (min-width: 768px) {
   :root { --header-h: 76px; }
+
+  /* Satır yeterince genişledi: paragraflar iki yana yaslanabilir.
+     (Ortalanmış ve tek satırlık istisnalar style.css'te tanımlıdır ve
+     daha yüksek özgüllükte oldukları için bu kuraldan etkilenmez.) */
+  p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
 
   .grid--2 { grid-template-columns: repeat(2, 1fr); }
 

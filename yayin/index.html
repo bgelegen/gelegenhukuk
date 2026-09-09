@@ -43,9 +43,9 @@
        yalnızca bu sınıf varken çalışır; JS kapalıyken içerik gizlenmez. -->
   <script>document.documentElement.classList.add("js");</script>
 
-  <link rel="stylesheet" href="css/style.css?v=18">
-  <link rel="stylesheet" href="css/responsive.css?v=18">
-  <link rel="stylesheet" href="css/print.css?v=18" media="print">
+  <link rel="stylesheet" href="css/style.css?v=19">
+  <link rel="stylesheet" href="css/responsive.css?v=19">
+  <link rel="stylesheet" href="css/print.css?v=19" media="print">
 
   <!-- ===== SEO: Yapısal veri (Schema.org / JSON-LD) ======================= -->
   <script type="application/ld+json">
@@ -160,7 +160,9 @@
     <section class="hero">
       <div class="container hero__inner">
         <div>
-          <p class="eyebrow eyebrow--light">Av. Mustafa Gelegen &amp; Av. Merve Gelegen</p>
+          <!-- &nbsp; unvanı isimden ayırmaz; satır sonu yalnızca "&" işaretinde
+               oluşur, böylece dar ekranda "AV." tek başına alt satıra düşmez. -->
+          <p class="eyebrow eyebrow--light">Av.&nbsp;Mustafa&nbsp;Gelegen &amp; Av.&nbsp;Merve&nbsp;Gelegen</p>
           <h1>Hukuki süreçlerinizde<br><em>güvenilir</em> yol arkadaşınız</h1>
           <p class="hero__lead">
             Gelegen Hukuk Bürosu; bireysel ve kurumsal müvekkillerine çeşitli hukuk
@@ -592,7 +594,7 @@
   </div>
 
   <!-- ====================== SCRIPTLER ====================== -->
-  <script src="js/data.js?v=18"></script>
-  <script src="js/main.js?v=18" defer></script>
+  <script src="js/data.js?v=19"></script>
+  <script src="js/main.js?v=19" defer></script>
 </body>
 </html>

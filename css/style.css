@@ -186,11 +186,14 @@ h2 { font-size: var(--fs-h2); }
 h3 { font-size: var(--fs-h3); line-height: var(--lh-snug); }
 h4 { font-size: var(--fs-h4); line-height: var(--lh-snug); }
 
+/* MOBİLDE SOLA YASLI. Dar ekranda satıra yalnızca 3–4 kelime düştüğü için
+   iki yana yaslama kelimeler arasında büyük boşluklar açar ve metin dağınık
+   görünür. İki yana yaslama 768px'ten itibaren devreye girer (responsive.css). */
 p {
   text-wrap: pretty;
-  text-align: justify;                 /* tüm paragraflar iki yana yaslı */
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  text-align: left;
+  hyphens: manual;
+  -webkit-hyphens: manual;
 }
 p + p { margin-top: var(--sp-4); }
 
@@ -1121,6 +1124,11 @@ blockquote {
   flex-wrap: wrap;
   gap: var(--sp-4);
 }
+/* Mobilde butonlar metin uzunluğuna göre farklı genişlikte kalıyor ve
+   düzensiz görünüyordu; tam genişlik verilerek hizalanır.
+   480px'ten itibaren doğal genişliğe döner (responsive.css). */
+.hero__actions .btn,
+.cta-band__actions .btn { width: 100%; }
 .hero__trust { margin-top: var(--sp-7); padding-top: var(--sp-6); border-top: 1px solid var(--c-line-dark); }
 
 /* Hero yan görsel — terazi amblemi kartı */

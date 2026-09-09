@@ -91,6 +91,31 @@
     color: var(--c-gold-500);
   }
 
+  /* "Detaylı Profil" penceresindeki listeler (Öne Çıkan Dava ve İşlemler,
+     Çalışma Alanları, Eğitim...). Yukarıdaki kart listesiyle aynı yöntem:
+     madde işareti mutlak konumla dışarı alınır, böylece girinti metin
+     genişliğini yemez ve yaslamaya karışmaz.
+     Ölçüm (300–380px arası 9 genişlik): metin 256px -> 319px,
+     %90'lık dilim 14.2px, mutlak en kötü 31px, 50px aşımı 0/9. */
+  .modal__dialog { padding: 1.125rem; }
+  .modal__body ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  .modal__body ul li {
+    position: relative;
+    text-align: justify;
+    hyphens: manual;
+    -webkit-hyphens: manual;
+    font-size: 0.84375rem;
+  }
+  .modal__body ul li::before {
+    content: "•";
+    position: absolute;
+    left: -12px;
+    color: var(--c-gold-500);
+  }
+
   /* Footer: başlıklar, metinler, logo ve bağlantı listeleri.
      .footer-links li / .footer-contact li style.css'te "text-align: left"
      ile sabitlenmiş (yaslama istisna listesi); aynı özgüllükte ve daha sonra

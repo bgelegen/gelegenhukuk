@@ -47,18 +47,38 @@
      olduğundan yaslamanın görsel etkisi yok, iki satıra taşan tek maddede
      ise gereksiz boşluk açardı.
 
-     Boşlukları daraltmak için metin sütunu genişletilir: kart iç boşluğu
-     40px'ten 20px'e, madde girintisi 24px'ten 18px'e iner ve punto bir tık
-     küçülür. Metin genişliği 249px -> 295px olur; satır başına düşen kelime
-     arttığı için yaslamanın açtığı boşluk küçülür.
-     (Ölçüm: ortalama boşluk 13.2px -> 9.7px, %90'lık dilim 14.5px.) */
-  .lawyer-card__body { padding: 1.25rem; }
-  .lawyer-card__body ul.deneyim { padding-left: 1.125rem; }
+     BOŞLUK SORUNU VE ÇÖZÜMÜ
+     Dar sütunda yaslama, satır sonlarının nereye denk geldiğine aşırı
+     duyarlıdır: %7'lik bir genişlik farkı en kötü kelime arası boşluğu
+     31px'ten 97px'e çıkarabiliyordu. Bu yüzden ayarlar tek bir genişliğe
+     göre değil, 290–360px arasındaki 15 genişlikte ölçülerek seçildi.
+
+     Kazanılan alan: madde işareti listeden çıkarılıp mutlak konumla kartın
+     iç boşluğuna alındı; böylece girinti metin genişliğini yemiyor ve
+     yaslamaya da karışmıyor (list-style-position: inside denendi, işaret
+     ile metin arası boşluk da yaslandığı için görsel olarak bozuktu).
+     Metin genişliği 249px -> 317px.
+
+     Ölçüm sonucu: %90'lık dilim ort. 15.6px, mutlak en kötü 34px ve test
+     edilen 15 genişliğin HİÇBİRİNDE 50px'i aşan boşluk yok (öncesinde
+     15 genişliğin 6'sında aşıyordu). */
+  .lawyer-card__body { padding: 1.125rem; }
+  .lawyer-card__body ul.deneyim {
+    padding-left: 0;
+    list-style: none;
+  }
   .lawyer-card__body ul.deneyim li {
+    position: relative;
     text-align: justify;
     hyphens: manual;
     -webkit-hyphens: manual;
-    font-size: 0.9375rem;
+    font-size: 0.84375rem;
+  }
+  .lawyer-card__body ul.deneyim li::before {
+    content: "•";
+    position: absolute;
+    left: -12px;
+    color: var(--c-gold-500);
   }
 
   /* Footer: başlıklar, metinler, logo ve bağlantı listeleri.

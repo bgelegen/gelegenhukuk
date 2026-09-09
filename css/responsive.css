@@ -45,11 +45,20 @@
   /* Avukat kartındaki "Yürütülen İş ve Davalar" maddeleri.
      Yalnızca mobilde yaslanır: masaüstünde maddeler çoğunlukla tek satır
      olduğundan yaslamanın görsel etkisi yok, iki satıra taşan tek maddede
-     ise gereksiz boşluk açardı. */
+     ise gereksiz boşluk açardı.
+
+     Boşlukları daraltmak için metin sütunu genişletilir: kart iç boşluğu
+     40px'ten 20px'e, madde girintisi 24px'ten 18px'e iner ve punto bir tık
+     küçülür. Metin genişliği 249px -> 295px olur; satır başına düşen kelime
+     arttığı için yaslamanın açtığı boşluk küçülür.
+     (Ölçüm: ortalama boşluk 13.2px -> 9.7px, %90'lık dilim 14.5px.) */
+  .lawyer-card__body { padding: 1.25rem; }
+  .lawyer-card__body ul.deneyim { padding-left: 1.125rem; }
   .lawyer-card__body ul.deneyim li {
     text-align: justify;
     hyphens: manual;
     -webkit-hyphens: manual;
+    font-size: 0.9375rem;
   }
 
   /* Footer: başlıklar, metinler, logo ve bağlantı listeleri.

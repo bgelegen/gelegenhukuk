@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Yazdırma stilleri — dilekçe/randevu notu için sayfa çıktısı alan
+   müvekkiller için sade, mürekkep tasarrufu sağlayan düzen.
+   media="print" ile yüklenir, ekran performansını etkilemez.
+   ========================================================================== */
+@page {
+  margin: 18mm 16mm;
+}
+
+body {
+  background: #fff !important;
+  color: #000 !important;
+  font-size: 11.5pt;
+  line-height: 1.5;
+}
+
+/* Ekrana özel, kağıtta anlamsız olan bileşenleri gizle */
+.site-header,
+.site-nav,
+.nav-toggle,
+.nav-backdrop,
+.fab-stack,
+.hero__actions,
+.cta-band,
+.map-embed,
+.form,
+.modal,
+.skip-link,
+.breadcrumb,
+video,
+iframe {
+  display: none !important;
+}
+
+.hero,
+.page-hero,
+.site-footer {
+  background: #fff !important;
+  color: #000 !important;
+  padding-block: 0.5cm !important;
+}
+.hero::before, .hero::after, .page-hero::before { display: none !important; }
+.hero h1, .page-hero h1, .site-footer h4 { color: #000 !important; }
+.hero__lead, .page-hero p, .site-footer { color: #222 !important; }
+
+a { color: #000 !important; text-decoration: underline; }
+/* Bağlantı hedefini kağıtta göster */
+main a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #444; }
+main a[href^="mailto:"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #444; }
+
+.card,
+.lawyer,
+.notice {
+  border: 1px solid #999 !important;
+  box-shadow: none !important;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+
+.section { padding-block: 0.6cm !important; }
+
+.accordion details { display: block !important; }
+.accordion .accordion__panel { display: block !important; }
+
+.reveal { opacity: 1 !important; transform: none !important; }

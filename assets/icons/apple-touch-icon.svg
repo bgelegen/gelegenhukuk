@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180" role="img"
+     aria-label="Gelegen Hukuk Bürosu">
+  <rect width="180" height="180" fill="#0A1628" />
+  <g transform="translate(24 24) scale(2.75)" fill="none" stroke="#C9A96A" stroke-width="2"
+     stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 10v30" />
+    <path d="M17 40h14" />
+    <path d="M14 44h20" />
+    <path d="M8 13h32" />
+    <circle cx="24" cy="8.5" r="2.4" />
+    <path d="M8 13v5M40 13v5" />
+    <path d="M2.5 18h11" />
+    <path d="M2.5 18a5.5 5.5 0 0 0 11 0" />
+    <path d="M34.5 18h11" />
+    <path d="M34.5 18a5.5 5.5 0 0 0 11 0" />
+  </g>
+</svg>

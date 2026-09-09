@@ -1,0 +1,21 @@
+# ============================================================
+#  Gelegen Hukuk Bürosu — GitHub'a YÜKLENMEYECEK dosyalar
+# ============================================================
+
+# !!! SIR İÇERİR — Gmail uygulama şifresi bu dosyada !!!
+# Şifreni asla GitHub'a yükleme. Örnek sürümü (.ornek.bat) yüklenir.
+form-sunucu-baslat.bat
+
+# Ortam değişkeni dosyaları (ileride kullanırsan)
+.env
+*.env
+
+# Python derleme çıktıları
+__pycache__/
+*.pyc
+
+# Editör / araç ayarları
+.claude/
+.vscode/
+.DS_Store
+Thumbs.db

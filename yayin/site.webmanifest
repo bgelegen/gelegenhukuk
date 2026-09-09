@@ -1,0 +1,43 @@
+{
+  "name": "Gelegen Hukuk Bürosu",
+  "short_name": "Gelegen Hukuk",
+  "description": "Av. Mustafa Gelegen ve Av. Merve Gelegen — hukuki danışmanlık ve dava takibi.",
+  "lang": "tr-TR",
+  "dir": "ltr",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0A1628",
+  "theme_color": "#0A1628",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "İletişim ve Randevu",
+      "url": "/iletisim.html"
+    },
+    {
+      "name": "Avukatlarımız",
+      "url": "/avukatlarimiz.html"
+    }
+  ]
+}

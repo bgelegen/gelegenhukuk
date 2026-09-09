@@ -1,0 +1,21 @@
+# =============================================================
+# Gelegen Hukuk Bürosu — robots.txt
+# Not: Alan adını yayına almadan önce gerçek alan adıyla güncelleyin.
+# =============================================================
+
+User-agent: *
+Allow: /
+
+# Taranmasına gerek olmayan yollar
+Disallow: /docs/
+Disallow: /404.html
+
+# Yapay zekâ / içerik kazıma botları (isteğe bağlı — kaldırılabilir)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Site haritası
+Sitemap: https://www.gelegenhukuk.com/sitemap.xml

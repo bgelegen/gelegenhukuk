@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0A1628">
+
+  <title>Sayfa Bulunamadı (404) | Gelegen Hukuk Bürosu</title>
+  <meta name="description" content="Aradığınız sayfa bulunamadı. Anasayfaya dönebilir veya iletişim sayfasından bize ulaşabilirsiniz.">
+  <!-- Hata sayfaları arama sonuçlarında yer almamalıdır -->
+  <meta name="robots" content="noindex, follow">
+
+  <link rel="icon" href="assets/img/logo.webp">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap">
+
+  <!-- JS etkinse <html> öğesine "js" sınıfı eklenir. Kaydırma animasyonları
+       yalnızca bu sınıf varken çalışır; JS kapalıyken içerik gizlenmez. -->
+  <script>document.documentElement.classList.add("js");</script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">İçeriğe atla</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="Gelegen Hukuk Bürosu — Anasayfa">
+        <img class="brand__logo" src="assets/img/logo.webp" alt="Gelegen Hukuk Bürosu logosu" width="42" height="42">
+        <span class="brand__text">
+          <span class="brand__name">Gelegen</span>
+          <span class="brand__sub">Hukuk Bürosu</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Ana menü">
+        <ul>
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="avukatlarimiz.html">Avukatlarımız</a></li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+        <div class="site-nav__cta">
+          <a class="site-nav__phone" href="tel:+905518214444" data-site="telefon">+90 (551) 821 44 44</a>
+          <a class="btn btn--primary btn--block" href="iletisim.html">Randevu Talebi</a>
+        </div>
+      </nav>
+
+      <a class="btn btn--primary btn--sm header-cta" href="iletisim.html">Randevu Talebi</a>
+
+      <button class="nav-toggle" type="button" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-backdrop" role="presentation"></div>
+
+  <main id="main">
+    <section class="container error-page">
+      <div>
+        <p class="error-page__code">404</p>
+        <h1>Aradığınız sayfayı bulamadık</h1>
+        <p style="margin-top: var(--sp-4); max-width: 52ch; margin-inline: auto">
+          Bağlantı taşınmış, adı değişmiş veya adres yanlış yazılmış olabilir.
+          Aşağıdaki bağlantılardan devam edebilirsiniz.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: var(--sp-4); justify-content: center; margin-top: var(--sp-7)">
+          <a class="btn btn--primary" href="index.html">Anasayfaya Dön</a>
+          <a class="btn btn--outline" href="iletisim.html">İletişim</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Gelegen Hukuk Bürosu. Tüm hakları saklıdır.</p>
+        <p><a href="kvkk.html">KVKK Aydınlatma Metni</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

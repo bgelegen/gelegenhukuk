@@ -1,0 +1,154 @@
+# =============================================================================
+# Gelegen Hukuk Bürosu — Apache sunucu yapılandırması
+# Kapsam: HTTPS zorunluluğu, güvenlik başlıkları, önbellek, sıkıştırma, 404
+#
+# NOT: Netlify / Vercel / Cloudflare Pages kullanıyorsanız bu dosya yerine
+#      "_headers" dosyası geçerlidir. Nginx için karşılıkları
+#      docs/GUVENLIK-PLANI.md içinde verilmiştir.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1) HTTPS ZORUNLULUĞU  —  http:// ve www'suz istekleri tek adrese yönlendir
+# -----------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # http -> https
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # gelegenhukuk.com -> www.gelegenhukuk.com (tek kanonik alan adı: SEO)
+  RewriteCond %{HTTP_HOST} ^gelegenhukuk\.com$ [NC]
+  RewriteRule ^(.*)$ https://www.gelegenhukuk.com/$1 [R=301,L]
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 2) GÜVENLİK BAŞLIKLARI
+# -----------------------------------------------------------------------------
+<IfModule mod_headers.c>
+
+  # HSTS — tarayıcı 1 yıl boyunca yalnızca HTTPS ile bağlansın.
+  # DİKKAT: Yalnızca sertifika kurulup site sorunsuz çalıştıktan SONRA açın.
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+  # Clickjacking koruması
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # MIME tipi tahminini kapat
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Referrer bilgisini sınırla (müvekkil gizliliği)
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Gereksiz tarayıcı izinlerini kapat
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()"
+
+  # Çapraz kaynak izolasyonu
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+
+  # ---------------------------------------------------------------------------
+  # Content-Security-Policy
+  # script-src: satır içi JSON-LD blokları için SHA-256 hash'leri kullanılır
+  #             ('unsafe-inline' AÇILMAZ). Hash'leri yeniden üretmek için:
+  #                 node tools/csp-hash.js
+  # style-src : satır içi style="" nitelikleri ve Google Fonts CSS'i için
+  # frame-src : yalnızca kullanıcı onaylayınca yüklenen harita için
+  # connect-src: iletişim formu bir API'ye bağlanacaksa alan adını buraya EKLEYİN
+  # ---------------------------------------------------------------------------
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'sha256-WZRJfWvsnNCPcxzZwvyhovnZGqhZaC+8gPGPRbx6wTk=' 'sha256-B7cwSHSDI4IwO43pgsYp6pQv206PqBkacUr6xMFhfgs=' 'sha256-rIQYPxbnVRzhHGVH1hiRxvTKWD4empuW7zQKNs1YB7Y=' 'sha256-M+VLTW1XbM9mB/zI5EkohuFw3DYLa5hyE+3vc8gPqCw=' 'sha256-sOdiVzVkBJXfZ+0amEHAGLG9d1KIKxsfP2pmoG3kuHM='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://maps.google.com https://www.google.com; connect-src 'self' https://api.web3forms.com; manifest-src 'self'; upgrade-insecure-requests"
+
+  # Sunucu imzasını gizle (bilgi sızıntısını azalt)
+  Header unset X-Powered-By
+  Header always unset Server
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Yazı tiplerinin CORS ile yüklenebilmesi
+  <FilesMatch "\.(woff2?|ttf|otf|eot)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 3) DİZİN LİSTELEME VE GİZLİ DOSYALAR
+# -----------------------------------------------------------------------------
+Options -Indexes
+
+# Nokta ile başlayan dosyalara (.htaccess, .git, .env) erişimi engelle
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# Geliştirme/dokümantasyon/backend dosyaları web'den erişilemesin
+# (.bat içinde SMTP şifresi olabilir; .py backend kaynağı — statik olarak sunulmamalı)
+<FilesMatch "\.(md|json5|log|bak|yml|yaml|py|bat|env)$">
+  Require all denied
+</FilesMatch>
+
+RedirectMatch 403 ^/docs/.*$
+RedirectMatch 403 ^/tools/.*$
+
+# site.webmanifest bu kuralın dışındadır
+<Files "site.webmanifest">
+  Require all granted
+</Files>
+
+# -----------------------------------------------------------------------------
+# 4) HATA SAYFALARI
+# -----------------------------------------------------------------------------
+ErrorDocument 404 /404.html
+ErrorDocument 403 /404.html
+
+# -----------------------------------------------------------------------------
+# 5) SIKIŞTIRMA (performans → Core Web Vitals → SEO)
+# -----------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE application/xml image/svg+xml
+</IfModule>
+
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css application/javascript image/svg+xml
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 6) ÖNBELLEK
+# -----------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault                          "access plus 1 month"
+
+  # HTML her zaman taze olsun (içerik güncellemeleri anında görünsün)
+  ExpiresByType text/html                 "access plus 0 seconds"
+
+  ExpiresByType text/css                  "access plus 1 year"
+  ExpiresByType application/javascript    "access plus 1 year"
+  ExpiresByType image/svg+xml             "access plus 1 year"
+  ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType image/jpeg                "access plus 1 year"
+  ExpiresByType image/webp                "access plus 1 year"
+  ExpiresByType font/woff2                "access plus 1 year"
+  ExpiresByType application/manifest+json "access plus 1 week"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|svg|png|jpe?g|webp|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 7) MIME TİPLERİ
+# -----------------------------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType image/svg+xml                 .svg
+  AddType application/manifest+json     .webmanifest
+  AddType font/woff2                    .woff2
+  AddDefaultCharset UTF-8
+</IfModule>

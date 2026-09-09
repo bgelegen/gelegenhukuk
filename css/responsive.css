@@ -1,0 +1,228 @@
+/* ==========================================================================
+   Gelegen Hukuk Bürosu — RESPONSIVE (mobil uyum) katmanı
+   --------------------------------------------------------------------------
+   Yaklaşım: MOBILE FIRST. style.css mobil düzeni tanımlar; burada yalnızca
+   ekran büyüdükçe eklenen kurallar bulunur (min-width sorguları).
+
+   Kırılım noktaları (breakpoints):
+     xs   <  480px   Küçük telefon        (temel düzen, tek sütun)
+     sm  >=  480px   Büyük telefon        (2'li ince gridler, buton yan yana)
+     md  >=  768px   Tablet / dikey iPad  (2 sütunlu içerik, geniş formlar)
+     lg  >= 1024px   Küçük dizüstü        (masaüstü menü, 3-4 sütun grid)
+     xl  >= 1280px   Masaüstü             (hero 2 sütun, geniş tipografi)
+     2xl >= 1536px   Geniş ekran          (konteyner ve boşluk artışı)
+
+   Ek katmanlar: yatay mod, dokunmatik/hover ayrımı, yüksek yoğunluk,
+   azaltılmış hareket, koyu arayüz tercihi, yazdırma (print.css).
+   ========================================================================== */
+
+/* ==========================================================================
+   sm >= 480px — Büyük telefonlar
+   ========================================================================== */
+@media (min-width: 480px) {
+  .hero__actions .btn,
+  .cta-band__actions .btn { min-width: 190px; }
+
+  .form__row--2 { grid-template-columns: 1fr 1fr; }
+
+  /* Telif ve KVKK linki her ekran boyutunda tek satır ve ortalı */
+  .footer-bottom {
+    flex-direction: row;
+    gap: var(--sp-4);
+  }
+  .footer-bottom p + p::before {
+    content: "·";
+    margin-right: var(--sp-4);
+    color: var(--c-gold-500);
+  }
+}
+
+/* ==========================================================================
+   md >= 768px — Tabletler
+   ========================================================================== */
+@media (min-width: 768px) {
+  :root { --header-h: 76px; }
+
+  .grid--2 { grid-template-columns: repeat(2, 1fr); }
+  .grid--3 { grid-template-columns: repeat(2, 1fr); }
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }
+
+  .steps { grid-template-columns: repeat(2, 1fr); gap: var(--sp-6); }
+
+  .split { grid-template-columns: 1fr 1fr; gap: var(--sp-8); }
+  .split--reverse .split__media { order: 2; }
+  /* Profil sayfası: portre kolonu daha dar olsun, metin nefes alsın */
+  .split--profile { grid-template-columns: minmax(220px, 320px) 1fr; align-items: start; }
+  .split--profile.split--reverse { grid-template-columns: 1fr minmax(220px, 320px); }
+
+  /* Avukat profil kartı: md+ genişlikte yatay yerleşim */
+  .lawyer-card__grid { grid-template-columns: minmax(290px, 330px) 1fr; }
+  .lawyer-card--reverse .lawyer-card__portrait { order: 2; }
+  .lawyer-card__body { padding: var(--sp-7); gap: var(--sp-4); }
+
+  .contact-layout { grid-template-columns: 1fr; }
+
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .lawyer__body { padding: var(--sp-6); }
+
+  .modal__dialog { padding: var(--sp-8); }
+}
+
+/* ==========================================================================
+   lg >= 1024px — Dizüstü: masaüstü navigasyona geçiş
+   ========================================================================== */
+@media (min-width: 1024px) {
+  :root { --header-h: 84px; }
+
+  /* Hamburger ve çekmece kaldırılır, yatay menü devreye girer */
+  .nav-toggle { display: none; }
+  .nav-backdrop { display: none; }
+
+  .site-nav {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    transform: none;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    gap: var(--sp-6);
+  }
+  .site-nav ul { flex-direction: row; align-items: center; gap: var(--sp-1); }
+  .site-nav a {
+    position: relative;
+    padding: var(--sp-3) var(--sp-4);
+    border-bottom: 0;
+    font-size: var(--fs-xs);
+    letter-spacing: 0.14em;
+  }
+  /* Aktif/hover durumunda alt çizgi animasyonu */
+  .site-nav a::after {
+    content: "";
+    position: absolute;
+    left: var(--sp-4);
+    right: var(--sp-4);
+    bottom: 4px;
+    height: 1px;
+    background: var(--c-gold-400);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--dur) var(--ease);
+  }
+  .site-nav a:hover::after,
+  .site-nav a[aria-current="page"]::after { transform: scaleX(1); }
+  .site-nav__cta { display: none; }
+
+  .header-cta { display: inline-flex; }
+
+  .grid--3 { grid-template-columns: repeat(3, 1fr); }
+  .grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+  .steps { grid-template-columns: repeat(4, 1fr); }
+
+  /* İletişim: form solda geniş, bilgiler sağda */
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1.25fr 0.85fr;
+    gap: var(--sp-8);
+    align-items: start;
+  }
+
+  .footer-grid { grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: var(--sp-6); }
+
+  .cta-band { padding: var(--sp-9); }
+
+  .section-head p { font-size: var(--fs-lg); }
+}
+
+/* ==========================================================================
+   xl >= 1280px — Masaüstü
+   ========================================================================== */
+@media (min-width: 1280px) {
+  .hero__inner {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--sp-9);
+  }
+  .hero__emblem { padding: var(--sp-8); }
+
+  .page-hero__inner { max-width: 78%; }
+}
+
+/* ==========================================================================
+   2xl >= 1536px — Geniş ekranlar
+   ========================================================================== */
+@media (min-width: 1536px) {
+  :root {
+    --container: 1320px;
+    --section-y: 8rem;
+  }
+}
+
+/* ==========================================================================
+   YATAY MOD — alçak ekranlarda dikey boşlukları kısalt
+   ========================================================================== */
+@media (max-height: 520px) and (orientation: landscape) {
+  .hero { padding-block: var(--sp-7); }
+  .site-nav { padding-top: calc(var(--header-h) + var(--sp-3)); }
+  .site-nav a { padding-block: var(--sp-3); }
+}
+
+/* ==========================================================================
+   GİRDİ TÜRÜ — dokunmatik cihazlarda hover efektlerini kapat
+   ========================================================================== */
+@media (hover: none) {
+  .card:hover { transform: none; box-shadow: none; }
+  .card:hover::after { opacity: 1; }        /* dokunmatikte vurgu hep açık */
+  .lawyer:hover { transform: none; box-shadow: none; }
+  .lawyer:hover .lawyer__media img { transform: none; }
+  .fab:hover { transform: none; }
+}
+
+/* İnce işaretçi (fare) olan cihazlarda daha kompakt dokunma hedefleri */
+@media (pointer: fine) {
+  .btn { min-height: 46px; }
+}
+
+/* ==========================================================================
+   ERİŞİLEBİLİRLİK — hareket azaltma tercihi
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .js .reveal,
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* Yüksek kontrast tercihi */
+@media (prefers-contrast: more) {
+  :root {
+    --c-body: #22303F;
+    --c-muted: #44505F;
+    --c-line: #C9C1B4;
+  }
+  .btn--primary { background: var(--c-gold-600); color: #fff; }
+}
+
+/* ==========================================================================
+   KONTEYNER SORGULARI — bileşen bazlı uyum (destekleyen tarayıcılarda)
+   Kart, içinde bulunduğu kolonun genişliğine göre kendini ayarlar.
+   ========================================================================== */
+@supports (container-type: inline-size) {
+  .grid--auto > * { container-type: inline-size; }
+
+  @container (min-width: 380px) {
+    .lawyer__body { padding: var(--sp-6); }
+    .card { padding: var(--sp-7); }
+  }
+}

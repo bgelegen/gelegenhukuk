@@ -1,0 +1,29 @@
+# =============================================================================
+# Netlify / Cloudflare Pages güvenlik başlıkları
+# (Apache kullanıyorsanız bu dosya yerine .htaccess geçerlidir.)
+#
+# script-src hash'leri satır içi JSON-LD blokları içindir.
+# Güncellemek için:  node tools/csp-hash.js
+# =============================================================================
+
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'sha256-WZRJfWvsnNCPcxzZwvyhovnZGqhZaC+8gPGPRbx6wTk=' 'sha256-B7cwSHSDI4IwO43pgsYp6pQv206PqBkacUr6xMFhfgs=' 'sha256-rIQYPxbnVRzhHGVH1hiRxvTKWD4empuW7zQKNs1YB7Y=' 'sha256-M+VLTW1XbM9mB/zI5EkohuFw3DYLa5hyE+3vc8gPqCw=' 'sha256-sOdiVzVkBJXfZ+0amEHAGLG9d1KIKxsfP2pmoG3kuHM='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://maps.google.com https://www.google.com; connect-src 'self' https://api.web3forms.com; manifest-src 'self'; upgrade-insecure-requests
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

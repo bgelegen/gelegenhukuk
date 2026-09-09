@@ -1,5 +1,0 @@
-# Python form backend (gonder.py) için gereksinim
-# Kurulum:  pip install -r requirements.txt
-Flask>=3.0
-# Üretim için (opsiyonel, WSGI sunucusu):
-# gunicorn>=21.0

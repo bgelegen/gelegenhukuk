@@ -275,8 +275,6 @@ blockquote {
 }
 .skip-link:focus { top: var(--sp-4); }
 
-.text-center { text-align: center; }
-.mt-0 { margin-top: 0; }
 
 /* ==========================================================================
    5) BİLEŞENLER
@@ -442,7 +440,7 @@ blockquote {
 
 /* --- 5.4 Grid sistemi ----------------------------------------------------- */
 .grid { display: grid; gap: var(--sp-5); }
-.grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; } /* mobil: tek sütun */
+.grid--2 { grid-template-columns: 1fr; } /* mobil: tek sütun */
 
 /* auto-fit grid: breakpoint gerektirmeden kendiliğinden sarar */
 .grid--auto {
@@ -1062,8 +1060,6 @@ blockquote {
 }
 .fab:hover { transform: translateY(-3px); background: var(--c-navy-700); color: var(--c-gold-400); }
 .fab svg { width: 22px; height: 22px; }
-.fab--wa { background: #1F7A55; color: #fff; border-color: transparent; }
-.fab--wa:hover { background: #17694A; color: #fff; }
 #backToTop { opacity: 0; visibility: hidden; transition: opacity var(--dur) var(--ease), visibility var(--dur); }
 #backToTop.is-visible { opacity: 1; visibility: visible; }
 
@@ -1443,12 +1439,3 @@ blockquote {
 }
 .footer-bottom p { text-align: center; margin: 0; }
 .footer-bottom a { color: rgba(250, 248, 245, 0.7); }
-.footer-disclaimer {
-  margin-top: var(--sp-5);
-  padding: var(--sp-4);
-  border: 1px solid var(--c-line-dark);
-  border-radius: var(--radius);
-  font-size: var(--fs-xs);
-  line-height: 1.6;
-  color: rgba(250, 248, 245, 0.55);
-}

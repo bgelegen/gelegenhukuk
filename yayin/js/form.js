@@ -210,7 +210,6 @@
 
     // İnsan-okunur konu ve gönderim zamanı
     const zaman = new Date().toLocaleString("tr-TR", { dateStyle: "long", timeStyle: "short" });
-    const konuBasligi = "Yeni Randevu Talebi — " + veri.adSoyad + " (" + veri.konu + ")";
 
     /* --- Netlify Forms gönderimi -----------------------------------------
        Gönderim kendi alan adımıza (same-origin) yapılır; Netlify sunucu

@@ -22,7 +22,6 @@
      --------------------------------------------------------------- */
   const SITE = {
     firma: "Gelegen Hukuk Bürosu",
-    firmaKisa: "Gelegen Hukuk",
 
     // TODO: Gerçek numara ile değiştirin. Format: uluslararası (tel: linki için)
     telefon: "+90 551 821 44 44",
@@ -47,14 +46,6 @@
     haritaLink: "https://www.google.com/maps/dir/?api=1&destination=38.34831614441364,38.32041685988208",
     // haritaAppleLink: APPLE Haritalar yol tarifi (aynı hedef)
     haritaAppleLink: "https://maps.apple.com/?daddr=38.34831614441364,38.32041685988208&dirflg=d",
-    // haritaEmbed: sayfada gömülü olarak gösterilen harita (iframe)
-    haritaEmbed: "https://maps.google.com/maps?q=38.34831614441364,38.32041685988208&hl=tr&z=17&output=embed",
-
-    calismaSaatleri: [
-      { gun: "Pazartesi – Cuma", saat: "09:00 – 18:00" },
-      { gun: "Cumartesi", saat: "Randevu ile" },
-      { gun: "Pazar", saat: "Kapalı" }
-    ],
 
     // Sosyal medya — kullanılmayanları boş bırakın, arayüzde gizlenir
     sosyal: {
@@ -63,23 +54,10 @@
       instagram: ""
     },
 
-    /* =====================================================================
-       FORM GÖNDERİMİ — talepler hangi e-postaya düşecek?
-       ---------------------------------------------------------------------
-       Formu çalışır hâle getirmek için AŞAĞIDAKİ İKİ YOLDAN BİRİNİ seçin.
-       Kurulum adımları: docs/FORM-KURULUM.md
-       ===================================================================== */
-
-    // Taleplerin düşeceği e-posta (Python backend yolunda kullanılır)
-    bildirimEposta: "batuhangelegen44@gmail.com",
-
     /* Form altyapısı: NETLIFY FORMS.
-       Gönderimler sitenin kendi alan adına yapılır, Netlify sunucu tarafında
-       işler; panelde saklanır ve bildirimEposta adresine iletilir.
-       API anahtarı veya ayrı sunucu GEREKMEZ — bu yüzden aşağıdaki iki ayar
-       artık kullanılmıyor, geriye dönük uyumluluk için boş bırakıldı. */
-    web3formsKey: "",
-    formEndpoint: "",
+       Gönderimler sitenin kendi alan adına yapılır; Netlify sunucu tarafında
+       işler, panelde saklar ve e-posta bildirimi gönderir. Bu yüzden burada
+       API anahtarı veya sunucu adresi tutulmaz. */
 
     // Form gönderim sınırları (istemci tarafı kötüye kullanım freni)
     formLimit: {

@@ -44,20 +44,14 @@
   :root { --header-h: 76px; }
 
   .grid--2 { grid-template-columns: repeat(2, 1fr); }
-  .grid--3 { grid-template-columns: repeat(2, 1fr); }
-  .grid--4 { grid-template-columns: repeat(2, 1fr); }
 
   .steps { grid-template-columns: repeat(2, 1fr); gap: var(--sp-6); }
 
   .split { grid-template-columns: 1fr 1fr; gap: var(--sp-8); }
   .split--reverse .split__media { order: 2; }
-  /* Profil sayfası: portre kolonu daha dar olsun, metin nefes alsın */
-  .split--profile { grid-template-columns: minmax(220px, 320px) 1fr; align-items: start; }
-  .split--profile.split--reverse { grid-template-columns: 1fr minmax(220px, 320px); }
 
   /* Avukat profil kartı: md+ genişlikte yatay yerleşim */
   .lawyer-card__grid { grid-template-columns: minmax(290px, 330px) 1fr; }
-  .lawyer-card--reverse .lawyer-card__portrait { order: 2; }
   .lawyer-card__body { padding: var(--sp-7); gap: var(--sp-4); }
 
   .contact-layout { grid-template-columns: 1fr; }
@@ -119,8 +113,6 @@
 
   .header-cta { display: inline-flex; }
 
-  .grid--3 { grid-template-columns: repeat(3, 1fr); }
-  .grid--4 { grid-template-columns: repeat(4, 1fr); }
 
   .steps { grid-template-columns: repeat(4, 1fr); }
 

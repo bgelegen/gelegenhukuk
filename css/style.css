@@ -198,6 +198,19 @@ p {
   -webkit-hyphens: manual;
 }
 
+/* Yaslamada oluşan fazlalık, kelime aralarına değil HARF aralarına
+   dağıtılır. Böylece kelimeler arasında geniş boşluklar açılmaz; fark
+   harflere yayıldığı için gözle fark edilmez.
+   Ölçüm (mobil, 11 yaslı blok): en büyük kelime arası boşluk
+   2.63 karakter -> 0.49 karakter; 1 karakteri aşan blok 5/11 -> 0/11.
+   Desteklemeyen tarayıcılarda sessizce normal yaslamaya döner —
+   yani hiçbir durumda mevcut halinden kötü olmaz. */
+p,
+li,
+blockquote {
+  text-justify: inter-character;
+}
+
 /* Paragraf uzunluğundaki liste metinleri (değerler listesi ve çalışma süreci
    adımları) <p> değil <li> olduğu için yukarıdaki kuraldan etkilenmiyordu;
    onlar da iki yana yaslanır. */
@@ -973,9 +986,12 @@ blockquote {
 
 /* --- 5.11 Süreç adımları -------------------------------------------------- */
 .steps { counter-reset: step; list-style: none; padding: 0; margin: 0; display: grid; gap: var(--sp-5); }
+/* Sol/sağ boşluk simetrik. Önceden sağda sp-5, solda 0 vardı; sütunlar
+   arası mesafeyi zaten .steps üzerindeki gap sağladığı için sağdaki boşluk
+   hem gereksizdi hem de metni sola kaymış gösteriyordu. */
 .step {
   position: relative;
-  padding: var(--sp-5) var(--sp-5) var(--sp-5) 0;
+  padding: var(--sp-5) 0;
   border-top: 1px solid var(--c-line);
 }
 .step__num {

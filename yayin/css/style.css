@@ -186,12 +186,14 @@ h2 { font-size: var(--fs-h2); }
 h3 { font-size: var(--fs-h3); line-height: var(--lh-snug); }
 h4 { font-size: var(--fs-h4); line-height: var(--lh-snug); }
 
-/* MOBİLDE SOLA YASLI. Dar ekranda satıra yalnızca 3–4 kelime düştüğü için
-   iki yana yaslama kelimeler arasında büyük boşluklar açar ve metin dağınık
-   görünür. İki yana yaslama 768px'ten itibaren devreye girer (responsive.css). */
+/* Paragraflar her ekranda iki yana yaslı.
+   hyphens: manual → kelimeler tireyle bölünmez (tarayıcılar Türkçe heceleme
+   yapmıyor; zorlamak yalnızca kopuk görünen sözcükler üretirdi).
+   Dar ekranda boşlukları makul tutmak için kısa/dar metinler aşağıda
+   yaslamanın dışında bırakılır. */
 p {
   text-wrap: pretty;
-  text-align: left;
+  text-align: justify;
   hyphens: manual;
   -webkit-hyphens: manual;
 }

@@ -17,6 +17,28 @@
    ========================================================================== */
 
 /* ==========================================================================
+   MOBİL (< 768px) — dar ekrana özel düzeltmeler
+   ========================================================================== */
+@media (max-width: 767px) {
+  /* Yaslama açık kalır, ancak DAR ve KISA metinler hariç tutulur.
+     Sebep: kart içi 3–4 satırlık metinler dar sütunda satır başına ~24
+     karakter aldığı için yaslama kelimeler arasında 40–75px boşluk açıyordu.
+     Uzun paragraflarda (hero, avukat açıklaması) yaslama sorunsuz çalışır. */
+  .card p,
+  .section-head p { text-align: left; }
+
+  /* Hero girişi bir tık küçülür: satıra daha çok kelime sığar,
+     yaslama boşlukları belirgin şekilde daralır. */
+  .hero__lead { font-size: 1rem; }
+
+  /* Footer: "Sayfalar" ve "Çalışma Alanları" yan yana gelir, böylece
+     footer gereksiz uzamaz. Logo/açıklama ve İletişim tam genişlikte kalır. */
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--sp-6) var(--sp-5); }
+  .footer-grid > .footer-about,
+  .footer-grid > div:last-child { grid-column: 1 / -1; }
+}
+
+/* ==========================================================================
    sm >= 480px — Büyük telefonlar
    ========================================================================== */
 @media (min-width: 480px) {
@@ -43,14 +65,6 @@
 @media (min-width: 768px) {
   :root { --header-h: 76px; }
 
-  /* Satır yeterince genişledi: paragraflar iki yana yaslanabilir.
-     (Ortalanmış ve tek satırlık istisnalar style.css'te tanımlıdır ve
-     daha yüksek özgüllükte oldukları için bu kuraldan etkilenmez.) */
-  p {
-    text-align: justify;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-  }
 
   .grid--2 { grid-template-columns: repeat(2, 1fr); }
 

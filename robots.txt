@@ -18,4 +18,4 @@ User-agent: CCBot
 Disallow: /
 
 # Site haritası
-Sitemap: https://www.gelegenhukuk.com/sitemap.xml
+Sitemap: https://gelegenhukuk.com/sitemap.xml

@@ -1278,6 +1278,14 @@ blockquote {
   border-bottom: 1px solid var(--c-line-dark);
   transition: box-shadow var(--dur) var(--ease), background-color var(--dur) var(--ease);
 }
+
+/* Mobil çekmece açıkken header'ı perdenin ÜSTÜNE taşı.
+   Neden: .site-nav (çekmece) header'ın İÇİNDE yer alır, dolayısıyla kendi
+   z-index'i (--z-drawer) header'ın yığın bağlamına tabidir. Header --z-header
+   (100) ile perdeden (--z-backdrop, 190) aşağıda kaldığı için perde çekmecenin
+   üzerine biner: menü açılır ama bağlantılar tıklanamaz ve soluk görünür.
+   Modal katmanı (--z-modal, 300) bunun da üstünde kalmaya devam eder. */
+body.is-locked .site-header { z-index: var(--z-drawer); }
 .site-header.is-stuck { box-shadow: 0 6px 24px rgba(6, 15, 28, 0.35); }
 
 .site-header__inner {

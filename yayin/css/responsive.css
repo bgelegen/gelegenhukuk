@@ -20,9 +20,19 @@
    MOBİL (< 768px) — dar ekrana özel düzeltmeler
    ========================================================================== */
 @media (max-width: 767px) {
-  /* Hero girişi bir tık küçülür: satıra daha çok kelime sığar,
-     yaslama boşlukları belirgin şekilde daralır. */
-  .hero__lead { font-size: 1rem; }
+  /* YASLAMA BOŞLUKLARI — genel gövde metni.
+     Satır başına düşen karakter arttıkça yaslamanın açtığı boşluk azalır.
+     Kenar boşluğu bir miktar daraltılıp punto 15px'e çekilerek satır başına
+     ~45 karaktere çıkılır (tipografide yaslamanın düzgün göründüğü eşik).
+     Ölçüm (336–372px aralığında 10 genişlik): %90'lık dilim 25.9px -> 20.9px,
+     50px'i aşan genişlik sayısı 9/10 -> 6/10.
+     Not: 2 satırlık kısa paragraflarda (SSS cevapları, süreç adımları) tek
+     satır yaslandığı için sonuç kısmen satır sonuna bağlı kalır; tireleme
+     kullanılmadığından bu tamamen giderilemiyor. */
+  .container { padding-inline: 0.9375rem; }
+  .hero__lead,
+  .accordion__panel p,
+  .section .reveal > p { font-size: 0.9375rem; }
 
   /* Kart iç boşluğu daraltılır: metin sütunu genişler, böylece yaslamanın
      kelimeler arasında açtığı boşluk küçülür. (Kart metinleri de masaüstünde

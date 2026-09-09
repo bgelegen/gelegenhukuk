@@ -1432,6 +1432,20 @@ body.is-locked .site-header { z-index: var(--z-drawer); }
 .footer-contact a { color: rgba(250, 248, 245, 0.72); text-decoration: none; }
 .footer-contact a:hover { color: var(--c-gold-400); }
 
+/* Dokunmatik cihazlarda footer bağlantıları: satır yüksekliği ~17px olduğu
+   için parmakla isabetli tıklanamıyordu. Bağlantılara asgari dokunma alanı
+   verilir, aradaki boşluk kısaltılarak footer'ın aşırı uzaması önlenir. */
+@media (max-width: 1023px) {
+  .footer-links,
+  .footer-contact { gap: var(--sp-2); }
+  .footer-links a,
+  .footer-contact a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+  }
+}
+
 .footer-bottom {
   margin-top: var(--sp-8);
   padding-top: var(--sp-5);

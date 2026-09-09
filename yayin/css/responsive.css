@@ -50,8 +50,10 @@
   .split { grid-template-columns: 1fr 1fr; gap: var(--sp-8); }
   .split--reverse .split__media { order: 2; }
 
-  /* Avukat profil kartı: md+ genişlikte yatay yerleşim */
-  .lawyer-card__grid { grid-template-columns: minmax(290px, 330px) 1fr; }
+  /* Avukat kartı bu genişlikte HÂLÂ dikey (portre üstte, metin altta).
+     Yatay yerleşim 1024px'te başlar; 768–1023 arasında yatay yapılırsa
+     portre kolonu kartın yarısını kaplar ve dava maddeleri 3–4 satıra
+     bölünerek sıkışık görünür. */
   .lawyer-card__body { padding: var(--sp-7); gap: var(--sp-4); }
 
   .contact-layout { grid-template-columns: 1fr; }
@@ -68,6 +70,11 @@
    ========================================================================== */
 @media (min-width: 1024px) {
   :root { --header-h: 84px; }
+
+  /* Avukat profil kartı: bu genişlikten itibaren yatay yerleşim.
+     Portre kolonu dar tutulur ki "Yürütülen İş ve Davalar" maddeleri
+     tek satıra sığsın. */
+  .lawyer-card__grid { grid-template-columns: minmax(290px, 330px) 1fr; }
 
   /* Hamburger ve çekmece kaldırılır, yatay menü devreye girer */
   .nav-toggle { display: none; }

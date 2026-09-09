@@ -197,6 +197,16 @@ p {
   hyphens: manual;
   -webkit-hyphens: manual;
 }
+
+/* Paragraf uzunluğundaki liste metinleri (değerler listesi ve çalışma süreci
+   adımları) <p> değil <li> olduğu için yukarıdaki kuraldan etkilenmiyordu;
+   onlar da iki yana yaslanır. */
+.values li,
+.steps li {
+  text-align: justify;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+}
 p + p { margin-top: var(--sp-4); }
 
 /* Kısa/tek satır olan (label, hint, kırıntı) paragrafları justify dışında tut —

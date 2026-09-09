@@ -20,16 +20,14 @@
    MOBİL (< 768px) — dar ekrana özel düzeltmeler
    ========================================================================== */
 @media (max-width: 767px) {
-  /* Yaslama açık kalır, ancak DAR ve KISA metinler hariç tutulur.
-     Sebep: kart içi 3–4 satırlık metinler dar sütunda satır başına ~24
-     karakter aldığı için yaslama kelimeler arasında 40–75px boşluk açıyordu.
-     Uzun paragraflarda (hero, avukat açıklaması) yaslama sorunsuz çalışır. */
-  .card p,
-  .section-head p { text-align: left; }
-
   /* Hero girişi bir tık küçülür: satıra daha çok kelime sığar,
      yaslama boşlukları belirgin şekilde daralır. */
   .hero__lead { font-size: 1rem; }
+
+  /* Kart iç boşluğu daraltılır: metin sütunu genişler, böylece yaslamanın
+     kelimeler arasında açtığı boşluk küçülür. (Kart metinleri de masaüstünde
+     olduğu gibi iki yana yaslı kalır.) */
+  .card { padding: var(--sp-5); }
 
   /* Footer: "Sayfalar" ve "Çalışma Alanları" yan yana gelir, böylece
      footer gereksiz uzamaz. Logo/açıklama ve İletişim tam genişlikte kalır. */

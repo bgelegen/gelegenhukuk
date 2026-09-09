@@ -216,16 +216,19 @@
        Biçim: application/x-www-form-urlencoded + zorunlu "form-name" alanı.
        Açıkta duran API anahtarı YOKTUR → anahtar toplayan spam botları
        doğrudan API'ye istek atamaz. Ayrıca Netlify honeypot + Akismet süzer. */
+    /* ÖNEMLİ: Anahtarlar iletisim.html'deki name="..." değerleriyle
+       BİREBİR AYNI olmalıdır. Netlify formu HTML'den tanır; farklı bir ad
+       gönderilirse o alan bildirim e-postasında BOŞ görünür.
+       E-postadaki Türkçe başlıklar HTML'deki <label> metinlerinden gelir. */
     const alanlar = {
       "form-name": "randevu",
-      "Ad Soyad": veri.adSoyad,
-      "E-posta": veri.eposta,
-      "Telefon": veri.telefon || "—",
-      "Hukuk Alanı": veri.konu,
-      "Görüşülecek Avukat": veri.avukat,
-      "Talep": veri.mesaj,
-      "Gönderim Zamanı": zaman,
-      "Konu Başlığı": konuBasligi
+      adSoyad: veri.adSoyad,
+      eposta:  veri.eposta,
+      telefon: veri.telefon || "—",
+      konu:    veri.konu,
+      avukat:  veri.avukat,
+      mesaj:   veri.mesaj,
+      kvkk:    "Onaylandı — " + zaman
     };
 
     const govde = new URLSearchParams();

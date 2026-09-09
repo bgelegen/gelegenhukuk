@@ -1439,7 +1439,9 @@ body.is-locked .site-header { z-index: var(--z-drawer); }
   .footer-links,
   .footer-contact { gap: var(--sp-2); }
   .footer-links a,
-  .footer-contact a {
+  .footer-contact a,
+  .footer-bottom a,
+  .link-arrow {
     display: inline-flex;
     align-items: center;
     min-height: 40px;

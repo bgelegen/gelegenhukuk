@@ -42,6 +42,16 @@
   .card,
   .card p { text-align: center; }
 
+  /* Avukat kartındaki "Yürütülen İş ve Davalar" maddeleri.
+     Yalnızca mobilde yaslanır: masaüstünde maddeler çoğunlukla tek satır
+     olduğundan yaslamanın görsel etkisi yok, iki satıra taşan tek maddede
+     ise gereksiz boşluk açardı. */
+  .lawyer-card__body ul.deneyim li {
+    text-align: justify;
+    hyphens: manual;
+    -webkit-hyphens: manual;
+  }
+
   /* Footer: başlıklar, metinler, logo ve bağlantı listeleri.
      .footer-links li / .footer-contact li style.css'te "text-align: left"
      ile sabitlenmiş (yaslama istisna listesi); aynı özgüllükte ve daha sonra

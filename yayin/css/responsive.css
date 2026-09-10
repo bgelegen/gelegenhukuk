@@ -48,9 +48,12 @@
   /* ---- ORTALAMA (yalnızca çalışma alanı kartları ve footer) ----
      Hem metin hem yerleşim ortalanır. */
 
-  /* Çalışma alanı kartları */
-  .card,
-  .card p { text-align: center; }
+  /* Çalışma alanı kartları — YALNIZCA onlar.
+     article.card ile sınırlandırıldı: iletişim sayfasındaki bilgi kutusu da
+     .card sınıfını kullanıyor ama <div>. Sınırlandırılmazsa oradaki ikon–
+     metin satırları da ortalanıyor ve metin ikonun yanından kayıyordu. */
+  article.card,
+  article.card p { text-align: center; }
 
   /* Avukat kartındaki "Yürütülen İş ve Davalar" maddeleri.
      Yalnızca mobilde yaslanır: masaüstünde maddeler çoğunlukla tek satır

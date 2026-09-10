@@ -211,6 +211,15 @@ blockquote {
   text-justify: inter-character;
 }
 
+/* Çalışma alanı kartları yaslamanın DIŞINDA tutulur.
+   Sebep: masaüstünde kart metni yalnızca ~198px, yani satıra 21–28 karakter
+   düşüyor. Bu genişlikte yaslama iki türlü de bozuluyor — kelime aralarına
+   dağıtılırsa 97px'e varan boşluklar, harf aralarına dağıtılırsa harf başına
+   3.3px açılma (ölçüldü) oluşuyor ve "A n l a ş m a l ı" gibi görünüyor.
+   Tipografide yaslama ~45 karakterin altında zaten uygulanmaz.
+   (Mobilde bu kartlar ortalanır; kural responsive.css'te.) */
+article.card p { text-align: left; }
+
 /* Paragraf uzunluğundaki liste metinleri (değerler listesi ve çalışma süreci
    adımları) <p> değil <li> olduğu için yukarıdaki kuraldan etkilenmiyordu;
    onlar da iki yana yaslanır. */

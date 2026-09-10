@@ -48,11 +48,14 @@
   /* ---- ORTALAMA (yalnızca çalışma alanı kartları ve footer) ----
      Hem metin hem yerleşim ortalanır. */
 
-  /* Çalışma alanı kartlarının ortalanması artık style.css'te, her genişlik
-     için tanımlı — burada tekrarlanmasına gerek yok. Seçici bilerek
-     article.card; iletişim sayfasındaki bilgi kutusu da .card sınıfını
-     kullanıyor ama <div>, sınırlandırılmazsa oradaki ikon–metin satırları da
-     ortalanıp metin ikonun yanından kayıyor. */
+  /* Tüm kartlar (anasayfadaki çalışma alanları + Hakkımızda'daki değerler)
+     mobilde ortalanır. Masaüstünde yalnızca anasayfadakiler ortalı kalır;
+     o kural style.css'te grid--center ile sınırlandırılmış durumda.
+     Seçici bilerek article.card: iletişim sayfasındaki bilgi kutusu da .card
+     sınıfını kullanıyor ama <div>, sınırlandırılmazsa oradaki ikon–metin
+     satırları da ortalanıp metin ikonun yanından kayıyor. */
+  article.card,
+  article.card p { text-align: center; }
 
   /* Avukat kartındaki "Yürütülen İş ve Davalar" maddeleri.
      Yalnızca mobilde yaslanır: masaüstünde maddeler çoğunlukla tek satır
@@ -162,14 +165,16 @@
 
   .grid--2 { grid-template-columns: repeat(2, 1fr); }
 
-  /* Adımlar bu genişlikten itibaren sütunlara ayrılıyor; sütun genişliği
-     4 sütunda 258px'e kadar iniyor. Bu darlıkta yaslama kartlardakiyle aynı
-     harf açılması sorununu yaratıyor. Numara, başlık ve açıklama birlikte
-     ortalanır — kartlarla aynı görsel dil. Mobilde adımlar tek sütun ve tam
-     genişlikte olduğu için orada yaslı kalmaya devam eder. */
   .steps { grid-template-columns: repeat(2, 1fr); gap: var(--sp-6); }
-  .steps li,
-  .step p { text-align: center; }
+
+  /* Anasayfadaki "Nasıl Çalışıyoruz" adımları bu genişlikten itibaren
+     sütunlara ayrılıyor; sütun genişliği 4 sütunda 258px'e kadar iniyor ve
+     bu darlıkta yaslama kartlardakiyle aynı harf açılması sorununu yaratıyor.
+     Numara, başlık ve açıklama birlikte ortalanır. Mobilde adımlar tek sütun
+     ve tam genişlikte olduğu için orada yaslı kalmaya devam eder.
+     steps--center ile sınırlı: Hakkımızda'daki Süreç bölümü yaslı kalır. */
+  .steps--center li,
+  .steps--center p { text-align: center; }
 
   .split { grid-template-columns: 1fr 1fr; gap: var(--sp-8); }
   .split--reverse .split__media { order: 2; }

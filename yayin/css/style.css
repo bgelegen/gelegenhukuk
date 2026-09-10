@@ -211,18 +211,23 @@ blockquote {
   text-justify: inter-character;
 }
 
-/* Çalışma alanı kartları yaslamanın DIŞINDA tutulur.
+/* Çalışma alanı kartları yaslamanın DIŞINDA tutulur ve her genişlikte ortalanır.
    Sebep: masaüstünde kart metni yalnızca ~198px, yani satıra 21–28 karakter
    düşüyor. Bu genişlikte yaslama iki türlü de bozuluyor — kelime aralarına
    dağıtılırsa 97px'e varan boşluklar, harf aralarına dağıtılırsa harf başına
    3.3px açılma (ölçüldü) oluşuyor ve "A n l a ş m a l ı" gibi görünüyor.
    Tipografide yaslama ~45 karakterin altında zaten uygulanmaz.
-   (Mobilde bu kartlar ortalanır; kural responsive.css'te.) */
-article.card p { text-align: left; }
+   Kartın tamamı (ikon + başlık + metin) birlikte ortalanır; yalnızca paragraf
+   ortalansaydı ikon ve başlık solda kalıp kart bozuk görünürdü.
+   Mobilde de aynı hiza geçerli olduğundan tek kural yeterli. */
+article.card,
+article.card p { text-align: center; }
 
 /* Paragraf uzunluğundaki liste metinleri (değerler listesi ve çalışma süreci
    adımları) <p> değil <li> olduğu için yukarıdaki kuraldan etkilenmiyordu;
-   onlar da iki yana yaslanır. */
+   onlar da iki yana yaslanır. Adımlar mobilde tek sütun ve tam genişlikte
+   olduğu için burada yaslı kalır; sütunlara ayrıldıkları 768px'ten itibaren
+   ortalanırlar (kural responsive.css'te). */
 .values li,
 .steps li {
   text-align: justify;

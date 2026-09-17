@@ -220,25 +220,34 @@ blockquote {
    (Mobilde bu kartlar ortalanır; kural responsive.css'te.) */
 article.card p { text-align: left; }
 
-/* Anasayfadaki "Çalışma Alanlarımız" kartları her genişlikte ortalanır.
-   grid--center ile sınırlı: Hakkımızda'daki değer kartları aynı bileşeni
-   kullanıyor ama onlar masaüstünde sola yaslı kalmalı.
-   Kartın tamamı (ikon + başlık + metin) birlikte ortalanır; yalnızca paragraf
-   ortalansaydı ikon ve başlık solda kalıp kart bozuk görünürdü. */
-.grid--center article.card,
-.grid--center article.card p { text-align: center; }
+/* Anasayfadaki "Çalışma Alanlarımız" kartları HER genişlikte sola yaslıdır.
+   grid--left ile sınırlı: Hakkımızda'daki değer kartları aynı bileşeni
+   kullanıyor, onların davranışı değişmesin.
+   Seçici mobildeki genel "article.card ortalanır" kuralından daha belirgin
+   olduğu için (0,2,1) > (0,1,1), telefonda da sola yaslı kalır. */
+.grid--left article.card,
+.grid--left article.card h3,
+.grid--left article.card p { text-align: left; }
 
 /* Paragraf uzunluğundaki liste metinleri (değerler listesi ve çalışma süreci
    adımları) <p> değil <li> olduğu için yukarıdaki kuraldan etkilenmiyordu;
    onlar da iki yana yaslanır. Anasayfadaki süreç adımları bunun istisnası:
-   sütunlara ayrıldıkları 768px'ten itibaren ortalanırlar (steps--center,
-   kural responsive.css'te). Hakkımızda'daki adımlar yaslı kalır. */
+   sola yaslı kalırlar (steps--left, kuralı hemen aşağıda). */
 .values li,
 .steps li {
   text-align: justify;
   hyphens: manual;
   -webkit-hyphens: manual;
 }
+
+/* Anasayfadaki "Nasıl Çalışıyoruz" adımları sola yaslıdır.
+   Yukarıdaki justify kuralını bilerek geçersiz kılar: dar sütunda iki yana
+   yaslama harflerin arasını açıyordu. steps--left ile sınırlı, Hakkımızda'daki
+   Süreç bölümü yaslı kalır. Aynı belirginlikte olduğu için bu kural
+   .steps li kuralından SONRA gelmelidir. */
+.steps--left li,
+.steps--left h3,
+.steps--left p { text-align: left; }
 p + p { margin-top: var(--sp-4); }
 
 /* Kısa/tek satır olan (label, hint, kırıntı) paragrafları justify dışında tut —

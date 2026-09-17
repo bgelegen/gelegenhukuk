@@ -10,8 +10,15 @@
   <!-- Hata sayfaları arama sonuçlarında yer almamalıdır -->
   <meta name="robots" content="noindex, follow">
 
-  <link rel="icon" href="assets/img/logo.webp">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.svg">
+  <!-- Simgeler: büronun kendi logosundan üretilmiş KARE sürümler.
+       Önceden favicon olarak logo.webp veriliyordu; Google favicon'da WebP'yi
+       desteklemiyor ve resmin kare olmasını istiyor (logo 750x609), bu yüzden
+       arama sonuçlarında bizim logomuz yerine kendi genel simgesini basıyordu.
+       Yollar kök göreli: 404 sayfası herhangi bir derinlikten sunulabiliyor. -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/logo-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/logo-192.png">
+  <link rel="apple-touch-icon" href="/assets/icons/logo-180.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,8 +28,8 @@
        yalnızca bu sınıf varken çalışır; JS kapalıyken içerik gizlenmez. -->
   <script>document.documentElement.classList.add("js");</script>
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/style.css?v=33">
+  <link rel="stylesheet" href="css/responsive.css?v=33">
 </head>
 
 <body>

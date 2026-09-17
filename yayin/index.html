@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#0A1628">
 
   <!-- ===== SEO: Temel meta etiketleri ===================================== -->
-  <title>Gelegen Hukuk Bürosu | Av. Mustafa Gelegen &amp; Av. Merve Gelegen</title>
-  <meta name="description" content="Gelegen Hukuk Bürosu; aile, ceza, iş, ticaret ile icra ve iflas hukuku alanlarında dava takibi ve hukuki danışmanlık hizmeti sunar. Av. Mustafa Gelegen ve Av. Merve Gelegen.">
+  <title>Malatya Avukat | Gelegen Hukuk Bürosu</title>
+  <meta name="description" content="Malatya Battalgazi'de Gelegen Hukuk Bürosu: aile, ceza, iş, ticaret, icra ve iflas hukukunda dava takibi ve hukuki danışmanlık. Av. Mustafa Gelegen ve Av. Merve Gelegen.">
   <meta name="author" content="Gelegen Hukuk Bürosu">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="canonical" href="https://gelegenhukuk.com/">
@@ -16,22 +16,29 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="tr_TR">
   <meta property="og:site_name" content="Gelegen Hukuk Bürosu">
-  <meta property="og:title" content="Gelegen Hukuk Bürosu | Av. Mustafa Gelegen &amp; Av. Merve Gelegen">
-  <meta property="og:description" content="Aile, ceza, iş, ticaret ile icra ve iflas hukuku alanlarında dava takibi ve hukuki danışmanlık.">
+  <meta property="og:title" content="Malatya Avukat | Gelegen Hukuk Bürosu">
+  <meta property="og:description" content="Malatya'da aile, ceza, iş, ticaret ile icra ve iflas hukuku alanlarında dava takibi ve hukuki danışmanlık.">
   <meta property="og:url" content="https://gelegenhukuk.com/">
   <meta property="og:image" content="https://gelegenhukuk.com/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Gelegen Hukuk Bürosu amblemi ve avukat isimleri">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Gelegen Hukuk Bürosu">
-  <meta name="twitter:description" content="Aile, ceza, iş, ticaret ile icra ve iflas hukuku alanlarında dava takibi ve hukuki danışmanlık.">
+  <meta name="twitter:title" content="Malatya Avukat | Gelegen Hukuk Bürosu">
+  <meta name="twitter:description" content="Malatya'da aile, ceza, iş, ticaret ile icra ve iflas hukuku alanlarında dava takibi ve hukuki danışmanlık.">
   <meta name="twitter:image" content="https://gelegenhukuk.com/assets/img/og-image.png">
 
   <!-- ===== Simgeler ve manifest =========================================== -->
-  <link rel="icon" href="assets/img/logo.webp">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.svg">
-  <link rel="manifest" href="site.webmanifest">
+  <!-- Simgeler: büronun kendi logosundan üretilmiş KARE sürümler.
+       Önceden favicon olarak logo.webp veriliyordu; Google favicon'da WebP'yi
+       desteklemiyor ve resmin kare olmasını istiyor (logo 750x609), bu yüzden
+       arama sonuçlarında bizim logomuz yerine kendi genel simgesini basıyordu.
+       Yollar kök göreli: 404 sayfası herhangi bir derinlikten sunulabiliyor. -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/logo-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/logo-192.png">
+  <link rel="apple-touch-icon" href="/assets/icons/logo-180.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <!-- ===== Yazı tipleri (performans: preconnect + display=swap) =========== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,9 +50,9 @@
        yalnızca bu sınıf varken çalışır; JS kapalıyken içerik gizlenmez. -->
   <script>document.documentElement.classList.add("js");</script>
 
-  <link rel="stylesheet" href="css/style.css?v=32">
-  <link rel="stylesheet" href="css/responsive.css?v=32">
-  <link rel="stylesheet" href="css/print.css?v=32" media="print">
+  <link rel="stylesheet" href="css/style.css?v=33">
+  <link rel="stylesheet" href="css/responsive.css?v=33">
+  <link rel="stylesheet" href="css/print.css?v=33" media="print">
 
   <!-- ===== SEO: Yapısal veri (Schema.org / JSON-LD) ======================= -->
   <script type="application/ld+json">
@@ -58,7 +65,7 @@
         "name": "Gelegen Hukuk Bürosu",
         "url": "https://gelegenhukuk.com/",
         "image": "https://gelegenhukuk.com/assets/img/og-image.png",
-        "logo": "https://gelegenhukuk.com/assets/img/logo.webp",
+        "logo": "https://gelegenhukuk.com/assets/icons/logo-512.png",
         "description": "Aile, ceza, iş, ticaret ile icra ve iflas hukuku alanlarında dava takibi ve hukuki danışmanlık hizmeti veren hukuk bürosu.",
         "telephone": "+905518214444",
         "email": "gelegenhukuk@gmail.com",
@@ -70,7 +77,17 @@
           "addressRegion": "Malatya",
           "addressCountry": "TR"
         },
-        "areaServed": { "@type": "Country", "name": "Türkiye" },
+        "areaServed": [
+          { "@type": "City", "name": "Malatya" },
+          { "@type": "AdministrativeArea", "name": "Battalgazi" },
+          { "@type": "Country", "name": "Türkiye" }
+        ],
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.3483161,
+          "longitude": 38.3204169
+        },
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=38.3483161,38.3204169",
         "availableLanguage": ["Turkish", "English"],
         "openingHoursSpecification": [{
           "@type": "OpeningHoursSpecification",
@@ -163,9 +180,9 @@
           <!-- &nbsp; unvanı isimden ayırmaz; satır sonu yalnızca "&" işaretinde
                oluşur, böylece dar ekranda "AV." tek başına alt satıra düşmez. -->
           <p class="eyebrow eyebrow--light">Av.&nbsp;Mustafa&nbsp;Gelegen &amp; Av.&nbsp;Merve&nbsp;Gelegen</p>
-          <h1>Hukuki süreçlerinizde<br><em>güvenilir</em> yol arkadaşınız</h1>
+          <h1>Malatya'da hukuki süreçlerinizde<br><em>güvenilir</em> yol arkadaşınız</h1>
           <p class="hero__lead">
-            Gelegen Hukuk Bürosu; bireysel ve kurumsal müvekkillerine çeşitli hukuk
+            Gelegen Hukuk Bürosu; Malatya'da bireysel ve kurumsal müvekkillerine çeşitli hukuk
             alanlarında dava takibi ve hukuki danışmanlık hizmeti sunar.
             Her dosyayı, kendi koşulları içinde titizlikle değerlendirir,
             müvekkillerimizin ihtiyaçlarına uygun çözüm odaklı hukuki yaklaşımlar geliştiririz.
@@ -213,7 +230,7 @@
           </p>
         </div>
 
-        <div class="grid grid--auto grid--center">
+        <div class="grid grid--auto grid--left">
           <article class="card reveal">
             <span class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -419,7 +436,7 @@
           <p class="eyebrow">Nasıl Çalışıyoruz?</p>
           <h2 id="surec-baslik">İlk görüşmeden sonuca kadar</h2>
         </div>
-        <ol class="steps steps--center">
+        <ol class="steps steps--left">
           <li class="step reveal">
             <span class="step__num" aria-hidden="true"></span>
             <h3>Randevu ve Ön Görüşme</h3>

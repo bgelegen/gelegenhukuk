@@ -24,6 +24,7 @@ copy "404.html"            "yayin\" >nul
 copy "robots.txt"          "yayin\" >nul
 copy "sitemap.xml"         "yayin\" >nul
 copy "site.webmanifest"    "yayin\" >nul
+copy "favicon.ico"         "yayin\" >nul
 copy "_headers"            "yayin\" >nul
 
 echo.

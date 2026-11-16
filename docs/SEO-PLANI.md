@@ -62,14 +62,14 @@ Her sayfada bulunanlar:
 ```html
 <meta name="description" content="…150–160 karakter, eylem çağrısı içeren özet…">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="https://www.gelegenhukuk.com/…">
+<link rel="canonical" href="https://gelegenhukuk.com/…">
 <meta property="og:title" / "og:description" / "og:image" / "og:url" / "og:type">
 <meta name="twitter:card" content="summary_large_image">
 <html lang="tr">  ·  <meta charset="UTF-8">  ·  viewport
 ```
 
 - **404.html** → `noindex, follow` (hata sayfası dizine girmemeli).
-- **Canonical**, `www` sürümüne ve HTTPS'e sabitlenmiştir; `.htaccess` de aynı adrese 301 yönlendirir → içerik tekrarı (duplicate content) önlenir.
+- **Canonical**, `www`'suz sürüme ve HTTPS'e sabitlenmiştir (`https://gelegenhukuk.com/`); `http://` ve `www.` adresleri barındırma tarafında (Netlify/Cloudflare) aynı adrese 301 ile yönlendirilir → içerik tekrarı (duplicate content) önlenir.
 - Açıklamalar birbirinin kopyası değildir; her sayfa kendi konusunu anlatır.
 
 ## 4. Yapısal veri (Schema.org / JSON-LD)
@@ -100,8 +100,8 @@ Doğrulama: <https://search.google.com/test/rich-results> ve <https://validator.
 |---|---|
 | `robots.txt` | ✅ Var — `docs/` ve `404.html` hariç tutulmuş, sitemap bildirilmiş |
 | `sitemap.xml` | ✅ Var — 5 URL, `lastmod`/`priority` tanımlı |
-| HTTPS | ✅ `.htaccess` ile 301 zorunlu yönlendirme |
-| Tek kanonik alan adı | ✅ `gelegenhukuk.com` → `www.gelegenhukuk.com` |
+| HTTPS | ✅ `http://` → `https://` 301 zorunlu yönlendirme (Netlify/Cloudflare) |
+| Tek kanonik alan adı | ✅ `www.gelegenhukuk.com` → `gelegenhukuk.com` (301) |
 | Mobil uyum | ✅ Mobile-first, `viewport` tanımlı (Google mobile-first indexing) |
 | Sayfa hızı | ✅ Sıfır JS kütüphanesi, ~15KB JS, SVG görseller, `defer`, uzun önbellek |
 | CLS | ✅ Görsellerde `width`/`height`, fontlarda `display=swap` |

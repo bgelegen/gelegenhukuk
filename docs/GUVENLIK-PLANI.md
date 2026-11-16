@@ -60,8 +60,8 @@ object-src 'none';                  → Flash/plugin tamamen kapalı
 frame-ancestors 'self';             → X-Frame-Options'ın modern karşılığı
 form-action 'self';                 → form verisi başka siteye POST edilemez
 script-src 'self' 'sha256-…' × 4;   → satır içi JSON-LD blokları HASH ile izinli
-style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-font-src 'self' https://fonts.gstatic.com;
+style-src 'self';                   → yalnızca sitenin kendi CSS dosyaları; satır içi stil yok
+font-src 'self';                    → yazı tipleri assets/fonts'tan (Google'a istek gitmez)
 img-src 'self' data:;
 frame-src https://maps.google.com https://www.google.com;
 connect-src 'self';
@@ -148,7 +148,7 @@ yayına çıkıp veri kaybı yaşanmaz.
 | Durum | Doğru yaklaşım |
 |---|---|
 | **Google Maps** | Bu sitede **API anahtarı kullanılmıyor.** Harita, anahtar gerektirmeyen `maps.google.com/maps?q=…&output=embed` adresiyle ve yalnızca kullanıcı onayıyla yükleniyor. |
-| Anahtar gerekirse (Maps JS API) | Google Cloud Console'da anahtarı **HTTP referrer** kısıtına bağlayın (`https://www.gelegenhukuk.com/*`) ve yalnızca gerekli API'yi etkinleştirin. Kısıtlanmış anahtar istemcide bulunabilir. |
+| Anahtar gerekirse (Maps JS API) | Google Cloud Console'da anahtarı **HTTP referrer** kısıtına bağlayın (`https://gelegenhukuk.com/*`) ve yalnızca gerekli API'yi etkinleştirin. Kısıtlanmış anahtar istemcide bulunabilir. |
 | E-posta gönderim anahtarı (SendGrid, Resend, SMTP şifresi) | **ASLA** istemciye konmaz. Sunucu tarafında ortam değişkeni (`.env`) olarak tutulur, `.env` dosyası sürüm kontrolüne eklenmez. |
 | Analytics ölçüm kimliği | Zaten herkese açıktır (gizli değildir), sorun değil. |
 | Sızmış anahtar | Derhal **iptal edip yenileyin** (rotate). Git geçmişinden silmek yeterli değildir. |

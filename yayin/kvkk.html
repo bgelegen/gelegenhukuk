@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0A1628">
+  <meta name="theme-color" content="#0A1424">
 
   <title>KVKK Aydınlatma Metni | Gelegen Hukuk Bürosu</title>
   <meta name="description" content="6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında Gelegen Hukuk Bürosu aydınlatma metni: işlenen veriler, amaçlar, saklama süreleri ve ilgili kişi hakları.">
@@ -21,17 +21,18 @@
   <link rel="apple-touch-icon" href="/assets/icons/logo-180.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap">
+  <!-- Yazı tipleri sitenin kendi sunucusunda (css/style.css § 0). İlk ekranda
+       görünen iki dosya önceden yüklenir; Google'a istek gitmez. -->
+  <link rel="preload" href="assets/fonts/libre-caslon-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- JS etkinse <html> öğesine "js" sınıfı eklenir. Kaydırma animasyonları
        yalnızca bu sınıf varken çalışır; JS kapalıyken içerik gizlenmez. -->
   <script>document.documentElement.classList.add("js");</script>
 
-  <link rel="stylesheet" href="css/style.css?v=33">
-  <link rel="stylesheet" href="css/responsive.css?v=33">
-  <link rel="stylesheet" href="css/print.css?v=33" media="print">
+  <link rel="stylesheet" href="css/style.css?v=44">
+  <link rel="stylesheet" href="css/responsive.css?v=44">
+  <link rel="stylesheet" href="css/print.css?v=40" media="print">
 </head>
 
 <body>
@@ -40,9 +41,9 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="index.html" aria-label="Gelegen Hukuk Bürosu — Anasayfa">
-        <img class="brand__logo" src="assets/img/logo.webp" alt="Gelegen Hukuk Bürosu logosu" width="42" height="42">
+        <img class="brand__logo" src="assets/img/logo-sm.png" alt="Gelegen Hukuk Bürosu logosu" width="42" height="42">
         <span class="brand__text">
-          <span class="brand__name">Gelegen</span>
+          <span class="brand__name" translate="no">Gelegen</span>
           <span class="brand__sub">Hukuk Bürosu</span>
         </span>
       </a>
@@ -92,7 +93,7 @@
           (Av. Mustafa Gelegen ve Av. Merve Gelegen) tarafından aşağıda açıklanan kapsamda işlenmektedir.
         </p>
         <ul>
-          <li>Adres: <span data-site="adres">Saray Mahallesi, Şehit Fahri Koçyiğit Sokak, Koçyiğit İş Merkezi No: 9, Kat: 2, Daire: 3, Battalgazi / Malatya</span></li>
+          <li>Adres: <span data-site="adres">Saray Mahallesi, Murat Kurum Caddesi, G-&#8288;05 Blok, Dış Kapı No: 12, Kat: 2, Daire: 17, Battalgazi / Malatya</span></li>
           <li>E-posta: <a href="mailto:gelegenhukuk@gmail.com" data-site="eposta">gelegenhukuk@gmail.com</a></li>
           <li>Telefon: <a href="tel:+905518214444" data-site="telefon">+90 (551) 821 44 44</a></li>
         </ul>
@@ -180,7 +181,7 @@
           yalnızca sizin onayınızla yüklenir.
         </p>
 
-        <p style="margin-top: var(--sp-8)">
+        <p class="legal__back">
           <a class="link-arrow" href="iletisim.html">
             İletişim sayfasına dön
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -199,7 +200,7 @@
     </div>
   </footer>
 
-  <script src="js/data.js"></script>
+  <script src="js/data.js?v=35"></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>

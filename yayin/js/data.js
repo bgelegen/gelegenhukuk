@@ -32,8 +32,8 @@
 
     // Büro adresi
     adres: {
-      satir1: "Saray Mahallesi, Şehit Fahri Koçyiğit Sokak",
-      satir2: "Koçyiğit İş Merkezi No: 9, Kat: 2, Daire: 3",
+      satir1: "Saray Mahallesi, Murat Kurum Caddesi",
+      satir2: "G-\u206005 Blok, Dış Kapı No: 12, Kat: 2, Daire: 17",   // \u2060: "G-" ile "05" ayrı satıra düşmesin
       ilce: "Battalgazi",
       il: "Malatya",
       postaKodu: "",              // biliniyorsa ekleyin (Battalgazi merkez 44xxx)
@@ -41,11 +41,12 @@
     },
 
     // Google Haritalar bağlantıları (API anahtarı GEREKTİRMEZ — bkz. GUVENLIK-PLANI.md)
-    // Koordinat: büronun tam konumu (Koçyiğit İş Merkezi, Battalgazi/Malatya)
+    // Konum: Murat Kurum Cd. G-05 Blok (38.34786793972292, 38.32065000710417).
+    // Değişirse iletisim.html (harita) ve index.html (JSON-LD geo/hasMap) da güncellenmeli.
     // haritaLink: GOOGLE Haritalar yol tarifi (hedef = büro konumu)
-    haritaLink: "https://www.google.com/maps/dir/?api=1&destination=38.34831614441364,38.32041685988208",
+    haritaLink: "https://www.google.com/maps/dir/?api=1&destination=38.34786793972292,38.32065000710417",
     // haritaAppleLink: APPLE Haritalar yol tarifi (aynı hedef)
-    haritaAppleLink: "https://maps.apple.com/?daddr=38.34831614441364,38.32041685988208&dirflg=d",
+    haritaAppleLink: "https://maps.apple.com/?daddr=38.34786793972292,38.32065000710417&dirflg=d",
 
     // Sosyal medya — kullanılmayanları boş bırakın, arayüzde gizlenir
     sosyal: {

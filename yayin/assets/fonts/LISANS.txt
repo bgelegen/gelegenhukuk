@@ -1,0 +1,7 @@
+Bu klasördeki yazı tipleri SIL Open Font License 1.1 ile lisanslanmıştır
+ve Google Fonts üzerinden alınmıştır (latin + latin-ext alt kümeleri).
+
+  Libre Caslon Display / Libre Caslon Text — Copyright Impallari Type
+  Public Sans — Copyright USWDS (U.S. Web Design System)
+
+Lisans metni: https://openfontlicense.org

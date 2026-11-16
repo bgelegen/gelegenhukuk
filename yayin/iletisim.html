@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0A1628">
+  <meta name="theme-color" content="#0A1424">
 
   <title>İletişim ve Randevu | Malatya Gelegen Hukuk Bürosu</title>
   <meta name="description" content="Malatya Battalgazi'deki Gelegen Hukuk Bürosu iletişim bilgileri, çalışma saatleri ve randevu talep formu. Av. Mustafa Gelegen ve Av. Merve Gelegen ile görüşme için bize ulaşın.">
@@ -30,17 +30,18 @@
   <link rel="apple-touch-icon" href="/assets/icons/logo-180.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap">
+  <!-- Yazı tipleri sitenin kendi sunucusunda (css/style.css § 0). İlk ekranda
+       görünen iki dosya önceden yüklenir; Google'a istek gitmez. -->
+  <link rel="preload" href="assets/fonts/libre-caslon-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- JS etkinse <html> öğesine "js" sınıfı eklenir. Kaydırma animasyonları
        yalnızca bu sınıf varken çalışır; JS kapalıyken içerik gizlenmez. -->
   <script>document.documentElement.classList.add("js");</script>
 
-  <link rel="stylesheet" href="css/style.css?v=33">
-  <link rel="stylesheet" href="css/responsive.css?v=33">
-  <link rel="stylesheet" href="css/print.css?v=33" media="print">
+  <link rel="stylesheet" href="css/style.css?v=44">
+  <link rel="stylesheet" href="css/responsive.css?v=44">
+  <link rel="stylesheet" href="css/print.css?v=40" media="print">
 
   <script type="application/ld+json">
   {
@@ -70,9 +71,9 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="index.html" aria-label="Gelegen Hukuk Bürosu — Anasayfa">
-        <img class="brand__logo" src="assets/img/logo.webp" alt="Gelegen Hukuk Bürosu logosu" width="42" height="42">
+        <img class="brand__logo" src="assets/img/logo-sm.png" alt="Gelegen Hukuk Bürosu logosu" width="42" height="42">
         <span class="brand__text">
-          <span class="brand__name">Gelegen</span>
+          <span class="brand__name" translate="no">Gelegen</span>
           <span class="brand__sub">Hukuk Bürosu</span>
         </span>
       </a>
@@ -204,7 +205,7 @@
               <textarea id="mesaj" name="mesaj" required minlength="20" maxlength="2000"
                         placeholder="Konuyu kısaca özetleyin. Hassas bilgi paylaşmayın."
                         aria-describedby="mesajHata mesajSayac"></textarea>
-              <div style="display: flex; justify-content: space-between; gap: var(--sp-4)">
+              <div class="field__meta">
                 <p class="field__error" id="mesajHata" aria-live="polite"></p>
                 <p class="field__hint" id="mesajSayac">0 / 2000</p>
               </div>
@@ -270,9 +271,9 @@
                 <div>
                   <p class="info-item__label">Adres</p>
                   <p class="info-item__value">
-                    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Saray%20Mahallesi%2C%20%C5%9Eehit%20Fahri%20Ko%C3%A7yi%C4%9Fit%20Sokak%20No%3A9%2C%20Battalgazi%2FMalatya"
+                    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=38.34786793972292,38.32065000710417"
                        target="_blank" rel="noopener noreferrer" data-site="adres">
-                      Saray Mahallesi, Şehit Fahri Koçyiğit Sokak, Koçyiğit İş Merkezi No: 9, Kat: 2, Daire: 3, Battalgazi / Malatya
+                      Saray Mahallesi, Murat Kurum Caddesi, G-&#8288;05 Blok, Dış Kapı No: 12, Kat: 2, Daire: 17, Battalgazi / Malatya
                     </a>
                   </p>
                 </div>
@@ -290,21 +291,21 @@
               </li>
             </ul>
 
-            <div style="display: grid; gap: var(--sp-3); margin-top: var(--sp-6)">
-              <a class="btn btn--dark btn--block" href="tel:+905518214444" data-site="telefon" data-site-keep>Hemen Ara</a>
+            <div class="info-actions">
+              <a class="btn btn--dark btn--block" href="tel:+905518214444" data-site="telefon" data-site-keep>Telefonla Ulaşın</a>
             </div>
           </div>
 
           <!-- Büro konum haritası — doğrudan gömülü (butonsuz, hep görünür).
                Haritaya tıklanınca hangi uygulamada yol tarifi açılacağı sorulur. -->
-          <div class="map-embed" style="margin-top: var(--sp-5)">
+          <div class="map-embed stack-gap">
             <iframe class="map-embed__frame"
-                    src="https://maps.google.com/maps?q=38.34831614441364,38.32041685988208&amp;hl=tr&amp;z=17&amp;output=embed"
+                    src="https://maps.google.com/maps?q=38.34786793972292,38.32065000710417&amp;hl=tr&amp;z=17&amp;output=embed"
                     title="Büro konumu — Gelegen Hukuk Bürosu (Battalgazi / Malatya)"
                     loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
             <!-- Tıklama katmanı: JS varsa uygulama seçimi açar; JS yoksa doğrudan Google'a gider -->
             <a class="map-embed__overlay" data-map-directions
-               href="https://www.google.com/maps/dir/?api=1&amp;destination=38.34831614441364,38.32041685988208"
+               href="https://www.google.com/maps/dir/?api=1&amp;destination=38.34786793972292,38.32065000710417"
                target="_blank" rel="noopener noreferrer" aria-label="Büroya yol tarifi al">
               <span class="map-embed__hint">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 20l-6-3V4l6 3m0 13 6-3m-6 3V7m6 10 6 3V7l-6-3m0 13V4m0 0L9 7"/></svg>
@@ -313,7 +314,7 @@
             </a>
           </div>
 
-          <div class="notice" style="margin-top: var(--sp-5)">
+          <div class="notice stack-gap">
             <strong>Acil durumlar</strong>
             Gözaltı, tutuklama veya süresi dolmak üzere olan bir başvuru gibi acil hâllerde
             lütfen form yerine doğrudan telefonla arayın.
@@ -344,9 +345,9 @@
       <div class="footer-grid">
         <div class="footer-about">
           <a class="brand" href="index.html">
-            <img class="brand__logo" src="assets/img/logo.webp" alt="Gelegen Hukuk Bürosu logosu" width="42" height="42">
+            <img class="brand__logo" src="assets/img/logo-sm.png" alt="Gelegen Hukuk Bürosu logosu" width="42" height="42">
             <span class="brand__text">
-              <span class="brand__name">Gelegen</span>
+              <span class="brand__name" translate="no">Gelegen</span>
               <span class="brand__sub">Hukuk Bürosu</span>
             </span>
           </a>
@@ -382,7 +383,7 @@
           <ul class="footer-contact">
             <li><a href="tel:+905518214444" data-site="telefon">+90 (551) 821 44 44</a></li>
             <li><a href="mailto:gelegenhukuk@gmail.com" data-site="eposta">gelegenhukuk@gmail.com</a></li>
-            <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Saray%20Mahallesi%2C%20%C5%9Eehit%20Fahri%20Ko%C3%A7yi%C4%9Fit%20Sokak%20No%3A9%2C%20Battalgazi%2FMalatya" target="_blank" rel="noopener noreferrer" data-site="adres">Saray Mahallesi, Şehit Fahri Koçyiğit Sokak, Koçyiğit İş Merkezi No: 9, Kat: 2, Daire: 3, Battalgazi / Malatya</a></li>
+            <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=38.34786793972292,38.32065000710417" target="_blank" rel="noopener noreferrer" data-site="adres">Saray Mahallesi, Murat Kurum Caddesi, G-&#8288;05 Blok, Dış Kapı No: 12, Kat: 2, Daire: 17, Battalgazi / Malatya</a></li>
             <li>Pazartesi – Cuma: 09:00 – 18:00</li>
           </ul>
         </div>
@@ -403,7 +404,7 @@
     </button>
   </div>
 
-  <script src="js/data.js?v=32"></script>
+  <script src="js/data.js?v=35"></script>
   <script src="js/main.js?v=32" defer></script>
   <script src="js/form.js?v=32" defer></script>
 </body>

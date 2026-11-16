@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0A1628">
+  <meta name="theme-color" content="#0A1424">
 
   <!-- ===== SEO: Temel meta etiketleri ===================================== -->
   <title>Malatya Avukat | Gelegen Hukuk Bürosu</title>
@@ -40,19 +40,20 @@
   <link rel="apple-touch-icon" href="/assets/icons/logo-180.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <!-- ===== Yazı tipleri (performans: preconnect + display=swap) =========== -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap">
+  <!-- ===== Yazı tipleri ================================================== -->
+  <!-- Yazı tipleri sitenin kendi sunucusunda (css/style.css § 0). İlk ekranda
+       görünen iki dosya önceden yüklenir; Google'a istek gitmez. -->
+  <link rel="preload" href="assets/fonts/libre-caslon-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- ===== Stiller ======================================================== -->
   <!-- JS etkinse <html> öğesine "js" sınıfı eklenir. Kaydırma animasyonları
        yalnızca bu sınıf varken çalışır; JS kapalıyken içerik gizlenmez. -->
   <script>document.documentElement.classList.add("js");</script>
 
-  <link rel="stylesheet" href="css/style.css?v=33">
-  <link rel="stylesheet" href="css/responsive.css?v=33">
-  <link rel="stylesheet" href="css/print.css?v=33" media="print">
+  <link rel="stylesheet" href="css/style.css?v=44">
+  <link rel="stylesheet" href="css/responsive.css?v=44">
+  <link rel="stylesheet" href="css/print.css?v=40" media="print">
 
   <!-- ===== SEO: Yapısal veri (Schema.org / JSON-LD) ======================= -->
   <script type="application/ld+json">
@@ -72,7 +73,7 @@
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Saray Mahallesi, Şehit Fahri Koçyiğit Sokak, Koçyiğit İş Merkezi No: 9, Kat: 2, Daire: 3",
+          "streetAddress": "Saray Mahallesi, Murat Kurum Caddesi, G-05 Blok, Dış Kapı No: 12, Kat: 2, Daire: 17",
           "addressLocality": "Battalgazi",
           "addressRegion": "Malatya",
           "addressCountry": "TR"
@@ -84,10 +85,10 @@
         ],
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 38.3483161,
-          "longitude": 38.3204169
+          "latitude": 38.3478679,
+          "longitude": 38.3206500
         },
-        "hasMap": "https://www.google.com/maps/search/?api=1&query=38.3483161,38.3204169",
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=38.3478679,38.3206500",
         "availableLanguage": ["Turkish", "English"],
         "openingHoursSpecification": [{
           "@type": "OpeningHoursSpecification",
@@ -142,9 +143,9 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="index.html" aria-label="Gelegen Hukuk Bürosu — Anasayfa">
-        <img class="brand__logo" src="assets/img/logo.webp" alt="Gelegen Hukuk Bürosu logosu" width="42" height="42">
+        <img class="brand__logo" src="assets/img/logo-sm.png" alt="Gelegen Hukuk Bürosu logosu" width="42" height="42">
         <span class="brand__text">
-          <span class="brand__name">Gelegen</span>
+          <span class="brand__name" translate="no">Gelegen</span>
           <span class="brand__sub">Hukuk Bürosu</span>
         </span>
       </a>
@@ -175,12 +176,30 @@
 
     <!-- ====================== HERO ====================== -->
     <section class="hero">
+      <!-- Arka plan videosu (Blender'da render edilmiş, kesintisiz döngü). Süs amaçlı;
+           ekran okuyucudan gizli. Oynatmayı js/hero-video.js yönetir; JS yoksa /
+           hareket azaltılmışsa yalnızca poster görünür. Telefon/tablette 1280 px,
+           geniş ekranda 1920 px H.264 sürüm yüklenir.
+           SAHNELER (assets/video):
+             terazi-*   → Adalet terazisi
+             adliye-*   → Adliye sütunları (ilk sürüm)
+             adliye2-*  → Adliye sütunları, gerçekçi Cycles sürümü (ŞU AN SEÇİLİ)
+           Sahne değiştirmek için aşağıdaki 3 satırdaki dosya adının başını
+           (terazi / adliye / adliye2) değiştirmek yeterli. -->
+      <div class="hero__media" aria-hidden="true">
+        <video class="hero__video" muted loop playsinline preload="auto"
+               disablepictureinpicture disableremoteplayback
+               poster="assets/video/adliye2-poster.jpg" width="1920" height="1080">
+          <source src="assets/video/adliye2-1280.mp4" type="video/mp4" media="(max-width: 1279px)">
+          <source src="assets/video/adliye2-1920.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="container hero__inner">
         <div>
           <!-- &nbsp; unvanı isimden ayırmaz; satır sonu yalnızca "&" işaretinde
                oluşur, böylece dar ekranda "AV." tek başına alt satıra düşmez. -->
           <p class="eyebrow eyebrow--light">Av.&nbsp;Mustafa&nbsp;Gelegen &amp; Av.&nbsp;Merve&nbsp;Gelegen</p>
-          <h1>Malatya'da hukuki süreçlerinizde<br><em>güvenilir</em> yol arkadaşınız</h1>
+          <h1>Malatya'da hukuki süreçlerinizde<br>güvenilir yol arkadaşınız</h1>
           <p class="hero__lead">
             Gelegen Hukuk Bürosu; Malatya'da bireysel ve kurumsal müvekkillerine çeşitli hukuk
             alanlarında dava takibi ve hukuki danışmanlık hizmeti sunar.
@@ -209,7 +228,7 @@
         </div>
 
         <aside class="hero__emblem" aria-hidden="true">
-          <img class="hero__emblem-logo" src="assets/img/logo.webp" alt="">
+          <img class="hero__emblem-logo" src="assets/img/logo.webp" alt="" width="750" height="609" fetchpriority="high">
           <blockquote>
             Adalet, mülkün temelidir.
             <cite>Türk Hukuk Geleneği</cite>
@@ -347,13 +366,11 @@
             <div class="lawyer__body">
               <p class="lawyer__role">Avukat / Kurucu Ortak</p>
               <h3 class="lawyer__name">Av. Mustafa Gelegen</h3>
+              <p class="lawyer__bar">Malatya Barosu</p>
               <p class="lawyer__desc">
                 Aile, ceza, iş ve sosyal güvenlik, ticaret ve şirketler, icra ve iflas, gayrimenkul,
                 miras ile idare ve vergi hukuku alanlarında dava takibi ve danışmanlık hizmeti vermektedir.
               </p>
-              <ul class="lawyer__tags">
-                <li>Aile Hukuku</li><li>Ceza Hukuku</li><li>İş ve Sosyal Güvenlik Hukuku</li><li>Ticaret ve Şirketler Hukuku</li><li>İcra ve İflas Hukuku</li><li>Gayrimenkul Hukuku</li><li>Miras Hukuku</li><li>İdare ve Vergi Hukuku</li>
-              </ul>
               <div class="lawyer__actions">
                 <button class="btn btn--outline btn--sm" type="button" data-lawyer="mustafa-gelegen">
                   Detaylı Profil
@@ -371,14 +388,12 @@
             <div class="lawyer__body">
               <p class="lawyer__role">Avukat / Kurucu Ortak</p>
               <h3 class="lawyer__name">Av. Merve Gelegen</h3>
+              <p class="lawyer__bar">Malatya Barosu</p>
               <p class="lawyer__desc">
                 Aile, ceza, iş ve sosyal güvenlik, ticaret ve şirketler, icra ve iflas, gayrimenkul,
                 miras ile idare ve vergi hukuku alanlarında dava takibi, sözleşme hazırlığı ve
                 kurumsal danışmanlık yürütmektedir.
               </p>
-              <ul class="lawyer__tags">
-                <li>Aile Hukuku</li><li>Ceza Hukuku</li><li>İş ve Sosyal Güvenlik Hukuku</li><li>Ticaret ve Şirketler Hukuku</li><li>İcra ve İflas Hukuku</li><li>Gayrimenkul Hukuku</li><li>Miras Hukuku</li><li>İdare ve Vergi Hukuku</li>
-              </ul>
               <div class="lawyer__actions">
                 <button class="btn btn--outline btn--sm" type="button" data-lawyer="merve-gelegen">
                   Detaylı Profil
@@ -394,9 +409,6 @@
     <!-- ====================== HAKKIMIZDA (özet) ====================== -->
     <section class="section" aria-labelledby="hakkimizda-ozet-baslik">
       <div class="container split">
-        <div class="split__media reveal" aria-hidden="true">
-          <img src="assets/img/logo.webp" alt="Gelegen Hukuk Bürosu logosu" width="240" height="240" loading="lazy">
-        </div>
         <div class="reveal">
           <p class="eyebrow">Hakkımızda</p>
           <h2 id="hakkimizda-ozet-baslik">Anlaşılır hukuk, öngörülebilir süreç</h2>
@@ -419,13 +431,41 @@
               <span><strong>Erişilebilirlik</strong>Dosyanızdaki gelişmeler, duruşma ve tebligat aşamalarında düzenli olarak bildirilir.</span>
             </li>
           </ul>
-          <p style="margin-top: var(--sp-6)">
+          <p class="more-link">
             <a class="link-arrow" href="hakkimizda.html">
               Büromuz hakkında daha fazlası
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
           </p>
         </div>
+
+        <!-- Büro künyesi: resmî evraktaki antet bilgileri gibi, büroyu tanımlayan
+             temel kayıtlar. Adres metni ve bağlantısı data.js'ten güncellenir. -->
+        <aside class="register reveal" aria-labelledby="kunye-baslik">
+          <h3 class="register__title" id="kunye-baslik">Büro künyesi</h3>
+          <dl class="register__list">
+            <div>
+              <dt>Unvan</dt>
+              <dd>Gelegen Hukuk Bürosu</dd>
+            </div>
+            <div>
+              <dt>Avukatlar</dt>
+              <dd>Av. Mustafa Gelegen<br>Av. Merve Gelegen</dd>
+            </div>
+            <div>
+              <dt>Baro</dt>
+              <dd>Malatya Barosu</dd>
+            </div>
+            <div>
+              <dt>Adres</dt>
+              <dd><a href="iletisim.html" data-site="adres">Saray Mahallesi, Murat Kurum Caddesi, G-&#8288;05 Blok, Dış Kapı No: 12, Kat: 2, Daire: 17, Battalgazi / Malatya</a></dd>
+            </div>
+            <div>
+              <dt>Görüşme</dt>
+              <dd>Randevu ile<br>Pazartesi – Cuma, 09:00 – 18:00</dd>
+            </div>
+          </dl>
+        </aside>
       </div>
     </section>
 
@@ -524,7 +564,7 @@
             size dönüş yapalım.
           </p>
           <div class="cta-band__actions">
-            <a class="btn btn--primary" href="tel:+905518214444" data-site="telefon" data-site-keep>Hemen Arayın</a>
+            <a class="btn btn--primary" href="tel:+905518214444" data-site="telefon" data-site-keep>Telefonla Ulaşın</a>
             <a class="btn btn--ghost" href="iletisim.html">İletişim Formu</a>
           </div>
         </div>
@@ -538,9 +578,9 @@
       <div class="footer-grid">
         <div class="footer-about">
           <a class="brand" href="index.html">
-            <img class="brand__logo" src="assets/img/logo.webp" alt="Gelegen Hukuk Bürosu logosu" width="42" height="42">
+            <img class="brand__logo" src="assets/img/logo-sm.png" alt="Gelegen Hukuk Bürosu logosu" width="42" height="42">
             <span class="brand__text">
-              <span class="brand__name">Gelegen</span>
+              <span class="brand__name" translate="no">Gelegen</span>
               <span class="brand__sub">Hukuk Bürosu</span>
             </span>
           </a>
@@ -576,7 +616,7 @@
           <ul class="footer-contact">
             <li><a href="tel:+905518214444" data-site="telefon">+90 (551) 821 44 44</a></li>
             <li><a href="mailto:gelegenhukuk@gmail.com" data-site="eposta">gelegenhukuk@gmail.com</a></li>
-            <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Saray%20Mahallesi%2C%20%C5%9Eehit%20Fahri%20Ko%C3%A7yi%C4%9Fit%20Sokak%20No%3A9%2C%20Battalgazi%2FMalatya" target="_blank" rel="noopener noreferrer" data-site="adres">Saray Mahallesi, Şehit Fahri Koçyiğit Sokak, Koçyiğit İş Merkezi No: 9, Kat: 2, Daire: 3, Battalgazi / Malatya</a></li>
+            <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=38.34786793972292,38.32065000710417" target="_blank" rel="noopener noreferrer" data-site="adres">Saray Mahallesi, Murat Kurum Caddesi, G-&#8288;05 Blok, Dış Kapı No: 12, Kat: 2, Daire: 17, Battalgazi / Malatya</a></li>
             <li>Pazartesi – Cuma: 09:00 – 18:00</li>
           </ul>
         </div>
@@ -611,7 +651,8 @@
   </div>
 
   <!-- ====================== SCRIPTLER ====================== -->
-  <script src="js/data.js?v=32"></script>
+  <script src="js/data.js?v=35"></script>
   <script src="js/main.js?v=32" defer></script>
+  <script src="js/hero-video.js?v=1" defer></script>
 </body>
 </html>

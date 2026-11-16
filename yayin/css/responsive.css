@@ -19,6 +19,16 @@
 /* ==========================================================================
    MOBİL (< 768px) — dar ekrana özel düzeltmeler
    ========================================================================== */
+/* Tek sütunlu hero (< 1280px): metin tüm genişliği kaplar, video perdesi
+   her yerde koyu; amblemin bulunduğu alt kısım biraz daha açık. */
+@media (max-width: 1279px) {
+  .hero__media::after {
+    background: linear-gradient(180deg,
+      rgba(10, 20, 36, 0.70) 0%, rgba(10, 20, 36, 0.78) 45%,
+      rgba(10, 20, 36, 0.52) 78%, rgba(10, 20, 36, 0.88) 100%);
+  }
+}
+
 @media (max-width: 767px) {
   /* YASLAMA BOŞLUKLARI — genel gövde metni.
      Satır başına düşen karakter arttıkça yaslamanın açtığı boşluk azalır.
@@ -166,9 +176,15 @@
 
   .grid--2 { grid-template-columns: repeat(2, 1fr); }
 
+  /* Çalışma alanları dizini: iki sütun */
+  .grid--left { grid-template-columns: repeat(2, 1fr); column-gap: var(--sp-8); }
+
   .steps { grid-template-columns: repeat(2, 1fr); gap: var(--sp-6); }
 
   .split { grid-template-columns: 1fr 1fr; gap: var(--sp-8); }
+
+  /* Künye: etiket solda, değer sağda */
+  .register__list > div { grid-template-columns: 9.5rem 1fr; align-items: start; }
   .split--reverse .split__media { order: 2; }
 
   /* Avukat kartı bu genişlikte HÂLÂ dikey (portre üstte, metin altta).
@@ -176,6 +192,14 @@
      portre kolonu kartın yarısını kaplar ve dava maddeleri 3–4 satıra
      bölünerek sıkışık görünür. */
   .lawyer-card__body { padding: var(--sp-7); gap: var(--sp-4); }
+  .lawyer-card__head {
+    grid-template-columns: auto 1fr;
+    justify-items: start;
+    align-items: center;
+    text-align: left;
+    gap: var(--sp-7);
+    padding: var(--sp-8);
+  }
 
   .contact-layout { grid-template-columns: 1fr; }
 
@@ -195,7 +219,8 @@
   /* Avukat profil kartı: bu genişlikten itibaren yatay yerleşim.
      Portre kolonu dar tutulur ki "Yürütülen İş ve Davalar" maddeleri
      tek satıra sığsın. */
-  .lawyer-card__grid { grid-template-columns: minmax(290px, 330px) 1fr; }
+  .lawyer-card__frame { width: 200px; }
+  .lawyer-card__bio { text-align: justify; }
 
   /* Hamburger ve çekmece kaldırılır, yatay menü devreye girer */
   .nav-toggle { display: none; }
@@ -219,8 +244,7 @@
     position: relative;
     padding: var(--sp-3) var(--sp-4);
     border-bottom: 0;
-    font-size: var(--fs-xs);
-    letter-spacing: 0.14em;
+    font-size: 0.95rem;
   }
   /* Aktif/hover durumunda alt çizgi animasyonu */
   .site-nav a::after {
@@ -267,8 +291,6 @@
     grid-template-columns: 1.15fr 0.85fr;
     gap: var(--sp-9);
   }
-  .hero__emblem { padding: var(--sp-8); }
-
   .page-hero__inner { max-width: 78%; }
 }
 
@@ -295,11 +317,8 @@
    GİRDİ TÜRÜ — dokunmatik cihazlarda hover efektlerini kapat
    ========================================================================== */
 @media (hover: none) {
-  .card:hover { transform: none; box-shadow: none; }
-  .card:hover::after { opacity: 1; }        /* dokunmatikte vurgu hep açık */
-  .lawyer:hover { transform: none; box-shadow: none; }
-  .lawyer:hover .lawyer__media img { transform: none; }
   .fab:hover { transform: none; }
+  .lawyer:hover .lawyer__media img { transform: none; }
 }
 
 /* İnce işaretçi (fare) olan cihazlarda daha kompakt dokunma hedefleri */
@@ -320,8 +339,10 @@
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
-  .js .reveal,
-  .reveal { opacity: 1; transform: none; }
+  /* Gecikmeli açılış animasyonları gecikme süresince görünmez kalmasın */
+  .hero *,
+  .hero *::before { animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
 }
 
 /* Yüksek kontrast tercihi */
@@ -331,7 +352,7 @@
     --c-muted: #44505F;
     --c-line: #C9C1B4;
   }
-  .btn--primary { background: var(--c-gold-600); color: #fff; }
+  .btn--primary { background: var(--c-gold-200); color: var(--c-navy-950); }
 }
 
 /* ==========================================================================

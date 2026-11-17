@@ -1,0 +1,246 @@
+# -*- coding: utf-8 -*-
+"""
+Makaleler ve çalışma alanı sayfalarını üretir.
+
+    python3 tools/uret.py          (proje kökünden çalıştırın)
+
+Üretilen dosyalar: makaleler.html, calisma-alanlari.html, her makale ve her
+çalışma alanı sayfası. Ardından:
+  1) node tools/csp-hash.js  → _headers'taki script-src satırını güncelleyin
+  2) sitemap.xml'e yeni adresleri ekleyin
+  3) yayin/ klasörüne kopyalayın
+"""
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from sablon import (SITE, head, foot, hero, cta, UYARI, breadcrumb_ld, faq_ld, faq_html)
+from icerik_alanlar import ALANLAR
+from icerik_makaleler import MAKALELER
+
+KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+AYLAR = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz",
+         "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]
+KURULUS = {"@id": SITE + "#kurulus"}
+
+
+def tarih_tr(iso):
+    y, m, d = iso.split("-")
+    return f"{int(d)} {AYLAR[int(m) - 1]} {y}"
+
+
+def yaz(ad, html):
+    with open(os.path.join(KOK, ad), "w", encoding="utf-8") as f:
+        f.write(html)
+    print("  yazıldı:", ad)
+
+
+def alan_by_kat(kat):
+    return next((a for a in ALANLAR if a["kategori"] == kat), None)
+
+
+def post_card(m, more="Yazıyı oku"):
+    return f"""          <article class="card post-card reveal">
+            <p class="post-card__cat">{m["cat"]}</p>
+            <h3><a href="{m["slug"]}">{m["h1"]}</a></h3>
+            <p>{m["lead"]}</p>
+            <span class="post-card__more" aria-hidden="true">{more} →</span>
+          </article>
+"""
+
+
+# ============================================================ ÇALIŞMA ALANI
+def alan_sayfasi(a):
+    yazilar = [m for m in MAKALELER if m["cat"] == a["kategori"]]
+    ld = {"@context": "https://schema.org", "@graph": [
+        breadcrumb_ld([("", "Anasayfa"), ("calisma-alanlari.html", "Çalışma Alanları"),
+                       (a["slug"], a["kisa"])]),
+        {"@type": "Service", "@id": SITE + a["slug"] + "#hizmet",
+         "name": a["h1"], "serviceType": a["kisa"], "description": a["desc"],
+         "url": SITE + a["slug"], "provider": KURULUS, "inLanguage": "tr-TR",
+         "areaServed": [{"@type": "City", "name": "Malatya"},
+                        {"@type": "AdministrativeArea", "name": "Battalgazi"},
+                        {"@type": "AdministrativeArea", "name": "Yeşilyurt"}]},
+        faq_ld(a["sss"], a["slug"] + "#sss"),
+    ]}
+    ilgili = ""
+    if yazilar:
+        lis = "\n".join(f'            <li><a href="{m["slug"]}">{m["h1"]}</a></li>' for m in yazilar)
+        ilgili = f"""
+          <h2>Bu konudaki bilgilendirici yazılarımız</h2>
+          <ul>
+{lis}
+          </ul>
+"""
+    html = head(a["title"], a["desc"], a["slug"], ld, ogtitle=a["h1"] + " | Gelegen Hukuk Bürosu")
+    html += hero(a["h1"], [("index.html", "Anasayfa"), ("calisma-alanlari.html", "Çalışma Alanları"),
+                           (None, a["kisa"])])
+    html += f"""
+    <section class="section">
+      <div class="container container--narrow">
+        <article class="article-body reveal">
+          <p class="article-lead">{a["lead"]}</p>
+{a["body"]}{ilgili}
+          <div class="article-note">
+            <p>Bu sayfadaki bilgiler genel nitelikte olup hukuki görüş yerine geçmez. Her dosyanın
+            koşulları farklıdır; somut durumunuz için ön görüşmede değerlendirme yapılır.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--sand" aria-labelledby="sss-baslik">
+      <div class="container container--narrow">
+        <div class="section-head reveal">
+          <p class="eyebrow">Sık Sorulan Sorular</p>
+          <h2 id="sss-baslik">{a["kisa"]} hakkında merak edilenler</h2>
+        </div>
+        <div class="accordion reveal">
+{faq_html(a["sss"])}
+        </div>
+      </div>
+    </section>
+"""
+    html += cta(metin=f"{a['kisa']} alanındaki sorularınız için büromuzla iletişime geçebilir, randevu talep edebilirsiniz.")
+    html += foot()
+    yaz(a["slug"], html)
+
+
+def merkez_sayfa():
+    slug = "calisma-alanlari.html"
+    ld = {"@context": "https://schema.org", "@graph": [
+        breadcrumb_ld([("", "Anasayfa"), (slug, "Çalışma Alanları")]),
+        {"@type": "CollectionPage", "name": "Çalışma Alanları", "url": SITE + slug,
+         "inLanguage": "tr-TR", "isPartOf": {"@id": SITE + "#website"}, "about": KURULUS,
+         "mainEntity": {"@type": "ItemList", "itemListElement": [
+             {"@type": "ListItem", "position": i + 1, "name": a["kisa"], "url": SITE + a["slug"]}
+             for i, a in enumerate(ALANLAR)]}},
+    ]}
+    kartlar = "".join(f"""          <article class="card post-card reveal">
+            <p class="post-card__cat">Malatya</p>
+            <h3><a href="{a["slug"]}">{a["kisa"]}</a></h3>
+            <p>{a["kart"]}</p>
+            <span class="post-card__more" aria-hidden="true">Ayrıntılar →</span>
+          </article>
+""" for a in ALANLAR)
+    html = head("Çalışma Alanları | Malatya Avukat | Gelegen Hukuk Bürosu",
+                "Gelegen Hukuk Bürosu'nun Malatya'da hizmet verdiği hukuk alanları: aile ve boşanma, ceza, iş, icra, gayrimenkul, miras, ticaret, idare ve vergi hukuku.",
+                slug, ld, ogtitle="Çalışma Alanları | Gelegen Hukuk Bürosu")
+    html += hero("Çalışma Alanları", [("index.html", "Anasayfa"), (None, "Çalışma Alanları")],
+                 "Malatya merkezli büromuz, aşağıdaki alanlarda dava ve takip işlerini yürütmekte ve "
+                 "önleyici hukuki danışmanlık sağlamaktadır. Ayrıntılı bilgi için ilgili alanı seçin.")
+    html += f"""
+    <section class="section">
+      <div class="container">
+        <div class="grid grid--auto">
+{kartlar}        </div>
+      </div>
+    </section>
+"""
+    html += cta() + foot()
+    yaz(slug, html)
+
+
+# ============================================================ MAKALE
+def makale_sayfasi(m):
+    alan = alan_by_kat(m["cat"])
+    ld = {"@context": "https://schema.org", "@graph": [
+        breadcrumb_ld([("", "Anasayfa"), ("makaleler.html", "Makaleler"), (m["slug"], m["h1"])]),
+        {"@type": "Article", "headline": m["h1"], "description": m["desc"], "inLanguage": "tr-TR",
+         "articleSection": m["cat"], "datePublished": m["tarih"], "dateModified": m["tarih"],
+         "mainEntityOfPage": {"@type": "WebPage", "@id": SITE + m["slug"]},
+         "image": SITE + "assets/img/og-image.png",
+         "author": {"@type": "Organization", "name": "Gelegen Hukuk Bürosu", "url": SITE},
+         "publisher": KURULUS},
+    ]}
+    # Aynı kategoriden diğer yazılar; yetmezse diğerlerinden tamamla
+    digerleri = [x for x in MAKALELER if x["cat"] == m["cat"] and x is not m]
+    digerleri += [x for x in MAKALELER if x["cat"] != m["cat"]]
+    digerleri = digerleri[:3]
+    alan_html = ""
+    if alan:
+        alan_html = f"""
+          <div class="article-note">
+            <p><strong>İlgili çalışma alanı:</strong> <a href="{alan["slug"]}">{alan["h1"]}</a> sayfasında
+            bu alandaki dava türleri, süreler ve sık sorulan sorular hakkında daha fazla bilgi bulabilirsiniz.</p>
+          </div>"""
+    html = head(m["title"], m["desc"], m["slug"], ld, ogtype="article",
+                ogtitle=m["h1"] + " | Gelegen Hukuk Bürosu")
+    html += hero(m["h1"], [("index.html", "Anasayfa"), ("makaleler.html", "Makaleler"), (None, m["cat"])])
+    html += f"""
+    <section class="section">
+      <div class="container container--narrow">
+        <article class="article-body reveal">
+          <p class="article-meta"><span>{m["cat"]}</span><time datetime="{m["tarih"]}">{tarih_tr(m["tarih"])}</time><span>{m["read"]}</span></p>
+          <p class="article-lead">{m["lead"]}</p>
+{m["body"]}
+{UYARI}{alan_html}
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--sand" aria-labelledby="diger-baslik">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Makaleler</p>
+          <h2 id="diger-baslik">Diğer yazılarımız</h2>
+        </div>
+        <div class="grid grid--auto">
+{"".join(post_card(x) for x in digerleri)}        </div>
+      </div>
+    </section>
+"""
+    html += cta() + foot()
+    yaz(m["slug"], html)
+
+
+def makaleler_listesi():
+    slug = "makaleler.html"
+    ld = {"@context": "https://schema.org", "@graph": [
+        breadcrumb_ld([("", "Anasayfa"), (slug, "Makaleler")]),
+        {"@type": "CollectionPage", "name": "Makaleler", "inLanguage": "tr-TR",
+         "description": "Gelegen Hukuk Bürosu bilgilendirici hukuk yazıları.",
+         "url": SITE + slug, "isPartOf": {"@id": SITE + "#website"},
+         "hasPart": [{"@type": "Article", "headline": m["h1"], "url": SITE + m["slug"]} for m in MAKALELER]},
+    ]}
+    # Kategori sırası: çalışma alanları sırası
+    sira = [a["kategori"] for a in ALANLAR]
+    kategoriler = sorted({m["cat"] for m in MAKALELER}, key=lambda c: sira.index(c) if c in sira else 99)
+    bolumler = ""
+    for i, kat in enumerate(kategoriler):
+        yazilar = [m for m in MAKALELER if m["cat"] == kat]
+        alan = alan_by_kat(kat)
+        alan_link = (f'\n          <p><a href="{alan["slug"]}">{alan["h1"]} sayfasına git →</a></p>'
+                     if alan else "")
+        kid = "kat-" + str(i + 1)
+        sinif = "section section--sand" if i % 2 else "section"
+        bolumler += f"""
+    <section class="{sinif}" aria-labelledby="{kid}">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">{len(yazilar)} yazı</p>
+          <h2 id="{kid}">{kat}</h2>{alan_link}
+        </div>
+        <div class="grid grid--auto">
+{"".join(post_card(m) for m in yazilar)}        </div>
+      </div>
+    </section>
+"""
+    html = head("Makaleler | Malatya Gelegen Hukuk Bürosu",
+                "Boşanma, nafaka, velayet, kıdem tazminatı, işe iade, icra takibine itiraz, ortaklığın giderilmesi, kira, miras ve ceza hukuku üzerine bilgilendirici yazılar.",
+                slug, ld, ogtitle="Makaleler | Gelegen Hukuk Bürosu", aktif=slug)
+    html += hero("Makaleler", [("index.html", "Anasayfa"), (None, "Makaleler")],
+                 "Sık karşılaşılan hukuki soruları, güncel mevzuat çerçevesinde ve yalnızca bilgilendirme "
+                 "amacıyla ele alıyoruz. Yazılar hukuki danışmanlık yerine geçmez.")
+    html += bolumler + cta() + foot()
+    yaz(slug, html)
+
+
+if __name__ == "__main__":
+    print("Çalışma alanları:")
+    for a in ALANLAR:
+        alan_sayfasi(a)
+    merkez_sayfa()
+    print("Makaleler:")
+    for m in MAKALELER:
+        makale_sayfasi(m)
+    makaleler_listesi()
+    print(f"TAMAM — {len(ALANLAR) + 1} alan sayfası, {len(MAKALELER) + 1} makale sayfası")

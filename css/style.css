@@ -1865,3 +1865,18 @@ body.is-locked .site-header { z-index: var(--z-drawer); }
 .post-card__more { margin-top: auto; padding-top: var(--sp-4); color: var(--c-gold-700);
   font-family: var(--ff-sans); font-size: var(--fs-sm); font-weight: 600; }
 article.card.post-card { position: relative; }
+
+/* Anasayfa: çalışma alanı kartları ilgili sayfaya bağlanır (kartın tamamı tıklanır) */
+.card__link { color: inherit; text-decoration: none; }
+.card__link::after { content: ""; position: absolute; inset: 0; }
+.card__link:focus-visible { outline: none; }
+.card:has(.card__link:focus-visible) { outline: 2px solid var(--c-gold-500); outline-offset: 3px; }
+.section-more { margin-top: var(--sp-7); text-align: center; }
+
+/* Hizmet verilen ilçeler */
+.district-list { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--sp-2) var(--sp-3);
+  list-style: none; margin: 0; padding: 0; }
+.district-list li { padding: 0.45rem 1.05rem; border: 1px solid var(--c-line); border-radius: 999px;
+  background: var(--c-white); color: var(--c-ink); font-family: var(--ff-sans); font-size: var(--fs-sm); }
+.post-card h3 a:focus-visible { outline: none; }
+.post-card:has(h3 a:focus-visible) { outline: 2px solid var(--c-gold-500); outline-offset: 3px; }

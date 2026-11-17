@@ -43,4 +43,32 @@
     <priority>0.3</priority>
   </url>
 
+  <url>
+    <loc>https://gelegenhukuk.com/makaleler.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://gelegenhukuk.com/anlasmali-bosanma-nasil-yapilir.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://gelegenhukuk.com/ise-iade-davasi-sartlar-sureler.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://gelegenhukuk.com/icra-takibine-itiraz-nasil-yapilir.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>

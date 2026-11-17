@@ -58,6 +58,9 @@ def head(title, desc, slug, jsonld, ogtype="website", ogtitle=None, ogdesc=None,
   <meta property="og:description" content="{ogdesc or desc}">
   <meta property="og:url" content="{SITE}{slug}">
   <meta property="og:image" content="{SITE}assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Gelegen Hukuk Bürosu amblemi ve avukat isimleri">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="/favicon.ico" sizes="48x48">

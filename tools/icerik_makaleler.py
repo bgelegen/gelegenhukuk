@@ -463,3 +463,514 @@ MAKALELER = [
 """,
   },
 ]
+
+# =====================================================================
+#  2. PARTİ — yüksek arama hacimli konular (17 Kasım 2026)
+# =====================================================================
+MAKALELER += [
+  # ------------------------------------------------------------------ AİLE
+  {
+    "slug": "bosanma-davasi-ne-kadar-surer.html",
+    "cat": "Aile Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
+    "title": "Boşanma Davası Ne Kadar Sürer? | Gelegen Hukuk Bürosu",
+    "desc": "Anlaşmalı ve çekişmeli boşanma davası ne kadar sürer, süreyi uzatan etkenler nelerdir, istinaf ve temyiz süreleri. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "h1": "Boşanma Davası Ne Kadar Sürer?",
+    "lead": "Boşanma davasının süresi, davanın anlaşmalı mı çekişmeli mi olduğuna, delil durumuna ve mahkemenin iş yüküne göre büyük farklılık gösterir. Bu yazıda sürecin aşamalarını ve süreyi etkileyen etkenleri özetliyoruz.",
+    "body": """
+          <h2>Anlaşmalı boşanma</h2>
+          <p><a href="anlasmali-bosanma-nasil-yapilir.html">Anlaşmalı boşanmada</a> taraflar tüm konularda uzlaştığı için dava genellikle <strong>tek duruşmada</strong> sonuçlanır. Süreyi belirleyen başlıca etken, mahkemenin duruşma gününü ne zamana verdiğidir. Karar açıklandıktan sonra gerekçeli kararın yazılması, tebliği ve kesinleşmesiyle süreç tamamlanır. Taraflar kanun yoluna başvurmayacaklarını duruşmada beyan ederse kesinleşme hızlanabilir.</p>
+
+          <h2>Çekişmeli boşanma</h2>
+          <p><a href="cekismeli-bosanma-davasi.html">Çekişmeli boşanma</a> davaları, ilk derece mahkemesinde çoğunlukla <strong>aylar</strong>, kanun yollarıyla birlikte ise <strong>yıllar</strong> sürebilir. Dava şu aşamalardan geçer:</p>
+          <ol>
+            <li><strong>Dilekçeler aşaması:</strong> Dava, cevap, cevaba cevap ve ikinci cevap dilekçeleri. Her dilekçe için kural olarak iki haftalık süre vardır.</li>
+            <li><strong>Ön inceleme duruşması:</strong> Uyuşmazlık konuları ve deliller belirlenir.</li>
+            <li><strong>Tahkikat:</strong> Tanıklar dinlenir, kurum yazışmaları yapılır; çocuk varsa sosyal inceleme raporu alınır.</li>
+            <li><strong>Karar duruşması:</strong> Boşanma, velayet, nafaka ve tazminat hakkında hüküm kurulur.</li>
+            <li><strong>İstinaf ve temyiz:</strong> Kararın tebliğinden itibaren <strong>iki hafta</strong> içinde istinafa, istinaf kararına karşı yine iki hafta içinde temyize başvurulabilir.</li>
+          </ol>
+
+          <h2>Süreyi uzatan etkenler</h2>
+          <ul>
+            <li>Tarafların adreslerinin bilinmemesi veya yurt dışında olması nedeniyle tebligatın gecikmesi,</li>
+            <li>Çok sayıda tanığın dinlenmesi veya tanıkların başka şehirlerde olması (talimat yoluyla dinleme),</li>
+            <li>Sosyal inceleme raporu, bilirkişi incelemesi veya kurum yazışmalarının beklenmesi,</li>
+            <li>Mal rejimi tasfiyesi gibi taleplerin aynı dosyada ileri sürülmesi,</li>
+            <li>Kararın istinaf ve temyiz aşamalarından geçmesi.</li>
+          </ul>
+
+          <h2>Süreç nasıl kısaltılabilir?</h2>
+          <ul>
+            <li>Delillerin ve tanık listesinin dilekçelerle birlikte eksiksiz sunulması,</li>
+            <li>Tarafların güncel adres bilgilerinin doğru bildirilmesi,</li>
+            <li>Çekişmeli dava devam ederken taraflar anlaşırsa, şartları varsa davanın <strong>anlaşmalı boşanmaya dönüştürülmesi</strong>,</li>
+            <li>Taraflar karardan memnunsa kanun yoluna başvurmaktan feragat edilmesi.</li>
+          </ul>
+
+          <h2>Karar kesinleşmeden yeniden evlenilebilir mi?</h2>
+          <p>Hayır. Boşanma kararı kesinleşmeden taraflar yeniden evlenemez. Ayrıca kadın için, evliliğin sona ermesinden itibaren <strong>300 günlük bekleme süresi</strong> vardır (TMK m. 132); bu süre doğumla sona erer ve gebe olmadığının tıbbi raporla belgelenmesi hâlinde mahkemece kaldırılabilir.</p>
+""",
+  },
+  {
+    "slug": "bosanmada-mal-paylasimi.html",
+    "cat": "Aile Hukuku", "tarih": "2026-11-17", "read": "6 dk okuma",
+    "title": "Boşanmada Mal Paylaşımı Nasıl Yapılır? | Gelegen Hukuk Bürosu",
+    "desc": "Edinilmiş mallara katılma rejimi, kişisel mallar, katılma alacağı, 2002 öncesi mallar, zamanaşımı ve mal paylaşımı davası. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "h1": "Boşanmada Mal Paylaşımı Nasıl Yapılır?",
+    "lead": "Boşanmada en çok merak edilen konulardan biri, evlilik süresince edinilen malların nasıl paylaşılacağıdır. Türk hukukunda paylaşım, eşlerin tabi olduğu mal rejimine göre yapılır. Bu yazıda temel kuralları özetliyoruz.",
+    "body": """
+          <h2>Yasal mal rejimi: edinilmiş mallara katılma</h2>
+          <p>Eşler evlenmeden önce veya evlilik sırasında noterde başka bir mal rejimi seçmemişse, 1 Ocak 2002 tarihinden itibaren <strong>edinilmiş mallara katılma rejimi</strong> uygulanır (TMK m. 202). Bu rejimde her eşin malları ikiye ayrılır: <strong>edinilmiş mallar</strong> ve <strong>kişisel mallar</strong>.</p>
+
+          <h2>Edinilmiş mallar</h2>
+          <p>Bir eşin evlilik süresince <strong>karşılığını vererek</strong> elde ettiği malvarlığı değerleridir (TMK m. 219). Başlıcaları:</p>
+          <ul>
+            <li>Çalışmasının karşılığı olan edinimler (maaş, kazanç ve bunlarla alınan mallar),</li>
+            <li>Sosyal güvenlik ve sosyal yardım kurumlarının yaptığı ödemeler,</li>
+            <li>Kişisel malların gelirleri (ör. evlilik öncesi alınmış bir evin kira geliri),</li>
+            <li>Edinilmiş malların yerine geçen değerler.</li>
+          </ul>
+
+          <h2>Kişisel mallar (paylaşıma girmez)</h2>
+          <ul>
+            <li>Eşlerden birinin yalnızca kişisel kullanımına yarayan eşyalar,</li>
+            <li>Mal rejiminin başlangıcında, yani <strong>evlilikten önce</strong> sahip olunan mallar,</li>
+            <li>Evlilik sırasında <strong>miras veya bağış</strong> gibi karşılıksız kazanma yoluyla edinilen mallar,</li>
+            <li>Manevi tazminat alacakları ve kişisel malların yerine geçen değerler (TMK m. 220).</li>
+          </ul>
+
+          <h2>Katılma alacağı nasıl hesaplanır?</h2>
+          <p>Her eşin edinilmiş mallarının toplam değerinden, bu mallara ilişkin borçlar düşülür; kalan miktar <strong>artık değerdir</strong>. Her eş, diğer eşin artık değerinin <strong>yarısı</strong> üzerinde hak sahibidir (TMK m. 236). Karşılıklı alacaklar takas edilerek ödenecek tutar bulunur. Mallar, tasfiye anındaki (karara en yakın tarihteki) <strong>sürüm değerleriyle</strong> hesaba katılır.</p>
+          <p>Örneğin evlilik içinde bir eşin maaşıyla kendi adına alınan daire, kural olarak edinilmiş maldır ve diğer eş bu dairenin değerinin yarısı oranında katılma alacağı isteyebilir. Kredi borcu varsa önce borç düşülür.</p>
+
+          <h2>2002 öncesi edinilen mallar</h2>
+          <p>1 Ocak 2002 öncesinde evli olan eşler için o tarihe kadar <strong>mal ayrılığı rejimi</strong> geçerliydi. Bu dönemde edinilen mallar için katılma alacağı değil, ispat edilebilen katkı oranında <strong>katkı payı alacağı</strong> talep edilebilir. Uzun süreli evliliklerde tasfiye, iki dönem için ayrı ayrı yapılır.</p>
+
+          <h2>Mal rejimi ne zaman sona erer?</h2>
+          <p>Boşanma hâlinde mal rejimi, <strong>boşanma davasının açıldığı tarihte</strong> sona erer (TMK m. 225). Bu tarihten sonra edinilen mallar paylaşıma girmez.</p>
+
+          <h2>Mal paylaşımı davası</h2>
+          <ul>
+            <li><strong>Görevli mahkeme:</strong> Aile mahkemesi.</li>
+            <li><strong>Zaman:</strong> Boşanma davasıyla birlikte veya boşanma kararı kesinleştikten sonra ayrı bir davayla açılabilir. Uygulamada mal rejimi davası, boşanma davasının sonucunun beklenmesi nedeniyle çoğunlukla bekletilir.</li>
+            <li><strong>Zamanaşımı:</strong> Yargıtay uygulamasına göre boşanma kararının kesinleşmesinden itibaren <strong>on yıl</strong>.</li>
+            <li><strong>İhtiyati tedbir:</strong> Dava sırasında malın elden çıkarılması riskine karşı tapu kaydına tedbir şerhi konulması istenebilir.</li>
+          </ul>
+""",
+  },
+  # ------------------------------------------------------------------ CEZA
+  {
+    "slug": "gozalti-suresi-ve-supheli-haklari.html",
+    "cat": "Ceza Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
+    "title": "Gözaltı Süresi Ne Kadar? Şüpheli Hakları | Gelegen Hukuk Bürosu",
+    "desc": "Gözaltı süresi (24 saat, toplu suçlarda 4 gün), gözaltına itiraz, şüphelinin susma ve avukat hakkı, yakınlara haber verilmesi ve tutuklama. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "h1": "Gözaltı Süresi Ne Kadar? Şüphelinin Hakları",
+    "lead": "Bir yakınınızın gözaltına alındığını öğrendiğinizde ilk saatler büyük önem taşır. Bu yazıda gözaltı sürelerini, gözaltındaki kişinin haklarını ve gözaltına itiraz yolunu özetliyoruz.",
+    "body": """
+          <h2>Gözaltı süresi</h2>
+          <p>Ceza Muhakemesi Kanunu (CMK) m. 91 uyarınca gözaltı süresi, yakalama yerine en yakın hâkim veya mahkemeye gönderilmesi için zorunlu süre hariç, yakalama anından itibaren <strong>24 saati</strong> geçemez.</p>
+          <ul>
+            <li><strong>Toplu suçlarda:</strong> Cumhuriyet savcısı, her defasında bir günü geçmemek üzere üç gün süreyle uzatma kararı verebilir. Böylece toplu suçlarda gözaltı süresi en fazla <strong>dört güne</strong> çıkabilir.</li>
+            <li>Terör suçları gibi özel düzenlemeler bulunan suçlarda farklı süreler uygulanabilir.</li>
+          </ul>
+          <p>Süre sonunda şüpheli ya serbest bırakılır ya da Cumhuriyet savcılığına çıkarılır; savcılık gerekli görürse tutuklama veya adli kontrol talebiyle sulh ceza hâkimliğine sevk eder.</p>
+
+          <h2>Gözaltındaki kişinin hakları</h2>
+          <ul>
+            <li><strong>Suçlamayı öğrenme:</strong> Kendisine yöneltilen suçlamanın ne olduğu bildirilir (CMK m. 147).</li>
+            <li><strong>Susma hakkı:</strong> Şüpheli, yüklenen suç hakkında açıklamada bulunmama hakkına sahiptir.</li>
+            <li><strong>Avukat (müdafi) hakkı:</strong> Gözaltının her aşamasında avukatla görüşebilir; avukatı ifade sırasında hazır bulunabilir. Kanunda sayılan hâllerde baro tarafından zorunlu müdafi atanır.</li>
+            <li><strong>Yakınlarına haber verilmesi:</strong> Yakalanan ve gözaltı süresi uzatılan kişinin durumu, şüphelinin seçeceği bir yakınına veya belirleyeceği bir kişiye gecikmeksizin bildirilir (CMK m. 95).</li>
+            <li><strong>Lehine delillerin toplanmasını isteme</strong> ve doktor muayenesi.</li>
+          </ul>
+
+          <h2>Gözaltına itiraz</h2>
+          <p>Gözaltına alınan kişi, müdafii, yasal temsilcisi, eşi veya birinci ya da ikinci derecede kan hısımı; yakalama veya gözaltı işlemine ya da gözaltı süresinin uzatılmasına karşı, derhal serbest bırakılmayı sağlamak için <strong>sulh ceza hâkimliğine</strong> başvurabilir (CMK m. 91/5). Hâkim incelemeyi evrak üzerinden yaparak en geç <strong>24 saat</strong> içinde karar verir.</p>
+
+          <h2>Kolluk ifadesi ile savcılık ifadesi arasındaki fark</h2>
+          <p>Kollukta müdafi hazır bulunmaksızın alınan ifade, şüpheli hâkim veya mahkeme huzurunda doğrulamadıkça hükme esas alınamaz (CMK m. 148/4). Bu nedenle ilk ifadeden itibaren avukat desteği, savunmanın sağlıklı kurulması bakımından önemlidir.</p>
+
+          <h2>Tutuklama ve adli kontrol</h2>
+          <p>Savcılığın talebi üzerine sulh ceza hâkimliği; kuvvetli suç şüphesi ve kaçma ya da delilleri karartma şüphesi gibi bir tutuklama nedeni varsa <strong>tutuklama</strong>, aksi hâlde yurt dışına çıkış yasağı, imza yükümlülüğü gibi <strong>adli kontrol</strong> tedbirlerine karar verebilir (CMK m. 100, 109). Tutukluluk hâli soruşturma evresinde en geç 30 günlük süreler içinde incelenir; şüpheli ve müdafii her zaman tahliye talebinde bulunabilir.</p>
+""",
+  },
+  {
+    "slug": "tehdit-sucu-ve-cezasi.html",
+    "cat": "Ceza Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
+    "title": "Tehdit Suçu ve Cezası (TCK 106) | Gelegen Hukuk Bürosu",
+    "desc": "Tehdit suçu nedir, basit ve nitelikli tehdidin cezası, şikâyet süresi, uzlaştırma ve mesajla tehdit. TCK 106 kapsamında Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "h1": "Tehdit Suçu ve Cezası (TCK 106)",
+    "lead": "Tehdit, uygulamada en sık karşılaşılan suçlardan biridir ve çoğu zaman mesaj, telefon veya sosyal medya yoluyla işlenir. Bu yazıda tehdit suçunun unsurlarını, cezasını ve yargılama sürecini özetliyoruz.",
+    "body": """
+          <h2>Tehdit suçu nedir?</h2>
+          <p>Türk Ceza Kanunu m. 106 uyarınca tehdit, bir başkasını kendisinin veya yakınının hayatına, vücut veya cinsel dokunulmazlığına ya da malvarlığına yönelik bir saldırı gerçekleştireceğinden bahisle korkutmaktır. Suçun oluşması için tehdidin, mağdurda korku yaratmaya <strong>elverişli</strong> olması yeterlidir; söylenen kötülüğün gerçekten yapılması gerekmez.</p>
+
+          <h2>Basit tehdit</h2>
+          <ul>
+            <li><strong>Hayata, vücut veya cinsel dokunulmazlığa yönelik tehdit:</strong> Altı aydan iki yıla kadar hapis cezası (TCK m. 106/1, birinci cümle).</li>
+            <li><strong>Malvarlığına büyük zarar verileceğinden veya sair bir kötülük edileceğinden bahisle tehdit:</strong> Mağdurun <strong>şikâyeti üzerine</strong>, altı aya kadar hapis veya adli para cezası (TCK m. 106/1, ikinci cümle).</li>
+          </ul>
+
+          <h2>Nitelikli tehdit</h2>
+          <p>Tehdidin aşağıdaki şekillerde işlenmesi hâlinde ceza <strong>iki yıldan beş yıla kadar</strong> hapistir (TCK m. 106/2):</p>
+          <ul>
+            <li>Silahla,</li>
+            <li>Kişinin kendisini tanınmayacak bir hâle koyması suretiyle, imzasız mektupla veya özel işaretlerle,</li>
+            <li>Birden fazla kişi tarafından birlikte,</li>
+            <li>Var olan veya var sayılan suç örgütlerinin oluşturdukları korkutucu güçten yararlanılarak.</li>
+          </ul>
+          <p>Tehdit amacıyla kasten öldürme, yaralama veya mala zarar verme suçları da işlenirse, bu suçlardan ayrıca ceza verilir (TCK m. 106/3).</p>
+
+          <h2>Şikâyet ve uzlaştırma</h2>
+          <p>Malvarlığına yönelik veya "sair kötülük" içeren basit tehdit şikâyete bağlıdır; şikâyet, fiilin ve failin öğrenilmesinden itibaren <strong>altı ay</strong> içinde yapılmalıdır (TCK m. 73). Hayata veya vücut dokunulmazlığına yönelik basit tehdit ise şikâyete bağlı değildir, ancak <strong>uzlaştırma</strong> kapsamındadır. Uzlaştırma kapsamındaki suçlarda taraflar uzlaşırsa soruşturma veya kovuşturma sona erer.</p>
+
+          <h2>Mesajla veya sosyal medyadan tehdit</h2>
+          <p>Telefon mesajı, e-posta, anlık mesajlaşma uygulamaları veya sosyal medya üzerinden yapılan tehditler de suç oluşturur. Bu durumda:</p>
+          <ul>
+            <li>Mesajların ekran görüntüleri alınmalı, mümkünse cihaz ve hesap bilgileri korunmalıdır,</li>
+            <li>Mesajlar silinmemeli; savcılık gerekirse ilgili kurum ve şirketlerden kayıtları talep edebilir,</li>
+            <li>Şikâyet, Cumhuriyet başsavcılığına veya kolluğa yapılabilir.</li>
+          </ul>
+
+          <h2>Tehdit mağduru ne yapabilir?</h2>
+          <p>Şikâyetin yanı sıra, özellikle aile içinde veya yakın ilişkide yaşanan tehditlerde 6284 sayılı Kanun kapsamında <strong>uzaklaştırma ve koruma kararı</strong> talep edilebilir. Bu kararlar, ceza soruşturmasından bağımsız olarak hızla verilebilir.</p>
+""",
+  },
+  # ------------------------------------------------------------------ İŞ
+  {
+    "slug": "ihbar-tazminati-ve-ihbar-sureleri.html",
+    "cat": "İş Hukuku", "tarih": "2026-11-17", "read": "4 dk okuma",
+    "title": "İhbar Tazminatı ve İhbar Süreleri | Gelegen Hukuk Bürosu",
+    "desc": "İhbar süreleri (2, 4, 6, 8 hafta), ihbar tazminatına hak kazanma şartları, hesaplama, istifa eden işçinin ihbar yükümlülüğü ve iş arama izni. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "h1": "İhbar Tazminatı ve İhbar Süreleri",
+    "lead": "Belirsiz süreli iş sözleşmesini sona erdirmek isteyen taraf, kural olarak karşı tarafa önceden bildirimde bulunmak zorundadır. Bu bildirime uyulmazsa ihbar tazminatı gündeme gelir. Bu yazıda süreleri ve hesaplamayı özetliyoruz.",
+    "body": """
+          <h2>İhbar (bildirim) süreleri</h2>
+          <p>İş Kanunu m. 17 uyarınca belirsiz süreli iş sözleşmeleri, işçinin kıdemine göre aşağıdaki sürelerden önce karşı tarafa bildirilerek feshedilir:</p>
+          <ul>
+            <li>İşi <strong>6 aydan az</strong> sürmüş işçi için: <strong>2 hafta</strong>,</li>
+            <li>İşi <strong>6 ay – 1,5 yıl</strong> sürmüş işçi için: <strong>4 hafta</strong>,</li>
+            <li>İşi <strong>1,5 – 3 yıl</strong> sürmüş işçi için: <strong>6 hafta</strong>,</li>
+            <li>İşi <strong>3 yıldan fazla</strong> sürmüş işçi için: <strong>8 hafta</strong>.</li>
+          </ul>
+          <p>Bu süreler asgari sürelerdir; iş sözleşmesiyle artırılabilir.</p>
+
+          <h2>İhbar tazminatı ne zaman ödenir?</h2>
+          <p>Bildirim şartına uymadan iş sözleşmesini fesheden taraf, bildirim süresine ait ücret tutarında <strong>ihbar tazminatı</strong> ödemek zorundadır. İşveren, bildirim süresine ait ücreti peşin ödeyerek sözleşmeyi hemen de feshedebilir.</p>
+          <p>Kanunda sayılan <strong>haklı nedenlerle</strong> yapılan fesihlerde (İş Kanunu m. 24 ve 25) bildirim süresine uyulması gerekmez; bu nedenle ihbar tazminatı da doğmaz.</p>
+
+          <h2>İstifa eden işçi ihbar tazminatı öder mi?</h2>
+          <p>Evet, olabilir. Haklı bir nedeni olmadan istifa eden işçi de bildirim sürelerine uymak zorundadır. Bildirim süresine uymadan işten ayrılan işçi, işverene ihbar tazminatı ödemekle yükümlü olabilir. Uygulamada işveren bu tutarı işçinin alacaklarından mahsup etmek isteyebilir.</p>
+
+          <h2>İhbar tazminatı nasıl hesaplanır?</h2>
+          <p>İhbar tazminatı, işçinin <strong>giydirilmiş brüt ücreti</strong> üzerinden, kıdemine karşılık gelen bildirim süresi kadar (2, 4, 6 veya 8 hafta) hesaplanır. Giydirilmiş ücrete düzenli ödenen yol, yemek, ikramiye gibi yan haklar dahildir. Kıdem tazminatından farklı olarak ihbar tazminatından <strong>gelir vergisi ve damga vergisi</strong> kesilir; kıdem tazminatındaki gibi bir tavan uygulanmaz.</p>
+
+          <h2>İş arama izni</h2>
+          <p>Bildirim süresi içinde işveren, işçiye yeni bir iş bulması için iş saatleri içinde ve ücret kesintisi yapmadan günde en az <strong>iki saat</strong> iş arama izni vermek zorundadır (İş Kanunu m. 27). İşçi isterse bu izinleri toplu olarak, işten ayrılacağı günden önceki günlere rastlatarak kullanabilir.</p>
+
+          <h2>Zamanaşımı ve arabuluculuk</h2>
+          <p>İhbar tazminatı alacağı <strong>beş yıllık</strong> zamanaşımına tabidir. Dava açmadan önce <strong>arabulucuya başvurmak zorunludur</strong>. İhbar tazminatı çoğunlukla <a href="kidem-tazminati-sartlari.html">kıdem tazminatı</a> ile birlikte talep edilir.</p>
+""",
+  },
+  {
+    "slug": "fazla-mesai-alacagi.html",
+    "cat": "İş Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
+    "title": "Fazla Mesai Ücreti ve Fazla Mesai Alacağı | Gelegen Hukuk Bürosu",
+    "desc": "Fazla mesai nedir, haftalık 45 saat sınırı, %50 zamlı ücret, yıllık 270 saat, serbest zaman, fazla mesainin ispatı ve zamanaşımı. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "h1": "Fazla Mesai Ücreti ve Fazla Mesai Alacağı",
+    "lead": "Uzun saatler çalışıp karşılığını alamamak, iş ilişkisinde en sık karşılaşılan uyuşmazlıklardan biridir. Bu yazıda fazla mesainin ne olduğunu, nasıl ücretlendirildiğini ve alacağın nasıl ispat edileceğini özetliyoruz.",
+    "body": """
+          <h2>Fazla çalışma (fazla mesai) nedir?</h2>
+          <p>İş Kanunu m. 41 uyarınca fazla çalışma, kanunda yazılı koşullar çerçevesinde <strong>haftalık 45 saati aşan</strong> çalışmalardır. Haftalık çalışma süresi sözleşmeyle 45 saatin altında belirlenmişse, bu sürenin üzerinde ve 45 saate kadar yapılan çalışmalar <strong>fazla sürelerle çalışma</strong> olarak adlandırılır.</p>
+
+          <h2>Fazla mesai ücreti nasıl hesaplanır?</h2>
+          <ul>
+            <li><strong>Fazla çalışma:</strong> Her bir saat için normal saat ücretinin <strong>yüzde elli</strong> yükseltilmesiyle ödenir.</li>
+            <li><strong>Fazla sürelerle çalışma:</strong> Her bir saat için normal saat ücretinin <strong>yüzde yirmi beş</strong> yükseltilmesiyle ödenir.</li>
+          </ul>
+          <p>Örneğin saat ücreti 100 TL olan bir işçinin 45 saati aşan her çalışma saati için 150 TL ödenmesi gerekir.</p>
+
+          <h2>Serbest zaman</h2>
+          <p>İşçi isterse, fazla çalışma ücreti yerine her bir saat fazla çalışma için <strong>1 saat 30 dakika</strong>, fazla sürelerle çalışma için <strong>1 saat 15 dakika</strong> serbest zaman kullanabilir. Serbest zaman, altı ay içinde, çalışma süreleri içinde ve ücretten kesinti yapılmadan kullandırılır.</p>
+
+          <h2>Fazla çalışmanın sınırları</h2>
+          <ul>
+            <li>Fazla çalışmanın toplamı bir yılda <strong>270 saatten</strong> fazla olamaz.</li>
+            <li>Fazla çalışma için işçinin <strong>onayı</strong> alınmalıdır.</li>
+            <li>Gece çalışmaları kural olarak <strong>7,5 saati</strong> geçemez; sağlık kuralları bakımından günde 7,5 saat veya daha az çalışılması gereken işlerde fazla çalışma yaptırılamaz.</li>
+            <li>18 yaşını doldurmamış işçilere ve gebe, yeni doğum yapmış veya çocuk emziren işçilere fazla çalışma yaptırılamaz.</li>
+          </ul>
+
+          <h2>Fazla mesai nasıl ispat edilir?</h2>
+          <p>Fazla mesainin ispat yükü kural olarak <strong>işçidedir</strong>. Başlıca deliller:</p>
+          <ul>
+            <li>İşyeri giriş-çıkış kayıtları, puantaj ve vardiya çizelgeleri,</li>
+            <li>İşyerinde birlikte çalışan <strong>tanıkların</strong> beyanları,</li>
+            <li>E-posta, mesaj ve sistem kayıtları,</li>
+            <li>Ücret bordroları: İşçinin imzasını taşıyan ve fazla mesai tahakkuku içeren bordrolar, kural olarak o aylar için fazla mesainin ödendiğini gösterir; bu nedenle bordrolara itirazi kayıtla imza atılması önem taşır.</li>
+          </ul>
+          <p>Yargıtay uygulamasında fazla mesainin tanık beyanlarıyla ispatlandığı durumlarda, hesaplanan alacaktan hakkaniyet gereği belirli bir oranda <strong>indirim</strong> yapılabilmektedir.</p>
+
+          <h2>Zamanaşımı ve arabuluculuk</h2>
+          <p>Fazla mesai alacağı <strong>beş yıllık</strong> zamanaşımına tabidir; bu nedenle iş ilişkisi sona erdiğinde son beş yıla ait alacaklar talep edilebilir. Dava açmadan önce <strong>arabulucuya başvurmak zorunludur</strong>.</p>
+""",
+  },
+  # ------------------------------------------------------------------ İCRA
+  {
+    "slug": "maas-haczi.html",
+    "cat": "İcra ve İflas Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
+    "title": "Maaş Haczi: Maaşın Ne Kadarı Haczedilir? | Gelegen Hukuk Bürosu",
+    "desc": "Maaş haczi oranı (dörtte bir), nafaka alacağında maaş haczi, emekli maaşı haczi, birden fazla haciz sırası ve maaş haczine itiraz. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "h1": "Maaş Haczi: Maaşın Ne Kadarı Haczedilir?",
+    "lead": "Kesinleşen bir icra takibinde alacaklının en sık başvurduğu yollardan biri, borçlunun maaşına haciz konulmasıdır. Bu yazıda maaşın hangi oranda haczedilebileceğini, emekli maaşının durumunu ve itiraz yollarını özetliyoruz.",
+    "body": """
+          <h2>Maaşın ne kadarı haczedilebilir?</h2>
+          <p>İcra ve İflas Kanunu (İİK) m. 83 uyarınca maaşlar, ücretler ve benzeri gelirler; icra müdürünce borçlu ve ailesinin geçimi için gerekli görülen miktar ayrıldıktan sonra haczedilebilir. Ancak haczedilecek miktar <strong>maaşın dörtte birinden az olamaz</strong>. Uygulamada maaşın genellikle dörtte biri oranında kesinti yapılır.</p>
+          <p>Asgari ücret alan işçinin maaşı da aynı kurallar çerçevesinde haczedilebilir.</p>
+
+          <h2>Nafaka alacağında maaş haczi</h2>
+          <p>Nafaka alacakları için dörtte bir sınırı uygulanmaz; nafaka miktarı kadar haciz konulabilir. Ayrıca nafaka alacakları, sıra bakımından diğer alacaklardan <strong>önce</strong> gelir.</p>
+
+          <h2>Birden fazla haciz varsa ne olur?</h2>
+          <p>Aynı maaşa birden fazla alacaklı tarafından haciz konulmuşsa, hacizler <strong>sıraya girer</strong>. Önce gelen haciz tamamen ödenince sıradaki hacze geçilir. Bu nedenle sonradan gelen alacaklıların tahsilatı uzun sürebilir.</p>
+
+          <h2>Emekli maaşı haczedilebilir mi?</h2>
+          <p>Sosyal Güvenlik Kanunu (5510 sayılı Kanun) m. 93 uyarınca emekli maaşları, <strong>nafaka borçları hariç</strong> kural olarak haczedilemez. Borçlunun haciz sırasında açıkça rıza göstermesi hâlinde haciz yapılabileceği kabul edilmektedir; ancak kredi sözleşmesi imzalanırken önceden verilen genel nitelikteki muvafakatler, Yargıtay uygulamasına göre geçerli sayılmamaktadır.</p>
+
+          <h2>Haczedilemeyen gelirler</h2>
+          <ul>
+            <li>Sosyal yardımlar ve bazı kamu ödemeleri,</li>
+            <li>Borçlunun ve ailesinin geçimi için zorunlu eşya ve gelirler (İİK m. 82),</li>
+            <li>Kanunla haczedilemeyeceği öngörülen diğer ödemeler.</li>
+          </ul>
+          <p>Haczi caiz olmayan mal ve haklar hakkında borçlunun <strong>önceden</strong> yaptığı feragat geçerli değildir.</p>
+
+          <h2>Maaş haczine itiraz</h2>
+          <p>Kanuna aykırı oranda kesinti yapılması, haczedilemez bir gelire haciz konulması veya takibin kendisindeki usulsüzlükler nedeniyle, işlemin öğrenilmesinden itibaren <strong>yedi gün</strong> içinde icra mahkemesine şikâyet yoluna başvurulabilir (İİK m. 16). Takibin dayanağı olan borca itiraz edilmemişse, önce <a href="icra-takibine-itiraz-nasil-yapilir.html">icra takibine itiraz</a> sürelerinin geçip geçmediğine bakılmalıdır.</p>
+
+          <h2>Borç ödenirse haciz ne zaman kalkar?</h2>
+          <p>Borcun tamamı faiz ve masraflarıyla ödendiğinde alacaklı veya icra dairesi, işverene <strong>haczin kaldırılması</strong> yazısı gönderir. Borçlunun, ödeme belgelerini saklaması ve haczin kaldırıldığını işverenden teyit etmesi önerilir.</p>
+""",
+  },
+  # ------------------------------------------------------------------ GAYRİMENKUL
+  {
+    "slug": "tapu-iptal-ve-tescil-davasi.html",
+    "cat": "Gayrimenkul Hukuku", "tarih": "2026-11-17", "read": "6 dk okuma",
+    "title": "Tapu İptal ve Tescil Davası | Gelegen Hukuk Bürosu",
+    "desc": "Tapu iptal ve tescil davası sebepleri: muris muvazaası, vekâletin kötüye kullanılması, ehliyetsizlik, yolsuz tescil. Görevli mahkeme, zamanaşımı ve tedbir. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "h1": "Tapu İptal ve Tescil Davası",
+    "lead": "Tapu kaydının hukuka aykırı biçimde oluştuğu durumlarda gerçek hak sahibi, kaydın iptalini ve taşınmazın kendi adına tescilini isteyebilir. Bu yazıda tapu iptal ve tescil davasının başlıca sebeplerini ve sürecini özetliyoruz.",
+    "body": """
+          <h2>Tapu iptal ve tescil davası nedir?</h2>
+          <p>Tapu sicilindeki bir kaydın <strong>yolsuz</strong>, yani geçerli bir hukuki sebebe dayanmadan oluştuğu durumlarda, ayni hakkı zedelenen kişi kaydın düzeltilmesini isteyebilir (TMK m. 1025). Dava, hem mevcut kaydın iptalini hem de taşınmazın davacı adına tescilini amaçlar.</p>
+
+          <h2>Başlıca dava sebepleri</h2>
+          <h3>1. Muris muvazaası (mirastan mal kaçırma)</h3>
+          <p>Miras bırakanın, mirasçılarından mal kaçırmak amacıyla gerçekte <strong>bağışladığı</strong> bir taşınmazı tapuda <strong>satış</strong> gibi göstermesidir. Yargıtay'ın 1 Nisan 1974 tarihli İçtihadı Birleştirme Kararı uyarınca saklı payı bulunsun bulunmasın tüm mirasçılar bu davayı açabilir. Satış bedelinin taşınmazın gerçek değeriyle orantısız olması, alıcının ödeme gücünün bulunmaması ve tarafların yakınlığı gibi durumlar muvazaaya işaret edebilir.</p>
+          <h3>2. Vekâletin kötüye kullanılması</h3>
+          <p>Vekilin, vekâlet verenin aleyhine ve üçüncü kişiyle anlaşarak taşınmazı değerinin çok altında veya kendisine ya da yakınlarına devretmesi hâlinde tapu iptali istenebilir.</p>
+          <h3>3. Ehliyetsizlik</h3>
+          <p>Taşınmazı devreden kişinin işlem tarihinde <strong>ayırt etme gücünden yoksun</strong> olması (ör. ileri derecede demans) hâlinde işlem geçersizdir. Bu durum çoğunlukla Adli Tıp raporu ile ispat edilir.</p>
+          <h3>4. İrade sakatlıkları</h3>
+          <p>Hata, aldatma (hile) veya korkutma (ikrah) yoluyla yapılan devirlerde de tapu iptali gündeme gelebilir.</p>
+          <h3>5. Diğer sebepler</h3>
+          <ul>
+            <li>Ölünceye kadar bakma sözleşmesinde bakım borcunun yerine getirilmemesi,</li>
+            <li>Kazandırıcı zamanaşımı şartlarının oluşması (TMK m. 713),</li>
+            <li>Sahte belge veya sahte kimlikle yapılan devirler.</li>
+          </ul>
+
+          <h2>Görevli ve yetkili mahkeme</h2>
+          <p>Tapu iptal ve tescil davalarında görevli mahkeme kural olarak <strong>asliye hukuk mahkemesidir</strong>. Taşınmaz üzerindeki ayni haklara ilişkin olduğu için dava, <strong>kesin yetki</strong> kuralı gereği taşınmazın bulunduğu yer mahkemesinde açılır. Malatya'daki bir taşınmaz için dava Malatya'da görülür.</p>
+
+          <h2>Zamanaşımı</h2>
+          <ul>
+            <li><strong>Muris muvazaası</strong> ve ehliyetsizliğe dayanan davalar zamanaşımına tabi değildir.</li>
+            <li><strong>Hata ve aldatmaya</strong> dayanan iptal talepleri, yanılma veya aldatmanın öğrenildiği tarihten itibaren <strong>bir yıl</strong> içinde ileri sürülmelidir (TBK m. 39).</li>
+          </ul>
+
+          <h2>Dava sırasında tedbir</h2>
+          <p>Dava süresince taşınmazın üçüncü kişilere devredilmesi, iyiniyetli alıcılar nedeniyle davayı sonuçsuz bırakabilir. Bu nedenle dava açılırken tapu kaydına <strong>ihtiyati tedbir şerhi</strong> konulması talep edilmelidir.</p>
+
+          <h2>Masraflar</h2>
+          <p>Tapu iptal ve tescil davalarında harç ve vekâlet ücreti, taşınmazın <strong>değeri</strong> esas alınarak hesaplanır. Taşınmazın değeri yargılama sırasında bilirkişi incelemesiyle belirlenir. Paylı taşınmazlarda dava sonrası <a href="ortakligin-giderilmesi-davasi.html">ortaklığın giderilmesi</a> de gündeme gelebilir.</p>
+""",
+  },
+  # ------------------------------------------------------------------ MİRAS
+  {
+    "slug": "miras-paylasimi-ve-miras-paylari.html",
+    "cat": "Miras Hukuku", "tarih": "2026-11-17", "read": "6 dk okuma",
+    "title": "Miras Paylaşımı: Kim Ne Kadar Miras Alır? | Gelegen Hukuk Bürosu",
+    "desc": "Yasal mirasçılar ve miras payları: çocuklar, eş, anne-baba, kardeşler. Eşin miras payı, örnek hesaplamalar ve veraset ve intikal vergisi. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "h1": "Miras Paylaşımı: Kim Ne Kadar Miras Alır?",
+    "lead": "Vasiyetname bırakılmamışsa miras, Türk Medeni Kanunu'nda belirlenen yasal mirasçılar arasında kanuni paylara göre paylaştırılır. Bu yazıda mirasçılık sırasını ve payların nasıl hesaplandığını örneklerle açıklıyoruz.",
+    "body": """
+          <h2>Zümre sistemi</h2>
+          <p>Türk hukukunda kan hısımları <strong>zümre</strong> esasına göre mirasçı olur. Önceki zümrede mirasçı varsa sonraki zümre mirasçı olamaz.</p>
+          <ul>
+            <li><strong>1. zümre — Altsoy (TMK m. 495):</strong> Çocuklar eşit paylarla mirasçı olur. Miras bırakandan önce ölmüş çocuğun yerini kendi çocukları (torunlar) alır. Evlatlıklar da öz çocuk gibi mirasçıdır.</li>
+            <li><strong>2. zümre — Anne ve baba (TMK m. 496):</strong> Altsoy yoksa miras anne ve babaya eşit olarak kalır. Önceden ölmüş anne veya babanın yerini onun altsoyu, yani miras bırakanın <strong>kardeşleri</strong> alır.</li>
+            <li><strong>3. zümre — Büyükanne ve büyükbabalar (TMK m. 497):</strong> İlk iki zümrede mirasçı yoksa miras büyükanne ve büyükbabalara, onların yerine de altsoylarına (amca, hala, dayı, teyze) geçer.</li>
+          </ul>
+
+          <h2>Sağ kalan eşin miras payı</h2>
+          <p>Eş, zümrelerden hangisiyle birlikte mirasçı olduğuna göre farklı pay alır (TMK m. 499):</p>
+          <ul>
+            <li><strong>Çocuklarla birlikte:</strong> Mirasın <strong>dörtte biri</strong>,</li>
+            <li><strong>Anne-baba zümresiyle birlikte:</strong> Mirasın <strong>yarısı</strong>,</li>
+            <li><strong>Büyükanne-büyükbaba zümresiyle birlikte:</strong> Mirasın <strong>dörtte üçü</strong>,</li>
+            <li>Bunlar da yoksa mirasın <strong>tamamı</strong>.</li>
+          </ul>
+
+          <h2>Örnek hesaplamalar</h2>
+          <ul>
+            <li><strong>Eş + 2 çocuk:</strong> Eş 1/4; kalan 3/4 iki çocuk arasında eşit paylaşılır, her çocuk 3/8 alır.</li>
+            <li><strong>Eş + anne + baba (çocuk yok):</strong> Eş 1/2; anne ve baba kalan yarıyı paylaşır, her biri 1/4 alır.</li>
+            <li><strong>Eş + anne (baba önceden ölmüş) + 2 kardeş:</strong> Eş 1/2; anne 1/4; babanın payı olan 1/4 kardeşlere geçer, her kardeş 1/8 alır.</li>
+            <li><strong>Yalnızca 3 çocuk:</strong> Her çocuk 1/3 alır.</li>
+          </ul>
+
+          <h2>Vasiyetname varsa ne olur?</h2>
+          <p>Miras bırakan, <a href="vasiyetname-nasil-yapilir.html">vasiyetname</a> ile paylaşımı değiştirebilir; ancak altsoy, anne-baba ve eşin <strong>saklı paylarına</strong> dokunamaz. Saklı payı zedelenen mirasçı tenkis davası açabilir. Kardeşlerin saklı payı yoktur.</p>
+
+          <h2>Paylaşım nasıl yapılır?</h2>
+          <ol>
+            <li><strong>Mirasçılık belgesi</strong> notere veya sulh hukuk mahkemesine başvurularak alınır.</li>
+            <li>Mirasçılar terekenin borçlu olup olmadığını araştırır; borca batık terekelerde <a href="mirasin-reddi-ve-mirascilik-belgesi.html">mirasın reddi</a> için üç aylık süre gözetilir.</li>
+            <li>Mirasçılar paylaşım üzerinde anlaşırsa yazılı bir <strong>paylaşma sözleşmesi</strong> yapılabilir ve tapuda intikal işlemleri buna göre tamamlanır.</li>
+            <li>Anlaşma sağlanamazsa miras ortaklığı, sulh hukuk mahkemesinde açılacak <a href="ortakligin-giderilmesi-davasi.html">ortaklığın giderilmesi</a> davası ile sona erdirilir.</li>
+          </ol>
+
+          <h2>Veraset ve intikal vergisi</h2>
+          <p>Mirasçılar, ölüm Türkiye'de gerçekleşmişse ölüm tarihini izleyen <strong>dört ay</strong> içinde vergi dairesine veraset ve intikal vergisi beyannamesi vermelidir. Belirli tutara kadar olan intikaller için istisnalar uygulanır; istisna tutarları her yıl yeniden belirlenir.</p>
+""",
+  },
+  {
+    "slug": "vasiyetname-nasil-yapilir.html",
+    "cat": "Miras Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
+    "title": "Vasiyetname Nasıl Yapılır? Türleri ve Geçerlilik Şartları | Gelegen Hukuk Bürosu",
+    "desc": "Resmî, el yazılı ve sözlü vasiyetname nasıl yapılır, geçerlilik şartları, saklı pay sınırı, vasiyetnamenin açılması ve iptali. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "h1": "Vasiyetname Nasıl Yapılır? Türleri ve Geçerlilik Şartları",
+    "lead": "Vasiyetname, kişinin ölümünden sonra malvarlığının nasıl paylaşılacağını belirlemesini sağlayan tek taraflı bir hukuki işlemdir. Geçerli olabilmesi için kanundaki şekil şartlarına sıkı sıkıya uyulmalıdır. Bu yazıda vasiyetname türlerini özetliyoruz.",
+    "body": """
+          <h2>Kimler vasiyetname yapabilir?</h2>
+          <p>Ayırt etme gücüne sahip ve <strong>15 yaşını doldurmuş</strong> herkes vasiyetname yapabilir (TMK m. 502). Vasiyetname yapanın, işlem anında ne yaptığını bilecek durumda olması gerekir.</p>
+
+          <h2>Vasiyetname türleri</h2>
+          <p>Türk Medeni Kanunu m. 531 uyarınca vasiyetname üç şekilde yapılabilir:</p>
+          <h3>1. Resmî vasiyetname</h3>
+          <p>Resmî memur (noter, sulh hâkimi veya kanunla yetkilendirilmiş başka bir görevli) önünde ve <strong>iki tanık</strong> katılımıyla yapılır (TMK m. 532 vd.). Vasiyetçi arzularını memura bildirir, memur vasiyetnameyi yazar; vasiyetçi okuyup imzalar ve tanıklar, vasiyetçinin beyanlarını kendi önlerinde yaptığını ve tasarrufa ehil göründüğünü onaylar. İspat ve saklama bakımından en güvenli yoldur.</p>
+          <h3>2. El yazılı vasiyetname</h3>
+          <p>Vasiyetnamenin <strong>baştan sona vasiyetçinin el yazısıyla</strong> yazılması, yapıldığı <strong>yıl, ay ve günün</strong> belirtilmesi ve <strong>imzalanması</strong> gerekir (TMK m. 538). Bilgisayarla yazılıp yalnızca imzalanan metin el yazılı vasiyetname sayılmaz. Vasiyetçi, el yazılı vasiyetnameyi açık veya kapalı olarak saklanmak üzere notere veya sulh hâkimine bırakabilir.</p>
+          <h3>3. Sözlü vasiyetname</h3>
+          <p>Ölüm tehlikesi, ulaşımın kesilmesi, salgın hastalık veya savaş gibi <strong>olağanüstü durumlarda</strong>, diğer şekillere başvurulamıyorsa iki tanığa sözlü olarak yapılır (TMK m. 539). Olağanüstü durum sona erdikten sonra vasiyetçi diğer şekillerde vasiyetname yapma imkânına kavuşur ve <strong>bir ay</strong> geçerse sözlü vasiyetname hükümsüz kalır.</p>
+
+          <h2>Vasiyetnameyle neler yapılabilir?</h2>
+          <ul>
+            <li>Mirasçı atama veya belirli bir malı belirli bir kişiye bırakma (belirli mal bırakma),</li>
+            <li>Bir vakıf kurulması veya bir kuruma bağış yapılması,</li>
+            <li>Vasiyeti yerine getirme görevlisi atanması,</li>
+            <li>Kanunda öngörülen sebeplerle mirasçılıktan çıkarma.</li>
+          </ul>
+
+          <h2>Saklı pay sınırı</h2>
+          <p>Vasiyetname ile mirasçıların <strong>saklı paylarına</strong> dokunulamaz. Altsoy, anne-baba ve eşin saklı payını ihlal eden vasiyetname geçersiz olmaz, ancak saklı payı zedelenen mirasçı <strong>tenkis davası</strong> açarak payını isteyebilir. Ayrıntılar için <a href="miras-paylasimi-ve-miras-paylari.html">miras paylaşımı</a> yazımıza bakabilirsiniz.</p>
+
+          <h2>Vasiyetnamenin açılması</h2>
+          <p>Vasiyetçinin ölümünden sonra, eline vasiyetname geçen kişi bunu <strong>derhal sulh hâkimine</strong> teslim etmek zorundadır (TMK m. 595). Sulh hâkimi vasiyetnameyi bir ay içinde açar ve mirasçılara okur; ilgililere birer örneğini tebliğ eder.</p>
+
+          <h2>Vasiyetnamenin iptali</h2>
+          <p>Vasiyetçinin tasarruf ehliyetinin bulunmaması, iradesinin yanılma, aldatma veya korkutma ile sakatlanması, içeriğin hukuka veya ahlaka aykırı olması ya da şekil şartlarına uyulmaması hâlinde vasiyetnamenin iptali istenebilir (TMK m. 557). Dava, iptal sebebinin ve davacının hak sahibi olduğunun öğrenilmesinden itibaren <strong>bir yıl</strong>, her hâlde vasiyetnamenin açılmasından itibaren <strong>on yıl</strong> içinde açılmalıdır.</p>
+""",
+  },
+  # ------------------------------------------------------------------ İDARE
+  {
+    "slug": "iptal-davasi-nasil-acilir.html",
+    "cat": "İdare Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
+    "title": "İdari İşlemlere Karşı İptal Davası Nasıl Açılır? | Gelegen Hukuk Bürosu",
+    "desc": "İptal davası nedir, dava açma süresi (60 gün, vergi 30 gün), üst makama başvuru, yürütmenin durdurulması, istinaf ve temyiz. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "h1": "İdari İşlemlere Karşı İptal Davası Nasıl Açılır?",
+    "lead": "Kamu kurumlarının hukuka aykırı işlemlerine karşı en etkili yol, idare mahkemesinde açılacak iptal davasıdır. Atama, disiplin cezası, ruhsat iptali veya imar işlemleri gibi pek çok işlem bu yolla denetlenebilir. Bu yazıda süreci özetliyoruz.",
+    "body": """
+          <h2>İptal davası nedir?</h2>
+          <p>İdari Yargılama Usulü Kanunu (İYUK) m. 2 uyarınca iptal davası, idari işlemlerin <strong>yetki, şekil, sebep, konu ve maksat</strong> yönlerinden biriyle hukuka aykırı olduğu ileri sürülerek, <strong>menfaati ihlal edilenler</strong> tarafından açılan davadır. Mahkeme işlemi hukuka aykırı bulursa iptal eder ve işlem, yapıldığı andan itibaren hükümsüz hâle gelir.</p>
+
+          <h2>Hangi işlemlere karşı açılabilir?</h2>
+          <ul>
+            <li>Kamu görevlilerinin atama, görevden alma, disiplin ve sicil işlemleri,</li>
+            <li>İmar planları, yapı ruhsatı ve yıkım kararları,</li>
+            <li>İşyeri açma ve çalışma ruhsatlarının iptali,</li>
+            <li>Sınav, öğrenci ve akademik işlemler,</li>
+            <li>İhale işlemleri ve diğer kesin ve yürütülmesi gereken idari işlemler.</li>
+          </ul>
+
+          <h2>Dava açma süresi</h2>
+          <ul>
+            <li><strong>İdare mahkemelerinde:</strong> Özel kanunlarda ayrı süre öngörülmedikçe <strong>60 gün</strong>,</li>
+            <li><strong>Vergi mahkemelerinde:</strong> <strong>30 gün</strong> (İYUK m. 7).</li>
+          </ul>
+          <p>Süre, işlemin ilgiliye <strong>yazılı bildirim</strong> tarihinden itibaren başlar. İlanı gereken düzenleyici işlemlerde süre ilan tarihinden itibaren işler. Süresinde açılmayan dava esasa girilmeden reddedilir.</p>
+
+          <h2>Üst makama başvuru</h2>
+          <p>İlgililer, dava açmadan önce işlemin kaldırılması, geri alınması veya değiştirilmesini dava açma süresi içinde <strong>üst makamdan</strong> (yoksa işlemi yapan makamdan) isteyebilir. Bu başvuru, işlemekte olan dava açma süresini durdurur. Başvuruya <strong>30 gün</strong> içinde cevap verilmezse istek reddedilmiş sayılır; ret üzerine süre kaldığı yerden işlemeye devam eder (İYUK m. 11).</p>
+
+          <h2>Yürütmenin durdurulması</h2>
+          <p>Dava açmak işlemin uygulanmasını kendiliğinden durdurmaz. İşlemin uygulanması hâlinde <strong>telafisi güç veya imkânsız zararların</strong> doğması ve işlemin <strong>açıkça hukuka aykırı</strong> olması şartlarının birlikte gerçekleşmesi hâlinde mahkeme yürütmenin durdurulmasına karar verebilir (İYUK m. 27). Bu talep dava dilekçesinde gerekçesiyle birlikte ileri sürülmelidir.</p>
+
+          <h2>Dava dilekçesi ve yargılama</h2>
+          <p>Dava dilekçesinde tarafların bilgileri, dava konusu işlemin tarihi ve sayısı, tebliğ tarihi, olaylar ve hukuki sebepler yer almalı; işlemin bir örneği eklenmelidir. İdari yargıda yargılama kural olarak <strong>yazılı</strong> yürütülür ve dosya üzerinden incelenir; mahkeme gerekli gördüğünde keşif, bilirkişi incelemesi veya duruşma yapabilir.</p>
+
+          <h2>Kanun yolları</h2>
+          <p>İdare ve vergi mahkemesi kararlarına karşı tebliğden itibaren <strong>30 gün</strong> içinde bölge idare mahkemesine istinaf, kanunda sayılan kararlar için ise Danıştay'a temyiz yoluna başvurulabilir. İdari para cezalarının itiraz usulü farklıdır; ayrıntılar için <a href="idari-para-cezasina-itiraz.html">idari para cezasına itiraz</a> yazımıza bakabilirsiniz.</p>
+""",
+  },
+  # ------------------------------------------------------------------ TAZMİNAT
+  {
+    "slug": "trafik-kazasi-tazminati.html",
+    "cat": "Tazminat Hukuku", "tarih": "2026-11-17", "read": "6 dk okuma",
+    "title": "Trafik Kazası Tazminatı: Hangi Haklar Talep Edilir? | Gelegen Hukuk Bürosu",
+    "desc": "Trafik kazasında araç hasarı, değer kaybı, iş göremezlik, destekten yoksun kalma ve manevi tazminat; sigortaya başvuru, tahkim ve zamanaşımı. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "h1": "Trafik Kazası Tazminatı: Hangi Haklar Talep Edilir?",
+    "lead": "Trafik kazası sonrasında zarar görenler, araç hasarından yaralanmaya ve yakın kaybına kadar farklı kalemlerde tazminat isteyebilir. Bu yazıda talep edilebilecek tazminatları, sigortaya başvuru zorunluluğunu ve süreleri özetliyoruz.",
+    "body": """
+          <h2>Kimden tazminat istenir?</h2>
+          <p>Karayolları Trafik Kanunu (KTK) m. 85 uyarınca motorlu aracın işletilmesi bir kişinin ölümüne, yaralanmasına veya bir şeyin zarara uğramasına sebep olursa, aracın <strong>işleteni</strong> ve bağlı olduğu teşebbüs sahibi müteselsilen sorumlu olur. Uygulamada tazminat, aracın <strong>zorunlu mali sorumluluk (trafik) sigortası</strong> şirketinden, poliçe limitleri dahilinde talep edilir. Limiti aşan zararlar için sürücü ve işletene başvurulabilir.</p>
+
+          <h2>Talep edilebilecek tazminat kalemleri</h2>
+          <h3>Maddi hasar</h3>
+          <ul>
+            <li><strong>Araç hasarı:</strong> Onarım masrafları veya tam hasar durumunda aracın değeri,</li>
+            <li><strong>Değer kaybı:</strong> Kaza sonrası onarılan aracın piyasa değerindeki düşüş,</li>
+            <li><strong>Araç mahrumiyeti (kazanç kaybı):</strong> Aracın serviste kaldığı süre için ikame araç veya kazanç kaybı.</li>
+          </ul>
+          <h3>Bedensel zarar</h3>
+          <ul>
+            <li><strong>Tedavi giderleri,</strong></li>
+            <li><strong>Geçici iş göremezlik:</strong> Tedavi süresince çalışamamaktan doğan kayıp,</li>
+            <li><strong>Sürekli iş göremezlik (maluliyet):</strong> Kalıcı sakatlık oranına göre hesaplanan tazminat,</li>
+            <li><strong>Bakıcı giderleri.</strong></li>
+          </ul>
+          <h3>Ölüm hâlinde</h3>
+          <ul>
+            <li><strong>Destekten yoksun kalma tazminatı:</strong> Ölenin desteğinden yoksun kalan eş, çocuklar ve diğer yakınlar için,</li>
+            <li><strong>Cenaze giderleri.</strong></li>
+          </ul>
+          <h3>Manevi tazminat</h3>
+          <p>Yaralanan kişi ve ölüm hâlinde yakınları manevi tazminat isteyebilir. Ancak manevi tazminat <strong>zorunlu trafik sigortasının kapsamında değildir</strong>; bu talep sürücü, işleten veya (kaskoda ihtiyari teminat varsa) ilgili sigorta şirketine yöneltilir.</p>
+
+          <h2>Kusur oranının önemi</h2>
+          <p>Tazminat miktarı, kaza tespit tutanağı ve bilirkişi raporlarıyla belirlenen <strong>kusur oranına</strong> göre hesaplanır. Zarar görenin de kusuru varsa tazminattan bu oranda indirim yapılır. Tutanaktaki kusur tespitine katılmıyorsanız, yargılama sırasında bilirkişi incelemesiyle bu tespit tartışılabilir.</p>
+
+          <h2>Önce sigortaya başvuru zorunlu</h2>
+          <p>Zarar gören, dava açmadan veya tahkime başvurmadan önce <strong>sigorta şirketine yazılı olarak başvurmak</strong> zorundadır (KTK m. 97). Sigorta şirketi <strong>15 gün</strong> içinde başvuruyu sonuçlandırmazsa veya ödeme teklifini kabul etmezseniz:</p>
+          <ul>
+            <li>Asliye ticaret veya asliye hukuk mahkemesinde dava açabilir,</li>
+            <li>Ya da <strong>Sigorta Tahkim Komisyonuna</strong> başvurabilirsiniz.</li>
+          </ul>
+          <p>Kazaya karışan araç sigortasızsa veya kaçmışsa, belirli zararlar için <strong>Güvence Hesabına</strong> başvurulabilir.</p>
+
+          <h2>Zamanaşımı</h2>
+          <p>Trafik kazasından doğan tazminat talepleri, zarar görenin zararı ve tazminat yükümlüsünü öğrendiği tarihten itibaren <strong>iki yıl</strong>, her hâlde kaza tarihinden itibaren <strong>on yıl</strong> içinde zamanaşımına uğrar. Kaza aynı zamanda ceza kanunlarına göre daha uzun zamanaşımına tabi bir suç oluşturuyorsa (ör. taksirle yaralama), bu uzun süre uygulanır (KTK m. 109).</p>
+""",
+  },
+]

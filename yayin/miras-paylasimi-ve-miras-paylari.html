@@ -30,7 +30,7 @@
 
   <script>document.documentElement.classList.add("js");</script>
 
-  <link rel="stylesheet" href="css/style.css?v=46">
+  <link rel="stylesheet" href="css/style.css?v=51">
   <link rel="stylesheet" href="css/responsive.css?v=44">
   <link rel="stylesheet" href="css/print.css?v=40" media="print">
 
@@ -126,7 +126,7 @@
 
   <main id="main">
 
-    <section class="page-hero">
+    <section class="page-hero article-hero">
       <div class="container page-hero__inner">
         <nav class="breadcrumb" aria-label="Sayfa yolu">
           <ol>
@@ -136,63 +136,94 @@
           </ol>
         </nav>
         <h1>Miras Paylaşımı: Kim Ne Kadar Miras Alır?</h1>
+        <p class="article-hero__lead">Vasiyetname bırakılmamışsa miras, Türk Medeni Kanunu'nda belirlenen yasal mirasçılar arasında kanuni paylara göre paylaştırılır. Bu yazıda mirasçılık sırasını ve payların nasıl hesaplandığını örneklerle açıklıyoruz.</p>
+        <ul class="article-hero__meta">
+          <li><a href="malatya-miras-avukati.html">Miras Hukuku</a></li>
+          <li><time datetime="2026-11-17">17 Kasım 2026</time></li>
+          <li>6 dk okuma</li>
+        </ul>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container container--narrow">
-        <article class="article-body reveal">
-          <p class="article-meta"><span>Miras Hukuku</span><time datetime="2026-11-17">17 Kasım 2026</time><span>6 dk okuma</span></p>
-          <p class="article-lead">Vasiyetname bırakılmamışsa miras, Türk Medeni Kanunu'nda belirlenen yasal mirasçılar arasında kanuni paylara göre paylaştırılır. Bu yazıda mirasçılık sırasını ve payların nasıl hesaplandığını örneklerle açıklıyoruz.</p>
+    <section class="article-section">
+      <div class="container article-layout">
+        <aside class="article-aside" aria-label="Yazı içi gezinme">
+          <div class="article-aside__sticky">
+            <nav class="toc" aria-label="İçindekiler">
+              <p class="toc__title">Bu yazıda</p>
+              <ol class="toc__list">
+              <li><a href="#zumre-sistemi">Zümre sistemi</a></li>
+              <li><a href="#sag-kalan-esin-miras-payi">Sağ kalan eşin miras payı</a></li>
+              <li><a href="#ornek-hesaplamalar">Örnek hesaplamalar</a></li>
+              <li><a href="#vasiyetname-varsa-ne-olur">Vasiyetname varsa ne olur?</a></li>
+              <li><a href="#paylasim-nasil-yapilir">Paylaşım nasıl yapılır?</a></li>
+              <li><a href="#veraset-ve-intikal-vergisi">Veraset ve intikal vergisi</a></li>
+              </ol>
+            </nav>
+            <div class="article-related"><p>İlgili çalışma alanı</p>
+              <a href="malatya-miras-avukati.html">Malatya Miras Avukatı ve Miras Hukuku</a></div>
+          </div>
+        </aside>
 
-          <h2>Zümre sistemi</h2>
+        <article class="article-body">
+          <details class="toc-mobile">
+            <summary>Bu yazıda</summary>
+            <ol class="toc__list">
+              <li><a href="#zumre-sistemi">Zümre sistemi</a></li>
+              <li><a href="#sag-kalan-esin-miras-payi">Sağ kalan eşin miras payı</a></li>
+              <li><a href="#ornek-hesaplamalar">Örnek hesaplamalar</a></li>
+              <li><a href="#vasiyetname-varsa-ne-olur">Vasiyetname varsa ne olur?</a></li>
+              <li><a href="#paylasim-nasil-yapilir">Paylaşım nasıl yapılır?</a></li>
+              <li><a href="#veraset-ve-intikal-vergisi">Veraset ve intikal vergisi</a></li>
+            </ol>
+          </details>
+
+          <h2 id="zumre-sistemi">Zümre sistemi</h2>
           <p>Türk hukukunda kan hısımları <strong>zümre</strong> esasına göre mirasçı olur. Önceki zümrede mirasçı varsa sonraki zümre mirasçı olamaz.</p>
           <ul>
-            <li><strong>1. zümre — Altsoy (TMK m. 495):</strong> Çocuklar eşit paylarla mirasçı olur. Miras bırakandan önce ölmüş çocuğun yerini kendi çocukları (torunlar) alır. Evlatlıklar da öz çocuk gibi mirasçıdır.</li>
-            <li><strong>2. zümre — Anne ve baba (TMK m. 496):</strong> Altsoy yoksa miras anne ve babaya eşit olarak kalır. Önceden ölmüş anne veya babanın yerini onun altsoyu, yani miras bırakanın <strong>kardeşleri</strong> alır.</li>
-            <li><strong>3. zümre — Büyükanne ve büyükbabalar (TMK m. 497):</strong> İlk iki zümrede mirasçı yoksa miras büyükanne ve büyükbabalara, onların yerine de altsoylarına (amca, hala, dayı, teyze) geçer.</li>
+            <li><strong class="lbl">1. zümre — Altsoy (TMK m. 495):</strong> Çocuklar eşit paylarla mirasçı olur. Miras bırakandan önce ölmüş çocuğun yerini kendi çocukları (torunlar) alır. Evlatlıklar da öz çocuk gibi mirasçıdır.</li>
+            <li><strong class="lbl">2. zümre — Anne ve baba (TMK m. 496):</strong> Altsoy yoksa miras anne ve babaya eşit olarak kalır. Önceden ölmüş anne veya babanın yerini onun altsoyu, yani miras bırakanın <strong>kardeşleri</strong> alır.</li>
+            <li><strong class="lbl">3. zümre — Büyükanne ve büyükbabalar (TMK m. 497):</strong> İlk iki zümrede mirasçı yoksa miras büyükanne ve büyükbabalara, onların yerine de altsoylarına (amca, hala, dayı, teyze) geçer.</li>
           </ul>
 
-          <h2>Sağ kalan eşin miras payı</h2>
+          <h2 id="sag-kalan-esin-miras-payi">Sağ kalan eşin miras payı</h2>
           <p>Eş, zümrelerden hangisiyle birlikte mirasçı olduğuna göre farklı pay alır (TMK m. 499):</p>
           <ul>
-            <li><strong>Çocuklarla birlikte:</strong> Mirasın <strong>dörtte biri</strong>,</li>
-            <li><strong>Anne-baba zümresiyle birlikte:</strong> Mirasın <strong>yarısı</strong>,</li>
-            <li><strong>Büyükanne-büyükbaba zümresiyle birlikte:</strong> Mirasın <strong>dörtte üçü</strong>,</li>
+            <li><strong class="lbl">Çocuklarla birlikte:</strong> Mirasın <strong>dörtte biri</strong>,</li>
+            <li><strong class="lbl">Anne-baba zümresiyle birlikte:</strong> Mirasın <strong>yarısı</strong>,</li>
+            <li><strong class="lbl">Büyükanne-büyükbaba zümresiyle birlikte:</strong> Mirasın <strong>dörtte üçü</strong>,</li>
             <li>Bunlar da yoksa mirasın <strong>tamamı</strong>.</li>
           </ul>
 
-          <h2>Örnek hesaplamalar</h2>
+          <h2 id="ornek-hesaplamalar">Örnek hesaplamalar</h2>
           <ul>
-            <li><strong>Eş + 2 çocuk:</strong> Eş 1/4; kalan 3/4 iki çocuk arasında eşit paylaşılır, her çocuk 3/8 alır.</li>
-            <li><strong>Eş + anne + baba (çocuk yok):</strong> Eş 1/2; anne ve baba kalan yarıyı paylaşır, her biri 1/4 alır.</li>
-            <li><strong>Eş + anne (baba önceden ölmüş) + 2 kardeş:</strong> Eş 1/2; anne 1/4; babanın payı olan 1/4 kardeşlere geçer, her kardeş 1/8 alır.</li>
-            <li><strong>Yalnızca 3 çocuk:</strong> Her çocuk 1/3 alır.</li>
+            <li><strong class="lbl">Eş + 2 çocuk:</strong> Eş 1/4; kalan 3/4 iki çocuk arasında eşit paylaşılır, her çocuk 3/8 alır.</li>
+            <li><strong class="lbl">Eş + anne + baba (çocuk yok):</strong> Eş 1/2; anne ve baba kalan yarıyı paylaşır, her biri 1/4 alır.</li>
+            <li><strong class="lbl">Eş + anne (baba önceden ölmüş) + 2 kardeş:</strong> Eş 1/2; anne 1/4; babanın payı olan 1/4 kardeşlere geçer, her kardeş 1/8 alır.</li>
+            <li><strong class="lbl">Yalnızca 3 çocuk:</strong> Her çocuk 1/3 alır.</li>
           </ul>
 
-          <h2>Vasiyetname varsa ne olur?</h2>
+          <h2 id="vasiyetname-varsa-ne-olur">Vasiyetname varsa ne olur?</h2>
           <p>Miras bırakan, <a href="vasiyetname-nasil-yapilir.html">vasiyetname</a> ile paylaşımı değiştirebilir; ancak altsoy, anne-baba ve eşin <strong>saklı paylarına</strong> dokunamaz. Saklı payı zedelenen mirasçı tenkis davası açabilir. Kardeşlerin saklı payı yoktur.</p>
 
-          <h2>Paylaşım nasıl yapılır?</h2>
+          <h2 id="paylasim-nasil-yapilir">Paylaşım nasıl yapılır?</h2>
           <ol>
-            <li><strong>Mirasçılık belgesi</strong> notere veya sulh hukuk mahkemesine başvurularak alınır.</li>
+            <li><strong class="lbl">Mirasçılık belgesi</strong> notere veya sulh hukuk mahkemesine başvurularak alınır.</li>
             <li>Mirasçılar terekenin borçlu olup olmadığını araştırır; borca batık terekelerde <a href="mirasin-reddi-ve-mirascilik-belgesi.html">mirasın reddi</a> için üç aylık süre gözetilir.</li>
             <li>Mirasçılar paylaşım üzerinde anlaşırsa yazılı bir <strong>paylaşma sözleşmesi</strong> yapılabilir ve tapuda intikal işlemleri buna göre tamamlanır.</li>
             <li>Anlaşma sağlanamazsa miras ortaklığı, sulh hukuk mahkemesinde açılacak <a href="ortakligin-giderilmesi-davasi.html">ortaklığın giderilmesi</a> davası ile sona erdirilir.</li>
           </ol>
 
-          <h2>Veraset ve intikal vergisi</h2>
+          <h2 id="veraset-ve-intikal-vergisi">Veraset ve intikal vergisi</h2>
           <p>Mirasçılar, ölüm Türkiye'de gerçekleşmişse ölüm tarihini izleyen <strong>dört ay</strong> içinde vergi dairesine veraset ve intikal vergisi beyannamesi vermelidir. Belirli tutara kadar olan intikaller için istisnalar uygulanır; istisna tutarları her yıl yeniden belirlenir.</p>
 
-          <div class="article-note">
-            <p><strong>Bilgilendirme:</strong> Bu yazı yalnızca genel bilgilendirme amaçlıdır; somut
-            olayınıza ilişkin hukuki görüş yerine geçmez. Süreler ve şartlar dosyanın özelliklerine ve
-            güncel mevzuata göre değişebilir. Hak kaybı yaşamamak için bir avukata danışmanız önerilir.</p>
+          <div class="article-disclaimer">
+            <p>Bu yazı yalnızca genel bilgilendirme amaçlıdır; somut olayınıza ilişkin hukuki görüş yerine
+            geçmez. Süreler ve şartlar dosyanın özelliklerine ve güncel mevzuata göre değişebilir. Hak kaybı
+            yaşamamak için bir avukata danışmanız önerilir. Son güncelleme: 17 Kasım 2026.</p>
           </div>
-          <div class="article-note">
-            <p><strong>İlgili çalışma alanı:</strong> <a href="malatya-miras-avukati.html">Malatya Miras Avukatı ve Miras Hukuku</a> sayfasında
-            bu alandaki dava türleri, süreler ve sık sorulan sorular hakkında daha fazla bilgi bulabilirsiniz.</p>
-          </div>
+          <div class="article-related article-related--mobile"><p>İlgili çalışma alanı</p>
+              <a href="malatya-miras-avukati.html">Malatya Miras Avukatı ve Miras Hukuku</a></div>
         </article>
       </div>
     </section>
@@ -307,6 +338,6 @@
   </div>
 
   <script src="js/data.js?v=35"></script>
-  <script src="js/main.js?v=32" defer></script>
+  <script src="js/main.js?v=34" defer></script>
 </body>
 </html>

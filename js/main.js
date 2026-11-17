@@ -355,6 +355,62 @@
   }
 
   /* =========================================================
+     10) MAKALE SAYFASI — okuma ilerleme çubuğu + içindekiler
+         Yalnızca .article-layout bulunan sayfalarda çalışır.
+     ========================================================= */
+  function initArticle() {
+    const body = $(".article-layout .article-body");
+    const header = $(".site-header");
+    if (!body) return;
+
+    // İlerleme çubuğu: kaydırmayla doğrudan eşlenir (animasyon değil)
+    if (header) {
+      const bar = document.createElement("div");
+      bar.className = "read-progress";
+      bar.setAttribute("aria-hidden", "true");
+      header.appendChild(bar);
+      let ticking = false;
+      const update = () => {
+        const r = body.getBoundingClientRect();
+        const total = r.height - window.innerHeight * 0.6;
+        const done = Math.min(1, Math.max(0, -r.top / (total > 0 ? total : 1)));
+        bar.style.transform = "scaleX(" + done.toFixed(4) + ")";
+        ticking = false;
+      };
+      window.addEventListener("scroll", () => {
+        if (!ticking) { ticking = true; requestAnimationFrame(update); }
+      }, { passive: true });
+      window.addEventListener("resize", update);
+      update();
+    }
+
+    // İçindekiler: okunan bölümü işaretle (ekranın üst %30'unu geçen son başlık);
+    // mobilde bağlantıya basınca kutuyu kapat
+    const links = $$(".toc__list a");
+    const heads = $$(".article-body h2[id]");
+    if (links.length && heads.length) {
+      let current = "";
+      const mark = () => {
+        const line = window.innerHeight * 0.3;
+        let id = "";
+        heads.forEach((h) => { if (h.getBoundingClientRect().top <= line) id = h.id; });
+        if (id === current) return;
+        current = id;
+        links.forEach((a) => {
+          if (a.getAttribute("href") === "#" + id) a.setAttribute("aria-current", "true");
+          else a.removeAttribute("aria-current");
+        });
+      };
+      window.addEventListener("scroll", () => requestAnimationFrame(mark), { passive: true });
+      mark();
+    }
+    $$(".toc-mobile a").forEach((a) => a.addEventListener("click", () => {
+      const d = a.closest("details");
+      if (d) d.open = false;
+    }));
+  }
+
+  /* =========================================================
      BAŞLAT
      ========================================================= */
   function init() {
@@ -367,6 +423,7 @@
     initBackToTop();
     initDataBinding();
     initMap();
+    initArticle();
   }
 
   if (document.readyState === "loading") {

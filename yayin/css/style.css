@@ -1837,22 +1837,137 @@ body.is-locked .site-header { z-index: var(--z-drawer); }
    § MAKALELER (bilgilendirici içerik — blog)
    Reklam yasağına uygun, uzun-metin okuma düzeni ve makale kartları.
    =========================================================================== */
-.article-body { max-width: var(--container-narrow); }
-.article-body > p,
-.article-body > ul,
-.article-body > ol { margin-top: var(--sp-4); }
-.article-body h2 { margin-top: var(--sp-8); margin-bottom: var(--sp-3); }
-.article-body h3 { margin-top: var(--sp-6); margin-bottom: var(--sp-2); }
-.article-body ul,
-.article-body ol { padding-left: 1.3rem; }
-.article-body li { margin-top: var(--sp-2); text-align: left; }
-.article-lead { font-size: 1.12rem; line-height: 1.7; color: var(--c-ink); text-align: left; }
-.article-meta { display: flex; flex-wrap: wrap; gap: var(--sp-2) var(--sp-4);
-  color: var(--c-muted); font-size: var(--fs-sm); margin-bottom: var(--sp-6); }
-.article-note { border-left: 3px solid var(--c-gold-500); background: var(--c-sand);
-  padding: var(--sp-4) var(--sp-5); border-radius: var(--radius); margin-top: var(--sp-6); }
-.article-note p { text-align: left; margin-top: 0; }
+/* ---------------------------------------------------------------------------
+   Makale sayfası — "hukuki görüş yazısı" düzeni
+   Gövde Caslon serif; önemli süre ve şartlar avukatın dosyada kullandığı
+   fosforlu kalem gibi ince altın vurguyla işaretlenir (sayfanın tek iddialı
+   öğesi). Masaüstünde solda sabit içindekiler, sağda 68 karakterlik okuma
+   sütunu; başlık bölümü okuma sütunuyla aynı hizaya oturur.
+   --------------------------------------------------------------------------- */
+:root { --aside-w: 15rem; --article-gap: clamp(2.5rem, 1rem + 4vw, 5rem); }
+
+/* Başlık bölümü */
+.article-hero { padding-block: clamp(2.25rem, 1.5rem + 3vw, 4.5rem) clamp(2rem, 1.4rem + 2.4vw, 3.75rem); }
+.article-hero h1 { font-size: clamp(2rem, 1.45rem + 2.4vw, 3.4rem); line-height: 1.1;
+  max-width: 20ch; margin-bottom: var(--sp-5); text-wrap: balance; }
+.article-hero .article-hero__lead { font-family: var(--ff-serif-text); font-style: italic;
+  font-size: clamp(1.1rem, 1rem + 0.45vw, 1.32rem); line-height: 1.65;
+  color: rgba(250, 248, 245, 0.86); max-width: 60ch; text-align: left; margin: 0; }
+.article-hero__meta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2) 0;
+  list-style: none; margin: var(--sp-6) 0 0; padding: 0; font-size: var(--fs-sm);
+  color: rgba(250, 248, 245, 0.66); }
+.article-hero__meta li + li { border-left: 1px solid rgba(205, 175, 115, 0.45);
+  margin-left: var(--sp-4); padding-left: var(--sp-4); }
+.article-hero__meta a { color: var(--c-gold-400); text-decoration: none; }
+.article-hero__meta a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* İki sütunlu yerleşim */
+.article-section { padding-block: clamp(2.5rem, 1.6rem + 3vw, 4.5rem) var(--section-y); }
+.article-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-6); }
+.article-aside { display: none; }
+.toc-mobile { margin-bottom: var(--sp-6); border: 1px solid var(--c-line); border-radius: var(--radius);
+  background: var(--c-white); font-family: var(--ff-sans); }
+.toc-mobile summary { cursor: pointer; padding: var(--sp-4) var(--sp-5); font-weight: 600;
+  color: var(--c-ink); list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.toc-mobile summary::-webkit-details-marker { display: none; }
+.toc-mobile summary::after { content: ""; width: 9px; height: 9px; border-right: 1.5px solid var(--c-gold-600);
+  border-bottom: 1.5px solid var(--c-gold-600); transform: rotate(45deg) translateY(-3px);
+  transition: transform var(--dur) var(--ease); }
+.toc-mobile[open] summary::after { transform: rotate(-135deg) translateY(-1px); }
+.toc-mobile .toc__list { padding: 0 var(--sp-5) var(--sp-4); }
+
+@media (min-width: 1024px) {
+  .article-hero .page-hero__inner,
+  .article-layout { display: grid; grid-template-columns: var(--aside-w) minmax(0, 1fr);
+    column-gap: var(--article-gap); }
+  .article-hero .page-hero__inner { max-width: none; }
+  .article-hero .page-hero__inner > * { grid-column: 2; }
+  .article-aside { display: block; }
+  .article-aside__sticky { position: sticky; top: calc(var(--header-h) + var(--sp-6)); }
+  .toc-mobile, .article-related--mobile { display: none; }
+}
+
+/* İçindekiler */
+.toc__title { font-family: var(--ff-sans); font-size: var(--fs-sm); font-weight: 600;
+  color: var(--c-ink); margin: 0 0 var(--sp-3); }
+.toc__list { list-style: none; margin: 0; padding: 0; font-family: var(--ff-sans); font-size: 0.92rem; }
+.toc__list a { display: block; padding: 0.45rem 0 0.45rem var(--sp-4); color: var(--c-muted);
+  text-decoration: none; line-height: 1.4; border-left: 2px solid var(--c-line);
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease); }
+.toc__list a:hover { color: var(--c-ink); }
+.toc__list a[aria-current="true"] { color: var(--c-ink); border-left-color: var(--c-gold-500); }
+.article-related { margin-top: var(--sp-7); padding: var(--sp-5); background: var(--c-sand);
+  border-radius: var(--radius); font-family: var(--ff-sans); }
+.article-related p { margin: 0; text-align: left; font-size: var(--fs-sm); color: var(--c-muted); }
+.article-related a { display: block; margin-top: var(--sp-2); font-family: var(--ff-serif-text);
+  font-size: 1.05rem; line-height: 1.4; color: var(--c-ink); text-decoration-color: var(--c-gold-500);
+  text-underline-offset: 4px; }
+.article-related a:hover { color: var(--c-gold-700); }
+.article-related--mobile { margin-top: var(--sp-8); }
+
+/* Okuma sütunu */
+.article-body { max-width: 68ch; font-family: var(--ff-serif-text);
+  font-size: clamp(1.06rem, 1rem + 0.25vw, 1.16rem); line-height: 1.82; color: var(--c-body);
+  font-synthesis: none; }
+.article-body p { text-align: left; margin: 0; }
+.article-body > p + p, .article-body > ul + p, .article-body > ol + p,
+.article-body > p + ul, .article-body > p + ol, .article-body > h3 + p { margin-top: var(--sp-5); }
+.article-body a { color: var(--c-ink); text-decoration-color: var(--c-gold-500);
+  text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.article-body a:hover { color: var(--c-gold-700); }
+
+.article-body h2 { position: relative; scroll-margin-top: calc(var(--header-h) + var(--sp-5));
+  font-size: clamp(1.55rem, 1.3rem + 1vw, 2.1rem); line-height: 1.2; color: var(--c-ink);
+  margin: var(--sp-9) 0 var(--sp-5); padding-top: var(--sp-5); text-wrap: balance; }
+.article-body h2::before { content: ""; position: absolute; top: 0; left: 0; width: 2.75rem; height: 2px;
+  background: var(--c-gold-500); }
+.toc-mobile + h2, .article-lead-gap + h2 { margin-top: var(--sp-2); }
+@media (max-width: 1023px) { .toc-mobile + h2 { margin-top: var(--sp-6); } }
+.article-body h3 { font-family: var(--ff-sans); font-size: 1.04rem; font-weight: 600; letter-spacing: 0;
+  color: var(--c-ink); margin: var(--sp-7) 0 0; }
+
+/* Fosforlu kalem vurgusu: paragraf içindeki süreler, oranlar, şartlar */
+.article-body strong { font-weight: 400; color: var(--c-ink);
+  background: linear-gradient(transparent 58%, rgba(205, 175, 115, 0.34) 58%, rgba(205, 175, 115, 0.34) 92%, transparent 92%);
+  -webkit-box-decoration-break: clone; box-decoration-break: clone; padding-inline: 0.08em; }
+/* Liste/not başındaki etiket ("Görevli mahkeme:") vurgu değil, satır başı başlığıdır.
+   .lbl sınıfını tools/uret.py ekler (<li> veya <p> hemen <strong> ile başlıyorsa). */
+.article-body strong.lbl { background: none; padding: 0; font-family: var(--ff-sans);
+  font-weight: 600; font-size: 0.92em; letter-spacing: 0.005em; }
+
+/* Madde işaretli liste: altın baklava */
+.article-body ul { list-style: none; padding: 0; margin: var(--sp-5) 0 0; }
+.article-body ul > li { position: relative; padding-left: 1.6rem; text-align: left; }
+.article-body ul > li + li { margin-top: var(--sp-3); }
+.article-body ul > li::before { content: ""; position: absolute; left: 0.2rem; top: 0.72em; width: 6px; height: 6px;
+  background: var(--c-gold-500); transform: rotate(45deg); }
+
+/* Numaralı liste: yalnızca gerçek sıralı süreçler — dikey zaman çizgisi */
+.article-body ol { list-style: none; counter-reset: adim; padding: 0; margin: var(--sp-6) 0 0; }
+.article-body ol > li { position: relative; counter-increment: adim; padding: 0 0 var(--sp-5) 3.25rem;
+  text-align: left; }
+.article-body ol > li:last-child { padding-bottom: 0; }
+.article-body ol > li::before { content: counter(adim); position: absolute; left: 0; top: 0.05em;
+  width: 2.1rem; height: 2.1rem; display: grid; place-items: center; border: 1px solid var(--c-gold-500);
+  border-radius: 50%; background: var(--c-ivory); font-family: var(--ff-serif); font-size: 1.05rem;
+  line-height: 1; color: var(--c-gold-700); }
+.article-body ol > li:not(:last-child)::after { content: ""; position: absolute; left: 1.05rem; top: 2.3rem;
+  bottom: 0.2rem; width: 1px; background: var(--c-gold-200); }
+
+/* Not kutusu (ör. "Dikkat") */
+.article-note { margin-top: var(--sp-6); padding: var(--sp-5) var(--sp-6); background: var(--c-sand);
+  border-left: 2px solid var(--c-gold-500); border-radius: 0 var(--radius) var(--radius) 0; }
+.article-note p { margin: 0; text-align: left; }
 .article-note p + p { margin-top: var(--sp-3); }
+
+/* Yazı sonu bilgilendirme notu: kutu değil, sade dipnot */
+.article-disclaimer { margin-top: var(--sp-9); padding-top: var(--sp-5); border-top: 1px solid var(--c-line);
+  font-family: var(--ff-sans); font-size: var(--fs-sm); line-height: 1.65; color: var(--c-muted); }
+.article-disclaimer p { text-align: left; margin: 0; }
+
+/* Okuma ilerleme çubuğu (JS ekler) */
+.read-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--c-gold-500);
+  transform-origin: 0 50%; transform: scaleX(0); pointer-events: none; }
 
 /* Makale kartı (liste) — mevcut .card üstüne tıklanabilir kart */
 .post-card { display: flex; flex-direction: column; height: 100%; }
@@ -1880,3 +1995,27 @@ article.card.post-card { position: relative; }
   background: var(--c-white); color: var(--c-ink); font-family: var(--ff-sans); font-size: var(--fs-sm); }
 .post-card h3 a:focus-visible { outline: none; }
 .post-card:has(h3 a:focus-visible) { outline: 2px solid var(--c-gold-500); outline-offset: 3px; }
+
+/* Çalışma alanı sayfalarında gövde başındaki giriş paragrafı */
+.article-body .article-lead { font-style: italic; font-size: 1.14em; line-height: 1.7; color: var(--c-ink); }
+
+/* İçindekiler listesi makale gövdesinin liste stillerini almasın (mobil kutu gövdenin içinde) */
+.article-body .toc__list { margin: 0; counter-reset: none; font-family: var(--ff-sans); font-size: 0.95rem; line-height: 1.4; }
+.article-body .toc__list > li { padding: 0; counter-increment: none; }
+.article-body .toc__list > li::before,
+.article-body .toc__list > li::after { content: none; }
+.article-body .toc__list a { text-decoration: none; color: var(--c-muted); }
+.article-body .toc__list a:hover { color: var(--c-ink); }
+.toc-mobile summary::after { transform: rotate(45deg); transform-origin: 60% 60%; margin-top: -4px; }
+.toc-mobile[open] summary::after { transform: rotate(225deg); margin-top: 4px; }
+
+/* Başlık bilgi satırı: ayırıcı çizgi yerine boşluk (satır kayınca baştaki çizgi kalmasın) */
+.article-hero__meta { column-gap: var(--sp-5); }
+.article-hero__meta li + li { border-left: 0; margin-left: 0; padding-left: 0; }
+.toc-mobile summary::after { transform-origin: 50% 50%; margin-top: -4px; }
+.toc-mobile[open] summary::after { transform: rotate(-135deg); margin-top: 4px; }
+/* Mobil içindekiler açma/kapama işareti: çizgi okları yerine artı / eksi */
+.toc-mobile summary::after, .toc-mobile[open] summary::after { content: "+"; width: auto; height: auto; border: 0;
+  transform: none; margin: 0; font-family: var(--ff-sans); font-size: 1.35rem; font-weight: 400; line-height: 1;
+  color: var(--c-gold-600); }
+.toc-mobile[open] summary::after { content: "\2013"; }

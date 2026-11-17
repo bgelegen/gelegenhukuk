@@ -30,7 +30,7 @@
 
   <script>document.documentElement.classList.add("js");</script>
 
-  <link rel="stylesheet" href="css/style.css?v=46">
+  <link rel="stylesheet" href="css/style.css?v=51">
   <link rel="stylesheet" href="css/responsive.css?v=44">
   <link rel="stylesheet" href="css/print.css?v=40" media="print">
 
@@ -126,7 +126,7 @@
 
   <main id="main">
 
-    <section class="page-hero">
+    <section class="page-hero article-hero">
       <div class="container page-hero__inner">
         <nav class="breadcrumb" aria-label="Sayfa yolu">
           <ol>
@@ -136,52 +136,81 @@
           </ol>
         </nav>
         <h1>Kıdem Tazminatı Şartları ve Hesaplanması</h1>
+        <p class="article-hero__lead">Kıdem tazminatı, belirli bir süre çalışmış işçinin iş sözleşmesi kanunda sayılan sebeplerle sona erdiğinde işveren tarafından ödenen bir tazminattır. Bu yazıda hangi durumlarda kıdem tazminatı alınabileceğini ve nasıl hesaplandığını özetliyoruz.</p>
+        <ul class="article-hero__meta">
+          <li><a href="malatya-is-hukuku-avukati.html">İş Hukuku</a></li>
+          <li><time datetime="2026-11-17">17 Kasım 2026</time></li>
+          <li>6 dk okuma</li>
+        </ul>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container container--narrow">
-        <article class="article-body reveal">
-          <p class="article-meta"><span>İş Hukuku</span><time datetime="2026-11-17">17 Kasım 2026</time><span>6 dk okuma</span></p>
-          <p class="article-lead">Kıdem tazminatı, belirli bir süre çalışmış işçinin iş sözleşmesi kanunda sayılan sebeplerle sona erdiğinde işveren tarafından ödenen bir tazminattır. Bu yazıda hangi durumlarda kıdem tazminatı alınabileceğini ve nasıl hesaplandığını özetliyoruz.</p>
+    <section class="article-section">
+      <div class="container article-layout">
+        <aside class="article-aside" aria-label="Yazı içi gezinme">
+          <div class="article-aside__sticky">
+            <nav class="toc" aria-label="İçindekiler">
+              <p class="toc__title">Bu yazıda</p>
+              <ol class="toc__list">
+              <li><a href="#kidem-tazminatina-hak-kazanma-sartlari">Kıdem tazminatına hak kazanma şartları</a></li>
+              <li><a href="#hangi-fesih-hallerinde-kidem-tazminati-odenir">Hangi fesih hâllerinde kıdem tazminatı ödenir?</a></li>
+              <li><a href="#kidem-tazminati-nasil-hesaplanir">Kıdem tazminatı nasıl hesaplanır?</a></li>
+              <li><a href="#zamanasimi-ve-faiz">Zamanaşımı ve faiz</a></li>
+              <li><a href="#dava-oncesi-arabuluculuk">Dava öncesi arabuluculuk</a></li>
+              </ol>
+            </nav>
+            <div class="article-related"><p>İlgili çalışma alanı</p>
+              <a href="malatya-is-hukuku-avukati.html">Malatya İş Hukuku Avukatı</a></div>
+          </div>
+        </aside>
 
-          <h2>Kıdem tazminatına hak kazanma şartları</h2>
+        <article class="article-body">
+          <details class="toc-mobile">
+            <summary>Bu yazıda</summary>
+            <ol class="toc__list">
+              <li><a href="#kidem-tazminatina-hak-kazanma-sartlari">Kıdem tazminatına hak kazanma şartları</a></li>
+              <li><a href="#hangi-fesih-hallerinde-kidem-tazminati-odenir">Hangi fesih hâllerinde kıdem tazminatı ödenir?</a></li>
+              <li><a href="#kidem-tazminati-nasil-hesaplanir">Kıdem tazminatı nasıl hesaplanır?</a></li>
+              <li><a href="#zamanasimi-ve-faiz">Zamanaşımı ve faiz</a></li>
+              <li><a href="#dava-oncesi-arabuluculuk">Dava öncesi arabuluculuk</a></li>
+            </ol>
+          </details>
+
+          <h2 id="kidem-tazminatina-hak-kazanma-sartlari">Kıdem tazminatına hak kazanma şartları</h2>
           <p>Kıdem tazminatı, 1475 sayılı İş Kanunu'nun yürürlükte bırakılan 14. maddesinde düzenlenmiştir. Hak kazanmak için:</p>
           <ul>
             <li>İşçinin aynı işverene bağlı olarak <strong>en az bir yıl</strong> çalışmış olması,</li>
             <li>İş sözleşmesinin kanunda sayılan sebeplerden biriyle sona ermesi gerekir.</li>
           </ul>
 
-          <h2>Hangi fesih hâllerinde kıdem tazminatı ödenir?</h2>
+          <h2 id="hangi-fesih-hallerinde-kidem-tazminati-odenir">Hangi fesih hâllerinde kıdem tazminatı ödenir?</h2>
           <ul>
             <li>İşverenin, ahlak ve iyi niyet kurallarına uymayan hâller dışındaki bir sebeple iş sözleşmesini <strong>feshetmesi</strong>,</li>
             <li>İşçinin <strong>haklı nedenle</strong> sözleşmeyi feshetmesi (ör. ücretin ödenmemesi, SGK priminin eksik yatırılması, mobbing),</li>
             <li>Erkek işçinin <strong>muvazzaf askerlik</strong> nedeniyle ayrılması,</li>
-            <li><strong>Emeklilik</strong> veya yaş dışındaki şartları tamamlayıp yaşlılık aylığı için gerekli prim gün sayısını ve sigortalılık süresini doldurma,</li>
+            <li><strong class="lbl">Emeklilik</strong> veya yaş dışındaki şartları tamamlayıp yaşlılık aylığı için gerekli prim gün sayısını ve sigortalılık süresini doldurma,</li>
             <li>Kadın işçinin <strong>evlendiği tarihten itibaren bir yıl içinde</strong> kendi isteğiyle ayrılması,</li>
             <li>İşçinin <strong>ölümü</strong> (tazminat mirasçılarına ödenir).</li>
           </ul>
           <p>Kural olarak sebepsiz istifa eden işçi kıdem tazminatı alamaz.</p>
 
-          <h2>Kıdem tazminatı nasıl hesaplanır?</h2>
+          <h2 id="kidem-tazminati-nasil-hesaplanir">Kıdem tazminatı nasıl hesaplanır?</h2>
           <p>İşçiye, her tam hizmet yılı için <strong>30 günlük brüt ücreti</strong> tutarında kıdem tazminatı ödenir; bir yıldan artan süreler de oranlanarak hesaba katılır. Hesaplamada çıplak ücrete; düzenli olarak ödenen yol, yemek, ikramiye gibi para veya parayla ölçülebilen menfaatler de eklenir (<strong>giydirilmiş ücret</strong>).</p>
           <p>Bir yıllık hizmet için ödenecek kıdem tazminatı, kamu görevlileri için belirlenen <strong>kıdem tazminatı tavanını</strong> aşamaz. Tavan tutarı her yıl iki kez güncellenir. Kıdem tazminatından yalnızca damga vergisi kesilir.</p>
 
-          <h2>Zamanaşımı ve faiz</h2>
+          <h2 id="zamanasimi-ve-faiz">Zamanaşımı ve faiz</h2>
           <p>Kıdem tazminatı alacağı, iş sözleşmesinin sona ermesinden itibaren <strong>beş yıllık</strong> zamanaşımına tabidir. Kıdem tazminatının zamanında ödenmemesi hâlinde, bankalarca mevduata uygulanan en yüksek faiz oranında faiz istenebilir.</p>
 
-          <h2>Dava öncesi arabuluculuk</h2>
+          <h2 id="dava-oncesi-arabuluculuk">Dava öncesi arabuluculuk</h2>
           <p>Kıdem tazminatı talepleri için dava açmadan önce <strong>arabulucuya başvurmak zorunludur</strong>. Arabuluculuk görüşmelerinde anlaşma sağlanırsa, anlaşma tutanağı ilam niteliğinde belge sayılır ve anlaşılan konular hakkında sonradan dava açılamaz.</p>
 
-          <div class="article-note">
-            <p><strong>Bilgilendirme:</strong> Bu yazı yalnızca genel bilgilendirme amaçlıdır; somut
-            olayınıza ilişkin hukuki görüş yerine geçmez. Süreler ve şartlar dosyanın özelliklerine ve
-            güncel mevzuata göre değişebilir. Hak kaybı yaşamamak için bir avukata danışmanız önerilir.</p>
+          <div class="article-disclaimer">
+            <p>Bu yazı yalnızca genel bilgilendirme amaçlıdır; somut olayınıza ilişkin hukuki görüş yerine
+            geçmez. Süreler ve şartlar dosyanın özelliklerine ve güncel mevzuata göre değişebilir. Hak kaybı
+            yaşamamak için bir avukata danışmanız önerilir. Son güncelleme: 17 Kasım 2026.</p>
           </div>
-          <div class="article-note">
-            <p><strong>İlgili çalışma alanı:</strong> <a href="malatya-is-hukuku-avukati.html">Malatya İş Hukuku Avukatı</a> sayfasında
-            bu alandaki dava türleri, süreler ve sık sorulan sorular hakkında daha fazla bilgi bulabilirsiniz.</p>
-          </div>
+          <div class="article-related article-related--mobile"><p>İlgili çalışma alanı</p>
+              <a href="malatya-is-hukuku-avukati.html">Malatya İş Hukuku Avukatı</a></div>
         </article>
       </div>
     </section>
@@ -296,6 +325,6 @@
   </div>
 
   <script src="js/data.js?v=35"></script>
-  <script src="js/main.js?v=32" defer></script>
+  <script src="js/main.js?v=34" defer></script>
 </body>
 </html>

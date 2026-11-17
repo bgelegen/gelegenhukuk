@@ -22,6 +22,34 @@ AYLAR = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz",
 KURULUS = {"@id": SITE + "#kurulus"}
 
 
+TR = str.maketrans("çğıöşüÇĞİÖŞÜâîû", "cgiosuCGIOSUaiu")
+
+
+def basliklara_kimlik(body):
+    """Gövdedeki <h2> başlıklarına bağlantı kimliği ekler, (kimlik, metin) listesi döndürür."""
+    import re
+    liste, kullanilan = [], set()
+
+    def degistir(mt):
+        metin = re.sub(r"<[^>]+>", "", mt.group(1)).strip()
+        k = re.sub(r"[^a-z0-9]+", "-", metin.translate(TR).lower()).strip("-")[:60] or "bolum"
+        base, n = k, 2
+        while k in kullanilan:
+            k, n = f"{base}-{n}", n + 1
+        kullanilan.add(k)
+        liste.append((k, metin))
+        return f'<h2 id="{k}">{mt.group(1)}</h2>'
+
+    body = re.sub(r"<h2>(.*?)</h2>", degistir, body)
+    return etiketle(body), liste
+
+
+def etiketle(body):
+    """<li> veya <p> doğrudan <strong> ile başlıyorsa o <strong> bir satır başı etiketidir."""
+    import re
+    return re.sub(r"(<(?:li|p)>\s*)<strong>", r'\1<strong class="lbl">', body)
+
+
 def tarih_tr(iso):
     y, m, d = iso.split("-")
     return f"{int(d)} {AYLAR[int(m) - 1]} {y}"
@@ -76,9 +104,9 @@ def alan_sayfasi(a):
     html += f"""
     <section class="section">
       <div class="container container--narrow">
-        <article class="article-body reveal">
+        <article class="article-body">
           <p class="article-lead">{a["lead"]}</p>
-{a["body"]}{ilgili}
+{etiketle(a["body"])}{ilgili}
           <div class="article-note">
             <p>Bu sayfadaki bilgiler genel nitelikte olup hukuki görüş yerine geçmez. Her dosyanın
             koşulları farklıdır; somut durumunuz için ön görüşmede değerlendirme yapılır.</p>
@@ -155,24 +183,63 @@ def makale_sayfasi(m):
     digerleri = [x for x in MAKALELER if x["cat"] == m["cat"] and x is not m]
     digerleri += [x for x in MAKALELER if x["cat"] != m["cat"]]
     digerleri = digerleri[:3]
-    alan_html = ""
+    body, basliklar = basliklara_kimlik(m["body"])
+    toc = "\n".join(f'              <li><a href="#{k}">{t}</a></li>' for k, t in basliklar)
+    alan_kart = ""
     if alan:
-        alan_html = f"""
-          <div class="article-note">
-            <p><strong>İlgili çalışma alanı:</strong> <a href="{alan["slug"]}">{alan["h1"]}</a> sayfasında
-            bu alandaki dava türleri, süreler ve sık sorulan sorular hakkında daha fazla bilgi bulabilirsiniz.</p>
-          </div>"""
+        alan_kart = f"""<p>İlgili çalışma alanı</p>
+              <a href="{alan["slug"]}">{alan["h1"]}</a>"""
+    kat_html = f'<a href="{alan["slug"]}">{m["cat"]}</a>' if alan else m["cat"]
     html = head(m["title"], m["desc"], m["slug"], ld, ogtype="article",
                 ogtitle=m["h1"] + " | Gelegen Hukuk Bürosu")
-    html += hero(m["h1"], [("index.html", "Anasayfa"), ("makaleler.html", "Makaleler"), (None, m["cat"])])
     html += f"""
-    <section class="section">
-      <div class="container container--narrow">
-        <article class="article-body reveal">
-          <p class="article-meta"><span>{m["cat"]}</span><time datetime="{m["tarih"]}">{tarih_tr(m["tarih"])}</time><span>{m["read"]}</span></p>
-          <p class="article-lead">{m["lead"]}</p>
-{m["body"]}
-{UYARI}{alan_html}
+    <section class="page-hero article-hero">
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Sayfa yolu">
+          <ol>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="makaleler.html">Makaleler</a></li>
+            <li aria-current="page">{m["cat"]}</li>
+          </ol>
+        </nav>
+        <h1>{m["h1"]}</h1>
+        <p class="article-hero__lead">{m["lead"]}</p>
+        <ul class="article-hero__meta">
+          <li>{kat_html}</li>
+          <li><time datetime="{m["tarih"]}">{tarih_tr(m["tarih"])}</time></li>
+          <li>{m["read"]}</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="article-section">
+      <div class="container article-layout">
+        <aside class="article-aside" aria-label="Yazı içi gezinme">
+          <div class="article-aside__sticky">
+            <nav class="toc" aria-label="İçindekiler">
+              <p class="toc__title">Bu yazıda</p>
+              <ol class="toc__list">
+{toc}
+              </ol>
+            </nav>
+            {'<div class="article-related">' + alan_kart + '</div>' if alan else ''}
+          </div>
+        </aside>
+
+        <article class="article-body">
+          <details class="toc-mobile">
+            <summary>Bu yazıda</summary>
+            <ol class="toc__list">
+{toc}
+            </ol>
+          </details>
+{body}
+          <div class="article-disclaimer">
+            <p>Bu yazı yalnızca genel bilgilendirme amaçlıdır; somut olayınıza ilişkin hukuki görüş yerine
+            geçmez. Süreler ve şartlar dosyanın özelliklerine ve güncel mevzuata göre değişebilir. Hak kaybı
+            yaşamamak için bir avukata danışmanız önerilir. Son güncelleme: {tarih_tr(m["tarih"])}.</p>
+          </div>
+          {'<div class="article-related article-related--mobile">' + alan_kart + '</div>' if alan else ''}
         </article>
       </div>
     </section>

@@ -30,7 +30,7 @@
 
   <script>document.documentElement.classList.add("js");</script>
 
-  <link rel="stylesheet" href="css/style.css?v=46">
+  <link rel="stylesheet" href="css/style.css?v=51">
   <link rel="stylesheet" href="css/responsive.css?v=44">
   <link rel="stylesheet" href="css/print.css?v=40" media="print">
 
@@ -126,7 +126,7 @@
 
   <main id="main">
 
-    <section class="page-hero">
+    <section class="page-hero article-hero">
       <div class="container page-hero__inner">
         <nav class="breadcrumb" aria-label="Sayfa yolu">
           <ol>
@@ -136,47 +136,76 @@
           </ol>
         </nav>
         <h1>İcra Takibine İtiraz Nasıl Yapılır?</h1>
+        <p class="article-hero__lead">Hakkınızda icra takibi başlatılıp ödeme emri tebliğ edildiğinde, borcu kabul etmiyorsanız yasal süresi içinde itiraz etmeniz gerekir. Süre çok kısadır; bu yazıda itiraz yolunu özetliyoruz.</p>
+        <ul class="article-hero__meta">
+          <li><a href="malatya-icra-avukati.html">İcra ve İflas Hukuku</a></li>
+          <li><time datetime="2026-11-17">17 Kasım 2026</time></li>
+          <li>5 dk okuma</li>
+        </ul>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container container--narrow">
-        <article class="article-body reveal">
-          <p class="article-meta"><span>İcra ve İflas Hukuku</span><time datetime="2026-11-17">17 Kasım 2026</time><span>5 dk okuma</span></p>
-          <p class="article-lead">Hakkınızda icra takibi başlatılıp ödeme emri tebliğ edildiğinde, borcu kabul etmiyorsanız yasal süresi içinde itiraz etmeniz gerekir. Süre çok kısadır; bu yazıda itiraz yolunu özetliyoruz.</p>
+    <section class="article-section">
+      <div class="container article-layout">
+        <aside class="article-aside" aria-label="Yazı içi gezinme">
+          <div class="article-aside__sticky">
+            <nav class="toc" aria-label="İçindekiler">
+              <p class="toc__title">Bu yazıda</p>
+              <ol class="toc__list">
+              <li><a href="#odeme-emrine-itiraz-suresi-7-gun">Ödeme emrine itiraz süresi: 7 gün</a></li>
+              <li><a href="#itiraz-nereye-nasil-yapilir">İtiraz nereye, nasıl yapılır?</a></li>
+              <li><a href="#itirazin-sonucu">İtirazın sonucu</a></li>
+              <li><a href="#alacaklinin-basvurabilecegi-yollar">Alacaklının başvurabileceği yollar</a></li>
+              <li><a href="#kotu-niyet-ve-icra-inkar-tazminati">Kötü niyet ve icra inkâr tazminatı</a></li>
+              </ol>
+            </nav>
+            <div class="article-related"><p>İlgili çalışma alanı</p>
+              <a href="malatya-icra-avukati.html">Malatya İcra Avukatı ve İcra Hukuku</a></div>
+          </div>
+        </aside>
 
-          <h2>Ödeme emrine itiraz süresi: 7 gün</h2>
+        <article class="article-body">
+          <details class="toc-mobile">
+            <summary>Bu yazıda</summary>
+            <ol class="toc__list">
+              <li><a href="#odeme-emrine-itiraz-suresi-7-gun">Ödeme emrine itiraz süresi: 7 gün</a></li>
+              <li><a href="#itiraz-nereye-nasil-yapilir">İtiraz nereye, nasıl yapılır?</a></li>
+              <li><a href="#itirazin-sonucu">İtirazın sonucu</a></li>
+              <li><a href="#alacaklinin-basvurabilecegi-yollar">Alacaklının başvurabileceği yollar</a></li>
+              <li><a href="#kotu-niyet-ve-icra-inkar-tazminati">Kötü niyet ve icra inkâr tazminatı</a></li>
+            </ol>
+          </details>
+
+          <h2 id="odeme-emrine-itiraz-suresi-7-gun">Ödeme emrine itiraz süresi: 7 gün</h2>
           <p>İlamsız icra takibinde borçluya <strong>ödeme emri</strong> tebliğ edilir. Borçlu, tebliğ tarihinden itibaren <strong>7 gün</strong> içinde takibi yapan icra dairesine itiraz edebilir. Bu süre hak düşürücüdür; kaçırılırsa takip kesinleşir.</p>
 
-          <h2>İtiraz nereye, nasıl yapılır?</h2>
+          <h2 id="itiraz-nereye-nasil-yapilir">İtiraz nereye, nasıl yapılır?</h2>
           <p>İtiraz, takibin yapıldığı <strong>icra müdürlüğüne</strong> yazılı ya da sözlü olarak bildirilir. İtiraz dilekçesinde borca mı, imzaya mı yoksa yetkiye mi itiraz edildiği açıkça belirtilmelidir:</p>
           <ul>
-            <li><strong>Borca itiraz:</strong> Borcun hiç doğmadığı, ödendiği veya zamanaşımına uğradığı ileri sürülür.</li>
-            <li><strong>İmzaya itiraz:</strong> Senetteki imzanın borçluya ait olmadığı iddia ediliyorsa <strong>ayrıca ve açıkça</strong> belirtilmelidir; aksi hâlde imza kabul edilmiş sayılır.</li>
-            <li><strong>Yetkiye itiraz:</strong> İcra dairesinin yetkisiz olduğu ileri sürülür.</li>
+            <li><strong class="lbl">Borca itiraz:</strong> Borcun hiç doğmadığı, ödendiği veya zamanaşımına uğradığı ileri sürülür.</li>
+            <li><strong class="lbl">İmzaya itiraz:</strong> Senetteki imzanın borçluya ait olmadığı iddia ediliyorsa <strong>ayrıca ve açıkça</strong> belirtilmelidir; aksi hâlde imza kabul edilmiş sayılır.</li>
+            <li><strong class="lbl">Yetkiye itiraz:</strong> İcra dairesinin yetkisiz olduğu ileri sürülür.</li>
           </ul>
 
-          <h2>İtirazın sonucu</h2>
+          <h2 id="itirazin-sonucu">İtirazın sonucu</h2>
           <p>Süresinde yapılan itiraz, takibi <strong>kendiliğinden durdurur</strong>. Bu durumda takibe devam edebilmek için alacaklının mahkemeye başvurması gerekir.</p>
 
-          <h2>Alacaklının başvurabileceği yollar</h2>
+          <h2 id="alacaklinin-basvurabilecegi-yollar">Alacaklının başvurabileceği yollar</h2>
           <ul>
-            <li><strong>İtirazın kaldırılması:</strong> Alacaklının elinde İİK m. 68 anlamında belge (imzası ikrar edilmiş senet, resmî belge vb.) varsa, itirazın tebliğinden itibaren <strong>6 ay</strong> içinde icra mahkemesine başvurur.</li>
-            <li><strong>İtirazın iptali:</strong> Elinde bu nitelikte belge yoksa, itirazın tebliğinden itibaren <strong>1 yıl</strong> içinde genel mahkemede itirazın iptali davası açar.</li>
+            <li><strong class="lbl">İtirazın kaldırılması:</strong> Alacaklının elinde İİK m. 68 anlamında belge (imzası ikrar edilmiş senet, resmî belge vb.) varsa, itirazın tebliğinden itibaren <strong>6 ay</strong> içinde icra mahkemesine başvurur.</li>
+            <li><strong class="lbl">İtirazın iptali:</strong> Elinde bu nitelikte belge yoksa, itirazın tebliğinden itibaren <strong>1 yıl</strong> içinde genel mahkemede itirazın iptali davası açar.</li>
           </ul>
 
-          <h2>Kötü niyet ve icra inkâr tazminatı</h2>
+          <h2 id="kotu-niyet-ve-icra-inkar-tazminati">Kötü niyet ve icra inkâr tazminatı</h2>
           <p>İtirazında veya takibinde haksız çıkan taraf aleyhine, şartları varsa alacağın <strong>%20'sinden az olmamak üzere</strong> icra inkâr tazminatına hükmedilebilir. Bu nedenle itirazın da, takibin de dayanağının iyi değerlendirilmesi önemlidir.</p>
 
-          <div class="article-note">
-            <p><strong>Bilgilendirme:</strong> Bu yazı yalnızca genel bilgilendirme amaçlıdır; somut
-            olayınıza ilişkin hukuki görüş yerine geçmez. Süreler ve şartlar dosyanın özelliklerine ve
-            güncel mevzuata göre değişebilir. Hak kaybı yaşamamak için bir avukata danışmanız önerilir.</p>
+          <div class="article-disclaimer">
+            <p>Bu yazı yalnızca genel bilgilendirme amaçlıdır; somut olayınıza ilişkin hukuki görüş yerine
+            geçmez. Süreler ve şartlar dosyanın özelliklerine ve güncel mevzuata göre değişebilir. Hak kaybı
+            yaşamamak için bir avukata danışmanız önerilir. Son güncelleme: 17 Kasım 2026.</p>
           </div>
-          <div class="article-note">
-            <p><strong>İlgili çalışma alanı:</strong> <a href="malatya-icra-avukati.html">Malatya İcra Avukatı ve İcra Hukuku</a> sayfasında
-            bu alandaki dava türleri, süreler ve sık sorulan sorular hakkında daha fazla bilgi bulabilirsiniz.</p>
-          </div>
+          <div class="article-related article-related--mobile"><p>İlgili çalışma alanı</p>
+              <a href="malatya-icra-avukati.html">Malatya İcra Avukatı ve İcra Hukuku</a></div>
         </article>
       </div>
     </section>
@@ -291,6 +320,6 @@
   </div>
 
   <script src="js/data.js?v=35"></script>
-  <script src="js/main.js?v=32" defer></script>
+  <script src="js/main.js?v=34" defer></script>
 </body>
 </html>

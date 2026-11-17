@@ -30,7 +30,7 @@
 
   <script>document.documentElement.classList.add("js");</script>
 
-  <link rel="stylesheet" href="css/style.css?v=46">
+  <link rel="stylesheet" href="css/style.css?v=51">
   <link rel="stylesheet" href="css/responsive.css?v=44">
   <link rel="stylesheet" href="css/print.css?v=40" media="print">
 
@@ -126,7 +126,7 @@
 
   <main id="main">
 
-    <section class="page-hero">
+    <section class="page-hero article-hero">
       <div class="container page-hero__inner">
         <nav class="breadcrumb" aria-label="Sayfa yolu">
           <ol>
@@ -136,44 +136,74 @@
           </ol>
         </nav>
         <h1>Trafik Kazası Tazminatı: Hangi Haklar Talep Edilir?</h1>
+        <p class="article-hero__lead">Trafik kazası sonrasında zarar görenler, araç hasarından yaralanmaya ve yakın kaybına kadar farklı kalemlerde tazminat isteyebilir. Bu yazıda talep edilebilecek tazminatları, sigortaya başvuru zorunluluğunu ve süreleri özetliyoruz.</p>
+        <ul class="article-hero__meta">
+          <li>Tazminat Hukuku</li>
+          <li><time datetime="2026-11-17">17 Kasım 2026</time></li>
+          <li>6 dk okuma</li>
+        </ul>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container container--narrow">
-        <article class="article-body reveal">
-          <p class="article-meta"><span>Tazminat Hukuku</span><time datetime="2026-11-17">17 Kasım 2026</time><span>6 dk okuma</span></p>
-          <p class="article-lead">Trafik kazası sonrasında zarar görenler, araç hasarından yaralanmaya ve yakın kaybına kadar farklı kalemlerde tazminat isteyebilir. Bu yazıda talep edilebilecek tazminatları, sigortaya başvuru zorunluluğunu ve süreleri özetliyoruz.</p>
+    <section class="article-section">
+      <div class="container article-layout">
+        <aside class="article-aside" aria-label="Yazı içi gezinme">
+          <div class="article-aside__sticky">
+            <nav class="toc" aria-label="İçindekiler">
+              <p class="toc__title">Bu yazıda</p>
+              <ol class="toc__list">
+              <li><a href="#kimden-tazminat-istenir">Kimden tazminat istenir?</a></li>
+              <li><a href="#talep-edilebilecek-tazminat-kalemleri">Talep edilebilecek tazminat kalemleri</a></li>
+              <li><a href="#kusur-oraninin-onemi">Kusur oranının önemi</a></li>
+              <li><a href="#once-sigortaya-basvuru-zorunlu">Önce sigortaya başvuru zorunlu</a></li>
+              <li><a href="#zamanasimi">Zamanaşımı</a></li>
+              </ol>
+            </nav>
+            
+          </div>
+        </aside>
 
-          <h2>Kimden tazminat istenir?</h2>
+        <article class="article-body">
+          <details class="toc-mobile">
+            <summary>Bu yazıda</summary>
+            <ol class="toc__list">
+              <li><a href="#kimden-tazminat-istenir">Kimden tazminat istenir?</a></li>
+              <li><a href="#talep-edilebilecek-tazminat-kalemleri">Talep edilebilecek tazminat kalemleri</a></li>
+              <li><a href="#kusur-oraninin-onemi">Kusur oranının önemi</a></li>
+              <li><a href="#once-sigortaya-basvuru-zorunlu">Önce sigortaya başvuru zorunlu</a></li>
+              <li><a href="#zamanasimi">Zamanaşımı</a></li>
+            </ol>
+          </details>
+
+          <h2 id="kimden-tazminat-istenir">Kimden tazminat istenir?</h2>
           <p>Karayolları Trafik Kanunu (KTK) m. 85 uyarınca motorlu aracın işletilmesi bir kişinin ölümüne, yaralanmasına veya bir şeyin zarara uğramasına sebep olursa, aracın <strong>işleteni</strong> ve bağlı olduğu teşebbüs sahibi müteselsilen sorumlu olur. Uygulamada tazminat, aracın <strong>zorunlu mali sorumluluk (trafik) sigortası</strong> şirketinden, poliçe limitleri dahilinde talep edilir. Limiti aşan zararlar için sürücü ve işletene başvurulabilir.</p>
 
-          <h2>Talep edilebilecek tazminat kalemleri</h2>
+          <h2 id="talep-edilebilecek-tazminat-kalemleri">Talep edilebilecek tazminat kalemleri</h2>
           <h3>Maddi hasar</h3>
           <ul>
-            <li><strong>Araç hasarı:</strong> Onarım masrafları veya tam hasar durumunda aracın değeri,</li>
-            <li><strong>Değer kaybı:</strong> Kaza sonrası onarılan aracın piyasa değerindeki düşüş,</li>
-            <li><strong>Araç mahrumiyeti (kazanç kaybı):</strong> Aracın serviste kaldığı süre için ikame araç veya kazanç kaybı.</li>
+            <li><strong class="lbl">Araç hasarı:</strong> Onarım masrafları veya tam hasar durumunda aracın değeri,</li>
+            <li><strong class="lbl">Değer kaybı:</strong> Kaza sonrası onarılan aracın piyasa değerindeki düşüş,</li>
+            <li><strong class="lbl">Araç mahrumiyeti (kazanç kaybı):</strong> Aracın serviste kaldığı süre için ikame araç veya kazanç kaybı.</li>
           </ul>
           <h3>Bedensel zarar</h3>
           <ul>
-            <li><strong>Tedavi giderleri,</strong></li>
-            <li><strong>Geçici iş göremezlik:</strong> Tedavi süresince çalışamamaktan doğan kayıp,</li>
-            <li><strong>Sürekli iş göremezlik (maluliyet):</strong> Kalıcı sakatlık oranına göre hesaplanan tazminat,</li>
-            <li><strong>Bakıcı giderleri.</strong></li>
+            <li><strong class="lbl">Tedavi giderleri,</strong></li>
+            <li><strong class="lbl">Geçici iş göremezlik:</strong> Tedavi süresince çalışamamaktan doğan kayıp,</li>
+            <li><strong class="lbl">Sürekli iş göremezlik (maluliyet):</strong> Kalıcı sakatlık oranına göre hesaplanan tazminat,</li>
+            <li><strong class="lbl">Bakıcı giderleri.</strong></li>
           </ul>
           <h3>Ölüm hâlinde</h3>
           <ul>
-            <li><strong>Destekten yoksun kalma tazminatı:</strong> Ölenin desteğinden yoksun kalan eş, çocuklar ve diğer yakınlar için,</li>
-            <li><strong>Cenaze giderleri.</strong></li>
+            <li><strong class="lbl">Destekten yoksun kalma tazminatı:</strong> Ölenin desteğinden yoksun kalan eş, çocuklar ve diğer yakınlar için,</li>
+            <li><strong class="lbl">Cenaze giderleri.</strong></li>
           </ul>
           <h3>Manevi tazminat</h3>
           <p>Yaralanan kişi ve ölüm hâlinde yakınları manevi tazminat isteyebilir. Ancak manevi tazminat <strong>zorunlu trafik sigortasının kapsamında değildir</strong>; bu talep sürücü, işleten veya (kaskoda ihtiyari teminat varsa) ilgili sigorta şirketine yöneltilir.</p>
 
-          <h2>Kusur oranının önemi</h2>
+          <h2 id="kusur-oraninin-onemi">Kusur oranının önemi</h2>
           <p>Tazminat miktarı, kaza tespit tutanağı ve bilirkişi raporlarıyla belirlenen <strong>kusur oranına</strong> göre hesaplanır. Zarar görenin de kusuru varsa tazminattan bu oranda indirim yapılır. Tutanaktaki kusur tespitine katılmıyorsanız, yargılama sırasında bilirkişi incelemesiyle bu tespit tartışılabilir.</p>
 
-          <h2>Önce sigortaya başvuru zorunlu</h2>
+          <h2 id="once-sigortaya-basvuru-zorunlu">Önce sigortaya başvuru zorunlu</h2>
           <p>Zarar gören, dava açmadan veya tahkime başvurmadan önce <strong>sigorta şirketine yazılı olarak başvurmak</strong> zorundadır (KTK m. 97). Sigorta şirketi <strong>15 gün</strong> içinde başvuruyu sonuçlandırmazsa veya ödeme teklifini kabul etmezseniz:</p>
           <ul>
             <li>Asliye ticaret veya asliye hukuk mahkemesinde dava açabilir,</li>
@@ -181,14 +211,15 @@
           </ul>
           <p>Kazaya karışan araç sigortasızsa veya kaçmışsa, belirli zararlar için <strong>Güvence Hesabına</strong> başvurulabilir.</p>
 
-          <h2>Zamanaşımı</h2>
+          <h2 id="zamanasimi">Zamanaşımı</h2>
           <p>Trafik kazasından doğan tazminat talepleri, zarar görenin zararı ve tazminat yükümlüsünü öğrendiği tarihten itibaren <strong>iki yıl</strong>, her hâlde kaza tarihinden itibaren <strong>on yıl</strong> içinde zamanaşımına uğrar. Kaza aynı zamanda ceza kanunlarına göre daha uzun zamanaşımına tabi bir suç oluşturuyorsa (ör. taksirle yaralama), bu uzun süre uygulanır (KTK m. 109).</p>
 
-          <div class="article-note">
-            <p><strong>Bilgilendirme:</strong> Bu yazı yalnızca genel bilgilendirme amaçlıdır; somut
-            olayınıza ilişkin hukuki görüş yerine geçmez. Süreler ve şartlar dosyanın özelliklerine ve
-            güncel mevzuata göre değişebilir. Hak kaybı yaşamamak için bir avukata danışmanız önerilir.</p>
+          <div class="article-disclaimer">
+            <p>Bu yazı yalnızca genel bilgilendirme amaçlıdır; somut olayınıza ilişkin hukuki görüş yerine
+            geçmez. Süreler ve şartlar dosyanın özelliklerine ve güncel mevzuata göre değişebilir. Hak kaybı
+            yaşamamak için bir avukata danışmanız önerilir. Son güncelleme: 17 Kasım 2026.</p>
           </div>
+          
         </article>
       </div>
     </section>
@@ -303,6 +334,6 @@
   </div>
 
   <script src="js/data.js?v=35"></script>
-  <script src="js/main.js?v=32" defer></script>
+  <script src="js/main.js?v=34" defer></script>
 </body>
 </html>

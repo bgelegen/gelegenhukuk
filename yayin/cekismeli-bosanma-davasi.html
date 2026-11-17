@@ -30,7 +30,7 @@
 
   <script>document.documentElement.classList.add("js");</script>
 
-  <link rel="stylesheet" href="css/style.css?v=46">
+  <link rel="stylesheet" href="css/style.css?v=51">
   <link rel="stylesheet" href="css/responsive.css?v=44">
   <link rel="stylesheet" href="css/print.css?v=40" media="print">
 
@@ -126,7 +126,7 @@
 
   <main id="main">
 
-    <section class="page-hero">
+    <section class="page-hero article-hero">
       <div class="container page-hero__inner">
         <nav class="breadcrumb" aria-label="Sayfa yolu">
           <ol>
@@ -136,35 +136,66 @@
           </ol>
         </nav>
         <h1>Çekişmeli Boşanma Davası: Sebepler ve Süreç</h1>
+        <p class="article-hero__lead">Eşler boşanmanın kendisi veya sonuçları (velayet, nafaka, tazminat, mal paylaşımı) konusunda anlaşamıyorsa boşanma çekişmeli dava yoluyla görülür. Bu yazıda boşanma sebeplerini ve davanın nasıl ilerlediğini özetliyoruz.</p>
+        <ul class="article-hero__meta">
+          <li><a href="malatya-bosanma-avukati.html">Aile Hukuku</a></li>
+          <li><time datetime="2026-11-17">17 Kasım 2026</time></li>
+          <li>6 dk okuma</li>
+        </ul>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container container--narrow">
-        <article class="article-body reveal">
-          <p class="article-meta"><span>Aile Hukuku</span><time datetime="2026-11-17">17 Kasım 2026</time><span>6 dk okuma</span></p>
-          <p class="article-lead">Eşler boşanmanın kendisi veya sonuçları (velayet, nafaka, tazminat, mal paylaşımı) konusunda anlaşamıyorsa boşanma çekişmeli dava yoluyla görülür. Bu yazıda boşanma sebeplerini ve davanın nasıl ilerlediğini özetliyoruz.</p>
+    <section class="article-section">
+      <div class="container article-layout">
+        <aside class="article-aside" aria-label="Yazı içi gezinme">
+          <div class="article-aside__sticky">
+            <nav class="toc" aria-label="İçindekiler">
+              <p class="toc__title">Bu yazıda</p>
+              <ol class="toc__list">
+              <li><a href="#bosanma-sebepleri-nelerdir">Boşanma sebepleri nelerdir?</a></li>
+              <li><a href="#hak-dusurucu-surelere-dikkat">Hak düşürücü sürelere dikkat</a></li>
+              <li><a href="#davada-kusur-ve-deliller">Davada kusur ve deliller</a></li>
+              <li><a href="#yargilama-nasil-ilerler">Yargılama nasıl ilerler?</a></li>
+              <li><a href="#dava-surerken-alinabilecek-tedbirler">Dava sürerken alınabilecek tedbirler</a></li>
+              </ol>
+            </nav>
+            <div class="article-related"><p>İlgili çalışma alanı</p>
+              <a href="malatya-bosanma-avukati.html">Malatya Boşanma Avukatı ve Aile Hukuku</a></div>
+          </div>
+        </aside>
 
-          <h2>Boşanma sebepleri nelerdir?</h2>
+        <article class="article-body">
+          <details class="toc-mobile">
+            <summary>Bu yazıda</summary>
+            <ol class="toc__list">
+              <li><a href="#bosanma-sebepleri-nelerdir">Boşanma sebepleri nelerdir?</a></li>
+              <li><a href="#hak-dusurucu-surelere-dikkat">Hak düşürücü sürelere dikkat</a></li>
+              <li><a href="#davada-kusur-ve-deliller">Davada kusur ve deliller</a></li>
+              <li><a href="#yargilama-nasil-ilerler">Yargılama nasıl ilerler?</a></li>
+              <li><a href="#dava-surerken-alinabilecek-tedbirler">Dava sürerken alınabilecek tedbirler</a></li>
+            </ol>
+          </details>
+
+          <h2 id="bosanma-sebepleri-nelerdir">Boşanma sebepleri nelerdir?</h2>
           <p>Türk Medeni Kanunu, boşanma sebeplerini <strong>özel</strong> ve <strong>genel</strong> sebepler olarak ikiye ayırır.</p>
           <h3>Özel boşanma sebepleri</h3>
           <ul>
-            <li><strong>Zina</strong> (TMK m. 161),</li>
-            <li><strong>Hayata kast, pek kötü veya onur kırıcı davranış</strong> (TMK m. 162),</li>
-            <li><strong>Suç işleme ve haysiyetsiz hayat sürme</strong> (TMK m. 163),</li>
-            <li><strong>Terk</strong> (TMK m. 164),</li>
-            <li><strong>Akıl hastalığı</strong> (TMK m. 165).</li>
+            <li><strong class="lbl">Zina</strong> (TMK m. 161),</li>
+            <li><strong class="lbl">Hayata kast, pek kötü veya onur kırıcı davranış</strong> (TMK m. 162),</li>
+            <li><strong class="lbl">Suç işleme ve haysiyetsiz hayat sürme</strong> (TMK m. 163),</li>
+            <li><strong class="lbl">Terk</strong> (TMK m. 164),</li>
+            <li><strong class="lbl">Akıl hastalığı</strong> (TMK m. 165).</li>
           </ul>
           <h3>Genel boşanma sebepleri</h3>
           <ul>
-            <li><strong>Evlilik birliğinin temelinden sarsılması</strong> (TMK m. 166/1): Ortak hayatın sürdürülemeyecek ölçüde sarsılması. Uygulamada en sık başvurulan sebeptir.</li>
-            <li><strong>Fiilî ayrılık</strong> (TMK m. 166/4): Daha önce açılan boşanma davasının reddedilip kesinleşmesinden itibaren üç yıl geçtiği hâlde ortak hayatın yeniden kurulamaması.</li>
+            <li><strong class="lbl">Evlilik birliğinin temelinden sarsılması</strong> (TMK m. 166/1): Ortak hayatın sürdürülemeyecek ölçüde sarsılması. Uygulamada en sık başvurulan sebeptir.</li>
+            <li><strong class="lbl">Fiilî ayrılık</strong> (TMK m. 166/4): Daha önce açılan boşanma davasının reddedilip kesinleşmesinden itibaren üç yıl geçtiği hâlde ortak hayatın yeniden kurulamaması.</li>
           </ul>
 
-          <h2>Hak düşürücü sürelere dikkat</h2>
+          <h2 id="hak-dusurucu-surelere-dikkat">Hak düşürücü sürelere dikkat</h2>
           <p>Zina ile hayata kast, pek kötü veya onur kırıcı davranış sebeplerine dayanan davalar, sebebin öğrenilmesinden itibaren <strong>altı ay</strong> ve her hâlde olayın üzerinden <strong>beş yıl</strong> geçmekle açılamaz. Affeden eşin dava hakkı da yoktur. Terk sebebinde ise terkin en az altı ay sürmüş olması ve usulüne uygun ihtar yapılması gerekir.</p>
 
-          <h2>Davada kusur ve deliller</h2>
+          <h2 id="davada-kusur-ve-deliller">Davada kusur ve deliller</h2>
           <p>Çekişmeli boşanmada tarafların kusur durumu; tazminat ve yoksulluk nafakası gibi taleplerin kabulünü doğrudan etkiler. Bu nedenle iddiaların ispatı önemlidir. Başlıca deliller şunlardır:</p>
           <ul>
             <li>Tanık beyanları,</li>
@@ -173,27 +204,25 @@
             <li>Banka kayıtları ve diğer resmî belgeler.</li>
           </ul>
 
-          <h2>Yargılama nasıl ilerler?</h2>
+          <h2 id="yargilama-nasil-ilerler">Yargılama nasıl ilerler?</h2>
           <ol>
-            <li><strong>Dilekçeler aşaması:</strong> Dava, cevap, cevaba cevap ve ikinci cevap dilekçeleri karşılıklı verilir.</li>
-            <li><strong>Ön inceleme:</strong> Uyuşmazlık konuları belirlenir, taraflar sulhe teşvik edilir.</li>
-            <li><strong>Tahkikat:</strong> Tanıklar dinlenir, deliller toplanır; çocuk varsa sosyal inceleme raporu alınabilir.</li>
-            <li><strong>Karar:</strong> Boşanma ile birlikte velayet, nafaka ve tazminat hakkında hüküm kurulur.</li>
-            <li><strong>Kanun yolları:</strong> Karar, istinaf ve temyiz yoluyla denetlenebilir.</li>
+            <li><strong class="lbl">Dilekçeler aşaması:</strong> Dava, cevap, cevaba cevap ve ikinci cevap dilekçeleri karşılıklı verilir.</li>
+            <li><strong class="lbl">Ön inceleme:</strong> Uyuşmazlık konuları belirlenir, taraflar sulhe teşvik edilir.</li>
+            <li><strong class="lbl">Tahkikat:</strong> Tanıklar dinlenir, deliller toplanır; çocuk varsa sosyal inceleme raporu alınabilir.</li>
+            <li><strong class="lbl">Karar:</strong> Boşanma ile birlikte velayet, nafaka ve tazminat hakkında hüküm kurulur.</li>
+            <li><strong class="lbl">Kanun yolları:</strong> Karar, istinaf ve temyiz yoluyla denetlenebilir.</li>
           </ol>
 
-          <h2>Dava sürerken alınabilecek tedbirler</h2>
+          <h2 id="dava-surerken-alinabilecek-tedbirler">Dava sürerken alınabilecek tedbirler</h2>
           <p>Dava açılınca hâkim, yargılama süresince gerekli geçici önlemleri kendiliğinden alır (TMK m. 169). Eşlerin barınması, geçimi, malların yönetimi ve çocukların bakımı bu kapsamdadır. Tedbir nafakası ve çocukla geçici kişisel ilişki bu yolla düzenlenir.</p>
 
-          <div class="article-note">
-            <p><strong>Bilgilendirme:</strong> Bu yazı yalnızca genel bilgilendirme amaçlıdır; somut
-            olayınıza ilişkin hukuki görüş yerine geçmez. Süreler ve şartlar dosyanın özelliklerine ve
-            güncel mevzuata göre değişebilir. Hak kaybı yaşamamak için bir avukata danışmanız önerilir.</p>
+          <div class="article-disclaimer">
+            <p>Bu yazı yalnızca genel bilgilendirme amaçlıdır; somut olayınıza ilişkin hukuki görüş yerine
+            geçmez. Süreler ve şartlar dosyanın özelliklerine ve güncel mevzuata göre değişebilir. Hak kaybı
+            yaşamamak için bir avukata danışmanız önerilir. Son güncelleme: 17 Kasım 2026.</p>
           </div>
-          <div class="article-note">
-            <p><strong>İlgili çalışma alanı:</strong> <a href="malatya-bosanma-avukati.html">Malatya Boşanma Avukatı ve Aile Hukuku</a> sayfasında
-            bu alandaki dava türleri, süreler ve sık sorulan sorular hakkında daha fazla bilgi bulabilirsiniz.</p>
-          </div>
+          <div class="article-related article-related--mobile"><p>İlgili çalışma alanı</p>
+              <a href="malatya-bosanma-avukati.html">Malatya Boşanma Avukatı ve Aile Hukuku</a></div>
         </article>
       </div>
     </section>
@@ -308,6 +337,6 @@
   </div>
 
   <script src="js/data.js?v=35"></script>
-  <script src="js/main.js?v=32" defer></script>
+  <script src="js/main.js?v=34" defer></script>
 </body>
 </html>

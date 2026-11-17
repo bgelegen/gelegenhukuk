@@ -59,7 +59,7 @@ MAKALELER = [
     "slug": "cekismeli-bosanma-davasi.html",
     "cat": "Aile Hukuku", "tarih": "2026-11-17", "read": "6 dk okuma",
     "title": "Çekişmeli Boşanma Davası: Sebepler ve Süreç | Gelegen Hukuk Bürosu",
-    "desc": "Çekişmeli boşanma davasının sebepleri (TMK 161-166), hak düşürücü süreler, deliller, tanıklar ve yargılama süreci. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Çekişmeli boşanma davasının sebepleri (TMK 161-166), hak düşürücü süreler, deliller, tanıklar ve yargılama süreci. Gelegen Hukuk, Malatya.",
     "h1": "Çekişmeli Boşanma Davası: Sebepler ve Süreç",
     "lead": "Eşler boşanmanın kendisi veya sonuçları (velayet, nafaka, tazminat, mal paylaşımı) konusunda anlaşamıyorsa boşanma çekişmeli dava yoluyla görülür. Bu yazıda boşanma sebeplerini ve davanın nasıl ilerlediğini özetliyoruz.",
     "body": """
@@ -108,7 +108,7 @@ MAKALELER = [
     "slug": "nafaka-turleri.html",
     "cat": "Aile Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
     "title": "Nafaka Türleri: Tedbir, İştirak ve Yoksulluk Nafakası | Gelegen Hukuk Bürosu",
-    "desc": "Tedbir, iştirak, yoksulluk ve yardım nafakası nedir, kimler talep edebilir, nafaka nasıl artırılır veya kaldırılır? Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Tedbir, iştirak, yoksulluk ve yardım nafakası nedir, kimler talep edebilir, nafaka nasıl artırılır veya kaldırılır? Gelegen Hukuk, Malatya.",
     "h1": "Nafaka Türleri: Tedbir, İştirak ve Yoksulluk Nafakası",
     "lead": "Nafaka, boşanma sürecinde ve sonrasında eşlerin ve çocukların geçimini güvence altına alan bir ödeme yükümlülüğüdür. Bu yazıda nafaka türlerini, şartlarını ve sonradan değiştirilmesini özetliyoruz.",
     "body": """
@@ -142,7 +142,7 @@ MAKALELER = [
     "slug": "velayet-davasi.html",
     "cat": "Aile Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
     "title": "Velayet Davası: Velayet Kime Verilir, Nasıl Değiştirilir? | Gelegen Hukuk Bürosu",
-    "desc": "Boşanmada velayetin belirlenmesi, çocuğun üstün yararı, sosyal inceleme raporu, ortak velayet ve velayetin değiştirilmesi davası. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Boşanmada velayetin belirlenmesi, çocuğun üstün yararı, sosyal inceleme raporu, ortak velayet ve velayetin değiştirilmesi davası. Gelegen Hukuk, Malatya.",
     "h1": "Velayet Davası: Velayet Kime Verilir, Nasıl Değiştirilir?",
     "lead": "Boşanma sürecinin en hassas konusu çoğu zaman çocukların velayetidir. Bu yazıda mahkemenin velayet kararında neleri dikkate aldığını ve velayetin sonradan nasıl değiştirilebileceğini özetliyoruz.",
     "body": """
@@ -182,7 +182,7 @@ MAKALELER = [
     "slug": "ise-iade-davasi-sartlar-sureler.html",
     "cat": "İş Hukuku", "tarih": "2026-11-17", "read": "6 dk okuma",
     "title": "İşe İade Davası: Şartlar ve Süreler | Gelegen Hukuk Bürosu",
-    "desc": "İşe iade davasının şartları, 30 iş günü ve 1 aylık başvuru süreleri, zorunlu arabuluculuk ve işe başlatmama tazminatı. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "İşe iade davasının şartları, 30 iş günü ve 1 aylık başvuru süreleri, zorunlu arabuluculuk ve işe başlatmama tazminatı. Gelegen Hukuk, Malatya.",
     "h1": "İşe İade Davası: Şartlar ve Süreler",
     "lead": "İş sözleşmesi geçerli bir neden gösterilmeden feshedilen işçi, belirli şartlar altında işe iadesini talep edebilir. Süreç sıkı sürelere bağlıdır; bu yazıda şartları ve süreleri özetliyoruz.",
     "body": """
@@ -217,7 +217,7 @@ MAKALELER = [
     "slug": "kidem-tazminati-sartlari.html",
     "cat": "İş Hukuku", "tarih": "2026-11-17", "read": "6 dk okuma",
     "title": "Kıdem Tazminatı Şartları ve Hesaplanması | Gelegen Hukuk Bürosu",
-    "desc": "Kıdem tazminatına hak kazanma şartları, istifa eden işçinin durumu, hesaplama yöntemi, tavan, zamanaşımı ve arabuluculuk. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Kıdem tazminatına hak kazanma şartları, istifa eden işçinin durumu, hesaplama yöntemi, tavan, zamanaşımı ve arabuluculuk. Gelegen Hukuk, Malatya.",
     "h1": "Kıdem Tazminatı Şartları ve Hesaplanması",
     "lead": "Kıdem tazminatı, belirli bir süre çalışmış işçinin iş sözleşmesi kanunda sayılan sebeplerle sona erdiğinde işveren tarafından ödenen bir tazminattır. Bu yazıda hangi durumlarda kıdem tazminatı alınabileceğini ve nasıl hesaplandığını özetliyoruz.",
     "body": """
@@ -288,7 +288,7 @@ MAKALELER = [
     "slug": "ortakligin-giderilmesi-davasi.html",
     "cat": "Gayrimenkul Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
     "title": "Ortaklığın Giderilmesi (İzale-i Şuyu) Davası | Gelegen Hukuk Bürosu",
-    "desc": "Hisseli taşınmazlarda ortaklığın giderilmesi davası: arabuluculuk şartı, aynen taksim, satış yoluyla paylaştırma, masraflar ve süreç. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Hisseli taşınmazlarda ortaklığın giderilmesi davası: arabuluculuk şartı, aynen taksim, satış yoluyla paylaştırma, masraflar ve süreç. Gelegen Hukuk, Malatya.",
     "h1": "Ortaklığın Giderilmesi (İzale-i Şuyu) Davası",
     "lead": "Miras yoluyla veya birlikte satın alınan hisseli taşınmazlarda paydaşlar anlaşamadığında, ortaklık mahkeme kararıyla sona erdirilebilir. Bu yazıda ortaklığın giderilmesi davasının şartlarını ve işleyişini özetliyoruz.",
     "body": """
@@ -322,7 +322,7 @@ MAKALELER = [
     "slug": "kira-tespit-ve-tahliye-davasi.html",
     "cat": "Gayrimenkul Hukuku", "tarih": "2026-11-17", "read": "6 dk okuma",
     "title": "Kira Tespit ve Tahliye Davası | Gelegen Hukuk Bürosu",
-    "desc": "Kira bedelinin tespiti davası, 5 yıl kuralı, tahliye sebepleri, tahliye taahhüdü, iki haklı ihtar ve kira davalarında arabuluculuk. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Kira bedelinin tespiti davası, 5 yıl kuralı, tahliye sebepleri, tahliye taahhüdü, iki haklı ihtar ve kira davalarında arabuluculuk. Gelegen Hukuk, Malatya.",
     "h1": "Kira Tespit ve Tahliye Davası",
     "lead": "Kira ilişkisinde en sık yaşanan iki uyuşmazlık, kira bedelinin belirlenmesi ve kiracının tahliyesidir. Bu yazıda kira tespit davasını ve kanunda sayılan tahliye sebeplerini özetliyoruz.",
     "body": """
@@ -361,7 +361,7 @@ MAKALELER = [
     "slug": "mirasin-reddi-ve-mirascilik-belgesi.html",
     "cat": "Miras Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
     "title": "Mirasın Reddi ve Mirasçılık Belgesi | Gelegen Hukuk Bürosu",
-    "desc": "Mirasçılık belgesi (veraset ilamı) nereden alınır, mirasın reddi süresi (3 ay), borca batık terekenin hükmen reddi. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Mirasçılık belgesi (veraset ilamı) nereden alınır, mirasın reddi süresi (3 ay), borca batık terekenin hükmen reddi. Gelegen Hukuk, Malatya.",
     "h1": "Mirasın Reddi ve Mirasçılık Belgesi",
     "lead": "Bir yakının vefatından sonra mirasçıların ilk yapması gerekenler, mirasçılık belgesinin alınması ve terekenin borçlu olup olmadığının araştırılmasıdır. Bu yazıda mirasçılık belgesini ve mirasın reddini özetliyoruz.",
     "body": """
@@ -398,7 +398,7 @@ MAKALELER = [
     "slug": "hagb-nedir.html",
     "cat": "Ceza Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
     "title": "HAGB Nedir? Hükmün Açıklanmasının Geri Bırakılması | Gelegen Hukuk Bürosu",
-    "desc": "Hükmün açıklanmasının geri bırakılması (HAGB) şartları, 5 yıllık denetim süresi, adli sicile etkisi ve HAGB kararına itiraz (CMK 231). Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Hükmün açıklanmasının geri bırakılması (HAGB) şartları, 5 yıllık denetim süresi, adli sicile etkisi ve HAGB kararına itiraz (CMK 231). Gelegen Hukuk, Malatya.",
     "h1": "HAGB Nedir? Hükmün Açıklanmasının Geri Bırakılması",
     "lead": "Hükmün açıklanmasının geri bırakılması (HAGB), belirli şartlar altında sanık hakkında kurulan hükmün sonuç doğurmamasını sağlayan bir kurumdur. Bu yazıda HAGB'nin şartlarını ve sonuçlarını özetliyoruz.",
     "body": """
@@ -433,7 +433,7 @@ MAKALELER = [
     "slug": "idari-para-cezasina-itiraz.html",
     "cat": "İdare Hukuku", "tarih": "2026-11-17", "read": "4 dk okuma",
     "title": "İdari Para Cezasına ve Trafik Cezasına İtiraz | Gelegen Hukuk Bürosu",
-    "desc": "İdari para cezalarına ve trafik cezalarına itiraz süresi (15 gün), başvuru yeri, erken ödeme indirimi ve itiraz süreci. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "İdari para cezalarına ve trafik cezalarına itiraz süresi (15 gün), başvuru yeri, erken ödeme indirimi ve itiraz süreci. Gelegen Hukuk, Malatya.",
     "h1": "İdari Para Cezasına ve Trafik Cezasına İtiraz",
     "lead": "Trafik cezası, belediye zabıta cezası veya diğer idari para cezalarına karşı itiraz hakkı, kısa bir süreye bağlıdır. Bu yazıda itirazın nereye ve ne zaman yapılacağını özetliyoruz.",
     "body": """
@@ -473,7 +473,7 @@ MAKALELER += [
     "slug": "bosanma-davasi-ne-kadar-surer.html",
     "cat": "Aile Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
     "title": "Boşanma Davası Ne Kadar Sürer? | Gelegen Hukuk Bürosu",
-    "desc": "Anlaşmalı ve çekişmeli boşanma davası ne kadar sürer, süreyi uzatan etkenler nelerdir, istinaf ve temyiz süreleri. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Anlaşmalı ve çekişmeli boşanma davası ne kadar sürer, süreyi uzatan etkenler nelerdir, istinaf ve temyiz süreleri. Gelegen Hukuk, Malatya.",
     "h1": "Boşanma Davası Ne Kadar Sürer?",
     "lead": "Boşanma davasının süresi, davanın anlaşmalı mı çekişmeli mi olduğuna, delil durumuna ve mahkemenin iş yüküne göre büyük farklılık gösterir. Bu yazıda sürecin aşamalarını ve süreyi etkileyen etkenleri özetliyoruz.",
     "body": """
@@ -515,7 +515,7 @@ MAKALELER += [
     "slug": "bosanmada-mal-paylasimi.html",
     "cat": "Aile Hukuku", "tarih": "2026-11-17", "read": "6 dk okuma",
     "title": "Boşanmada Mal Paylaşımı Nasıl Yapılır? | Gelegen Hukuk Bürosu",
-    "desc": "Edinilmiş mallara katılma rejimi, kişisel mallar, katılma alacağı, 2002 öncesi mallar, zamanaşımı ve mal paylaşımı davası. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Edinilmiş mallara katılma rejimi, kişisel mallar, katılma alacağı, 2002 öncesi mallar, zamanaşımı ve mal paylaşımı davası. Gelegen Hukuk, Malatya.",
     "h1": "Boşanmada Mal Paylaşımı Nasıl Yapılır?",
     "lead": "Boşanmada en çok merak edilen konulardan biri, evlilik süresince edinilen malların nasıl paylaşılacağıdır. Türk hukukunda paylaşım, eşlerin tabi olduğu mal rejimine göre yapılır. Bu yazıda temel kuralları özetliyoruz.",
     "body": """
@@ -563,7 +563,7 @@ MAKALELER += [
     "slug": "gozalti-suresi-ve-supheli-haklari.html",
     "cat": "Ceza Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
     "title": "Gözaltı Süresi Ne Kadar? Şüpheli Hakları | Gelegen Hukuk Bürosu",
-    "desc": "Gözaltı süresi (24 saat, toplu suçlarda 4 gün), gözaltına itiraz, şüphelinin susma ve avukat hakkı, yakınlara haber verilmesi ve tutuklama. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Gözaltı süresi (24 saat, toplu suçlarda 4 gün), gözaltına itiraz, şüphelinin susma ve avukat hakkı, yakınlara haber verilmesi ve tutuklama. Gelegen Hukuk, Malatya.",
     "h1": "Gözaltı Süresi Ne Kadar? Şüphelinin Hakları",
     "lead": "Bir yakınınızın gözaltına alındığını öğrendiğinizde ilk saatler büyük önem taşır. Bu yazıda gözaltı sürelerini, gözaltındaki kişinin haklarını ve gözaltına itiraz yolunu özetliyoruz.",
     "body": """
@@ -598,7 +598,7 @@ MAKALELER += [
     "slug": "tehdit-sucu-ve-cezasi.html",
     "cat": "Ceza Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
     "title": "Tehdit Suçu ve Cezası (TCK 106) | Gelegen Hukuk Bürosu",
-    "desc": "Tehdit suçu nedir, basit ve nitelikli tehdidin cezası, şikâyet süresi, uzlaştırma ve mesajla tehdit. TCK 106 kapsamında Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Tehdit suçu nedir, basit ve nitelikli tehdidin cezası, şikâyet süresi, uzlaştırma ve mesajla tehdit. TCK 106 kapsamında Gelegen Hukuk, Malatya.",
     "h1": "Tehdit Suçu ve Cezası (TCK 106)",
     "lead": "Tehdit, uygulamada en sık karşılaşılan suçlardan biridir ve çoğu zaman mesaj, telefon veya sosyal medya yoluyla işlenir. Bu yazıda tehdit suçunun unsurlarını, cezasını ve yargılama sürecini özetliyoruz.",
     "body": """
@@ -641,7 +641,7 @@ MAKALELER += [
     "slug": "ihbar-tazminati-ve-ihbar-sureleri.html",
     "cat": "İş Hukuku", "tarih": "2026-11-17", "read": "4 dk okuma",
     "title": "İhbar Tazminatı ve İhbar Süreleri | Gelegen Hukuk Bürosu",
-    "desc": "İhbar süreleri (2, 4, 6, 8 hafta), ihbar tazminatına hak kazanma şartları, hesaplama, istifa eden işçinin ihbar yükümlülüğü ve iş arama izni. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "İhbar süreleri (2, 4, 6, 8 hafta), ihbar tazminatına hak kazanma şartları, hesaplama, istifa eden işçinin ihbar yükümlülüğü ve iş arama izni. Gelegen Hukuk, Malatya.",
     "h1": "İhbar Tazminatı ve İhbar Süreleri",
     "lead": "Belirsiz süreli iş sözleşmesini sona erdirmek isteyen taraf, kural olarak karşı tarafa önceden bildirimde bulunmak zorundadır. Bu bildirime uyulmazsa ihbar tazminatı gündeme gelir. Bu yazıda süreleri ve hesaplamayı özetliyoruz.",
     "body": """
@@ -676,7 +676,7 @@ MAKALELER += [
     "slug": "fazla-mesai-alacagi.html",
     "cat": "İş Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
     "title": "Fazla Mesai Ücreti ve Fazla Mesai Alacağı | Gelegen Hukuk Bürosu",
-    "desc": "Fazla mesai nedir, haftalık 45 saat sınırı, %50 zamlı ücret, yıllık 270 saat, serbest zaman, fazla mesainin ispatı ve zamanaşımı. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Fazla mesai nedir, haftalık 45 saat sınırı, %50 zamlı ücret, yıllık 270 saat, serbest zaman, fazla mesainin ispatı ve zamanaşımı. Gelegen Hukuk, Malatya.",
     "h1": "Fazla Mesai Ücreti ve Fazla Mesai Alacağı",
     "lead": "Uzun saatler çalışıp karşılığını alamamak, iş ilişkisinde en sık karşılaşılan uyuşmazlıklardan biridir. Bu yazıda fazla mesainin ne olduğunu, nasıl ücretlendirildiğini ve alacağın nasıl ispat edileceğini özetliyoruz.",
     "body": """
@@ -720,7 +720,7 @@ MAKALELER += [
     "slug": "maas-haczi.html",
     "cat": "İcra ve İflas Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
     "title": "Maaş Haczi: Maaşın Ne Kadarı Haczedilir? | Gelegen Hukuk Bürosu",
-    "desc": "Maaş haczi oranı (dörtte bir), nafaka alacağında maaş haczi, emekli maaşı haczi, birden fazla haciz sırası ve maaş haczine itiraz. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Maaş haczi oranı (dörtte bir), nafaka alacağında maaş haczi, emekli maaşı haczi, birden fazla haciz sırası ve maaş haczine itiraz. Gelegen Hukuk, Malatya.",
     "h1": "Maaş Haczi: Maaşın Ne Kadarı Haczedilir?",
     "lead": "Kesinleşen bir icra takibinde alacaklının en sık başvurduğu yollardan biri, borçlunun maaşına haciz konulmasıdır. Bu yazıda maaşın hangi oranda haczedilebileceğini, emekli maaşının durumunu ve itiraz yollarını özetliyoruz.",
     "body": """
@@ -757,7 +757,7 @@ MAKALELER += [
     "slug": "tapu-iptal-ve-tescil-davasi.html",
     "cat": "Gayrimenkul Hukuku", "tarih": "2026-11-17", "read": "6 dk okuma",
     "title": "Tapu İptal ve Tescil Davası | Gelegen Hukuk Bürosu",
-    "desc": "Tapu iptal ve tescil davası sebepleri: muris muvazaası, vekâletin kötüye kullanılması, ehliyetsizlik, yolsuz tescil. Görevli mahkeme, zamanaşımı ve tedbir. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Tapu iptal ve tescil davası sebepleri: muris muvazaası, vekâletin kötüye kullanılması, ehliyetsizlik. Görevli mahkeme, zamanaşımı ve tedbir. Gelegen Hukuk, Malatya.",
     "h1": "Tapu İptal ve Tescil Davası",
     "lead": "Tapu kaydının hukuka aykırı biçimde oluştuğu durumlarda gerçek hak sahibi, kaydın iptalini ve taşınmazın kendi adına tescilini isteyebilir. Bu yazıda tapu iptal ve tescil davasının başlıca sebeplerini ve sürecini özetliyoruz.",
     "body": """
@@ -801,7 +801,7 @@ MAKALELER += [
     "slug": "miras-paylasimi-ve-miras-paylari.html",
     "cat": "Miras Hukuku", "tarih": "2026-11-17", "read": "6 dk okuma",
     "title": "Miras Paylaşımı: Kim Ne Kadar Miras Alır? | Gelegen Hukuk Bürosu",
-    "desc": "Yasal mirasçılar ve miras payları: çocuklar, eş, anne-baba, kardeşler. Eşin miras payı, örnek hesaplamalar ve veraset ve intikal vergisi. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Yasal mirasçılar ve miras payları: çocuklar, eş, anne-baba, kardeşler. Eşin miras payı, örnek hesaplamalar ve veraset ve intikal vergisi. Gelegen Hukuk, Malatya.",
     "h1": "Miras Paylaşımı: Kim Ne Kadar Miras Alır?",
     "lead": "Vasiyetname bırakılmamışsa miras, Türk Medeni Kanunu'nda belirlenen yasal mirasçılar arasında kanuni paylara göre paylaştırılır. Bu yazıda mirasçılık sırasını ve payların nasıl hesaplandığını örneklerle açıklıyoruz.",
     "body": """
@@ -849,7 +849,7 @@ MAKALELER += [
     "slug": "vasiyetname-nasil-yapilir.html",
     "cat": "Miras Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
     "title": "Vasiyetname Nasıl Yapılır? Türleri ve Geçerlilik Şartları | Gelegen Hukuk Bürosu",
-    "desc": "Resmî, el yazılı ve sözlü vasiyetname nasıl yapılır, geçerlilik şartları, saklı pay sınırı, vasiyetnamenin açılması ve iptali. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Resmî, el yazılı ve sözlü vasiyetname nasıl yapılır, geçerlilik şartları, saklı pay sınırı, vasiyetnamenin açılması ve iptali. Gelegen Hukuk, Malatya.",
     "h1": "Vasiyetname Nasıl Yapılır? Türleri ve Geçerlilik Şartları",
     "lead": "Vasiyetname, kişinin ölümünden sonra malvarlığının nasıl paylaşılacağını belirlemesini sağlayan tek taraflı bir hukuki işlemdir. Geçerli olabilmesi için kanundaki şekil şartlarına sıkı sıkıya uyulmalıdır. Bu yazıda vasiyetname türlerini özetliyoruz.",
     "body": """
@@ -888,7 +888,7 @@ MAKALELER += [
     "slug": "iptal-davasi-nasil-acilir.html",
     "cat": "İdare Hukuku", "tarih": "2026-11-17", "read": "5 dk okuma",
     "title": "İdari İşlemlere Karşı İptal Davası Nasıl Açılır? | Gelegen Hukuk Bürosu",
-    "desc": "İptal davası nedir, dava açma süresi (60 gün, vergi 30 gün), üst makama başvuru, yürütmenin durdurulması, istinaf ve temyiz. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "İptal davası nedir, dava açma süresi (60 gün, vergi 30 gün), üst makama başvuru, yürütmenin durdurulması, istinaf ve temyiz. Gelegen Hukuk, Malatya.",
     "h1": "İdari İşlemlere Karşı İptal Davası Nasıl Açılır?",
     "lead": "Kamu kurumlarının hukuka aykırı işlemlerine karşı en etkili yol, idare mahkemesinde açılacak iptal davasıdır. Atama, disiplin cezası, ruhsat iptali veya imar işlemleri gibi pek çok işlem bu yolla denetlenebilir. Bu yazıda süreci özetliyoruz.",
     "body": """
@@ -929,7 +929,7 @@ MAKALELER += [
     "slug": "trafik-kazasi-tazminati.html",
     "cat": "Tazminat Hukuku", "tarih": "2026-11-17", "read": "6 dk okuma",
     "title": "Trafik Kazası Tazminatı: Hangi Haklar Talep Edilir? | Gelegen Hukuk Bürosu",
-    "desc": "Trafik kazasında araç hasarı, değer kaybı, iş göremezlik, destekten yoksun kalma ve manevi tazminat; sigortaya başvuru, tahkim ve zamanaşımı. Malatya Gelegen Hukuk Bürosu bilgilendirme yazısı.",
+    "desc": "Trafik kazasında araç hasarı, değer kaybı, iş göremezlik, destekten yoksun kalma ve manevi tazminat; sigortaya başvuru, tahkim ve zamanaşımı. Gelegen Hukuk, Malatya.",
     "h1": "Trafik Kazası Tazminatı: Hangi Haklar Talep Edilir?",
     "lead": "Trafik kazası sonrasında zarar görenler, araç hasarından yaralanmaya ve yakın kaybına kadar farklı kalemlerde tazminat isteyebilir. Bu yazıda talep edilebilecek tazminatları, sigortaya başvuru zorunluluğunu ve süreleri özetliyoruz.",
     "body": """

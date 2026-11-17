@@ -30,7 +30,7 @@
 
   <script>document.documentElement.classList.add("js");</script>
 
-  <link rel="stylesheet" href="css/style.css?v=55">
+  <link rel="stylesheet" href="css/style.css?v=56">
   <link rel="stylesheet" href="css/responsive.css?v=44">
   <link rel="stylesheet" href="css/print.css?v=40" media="print">
 
@@ -225,32 +225,57 @@
       </div>
     </section>
 
-    <section class="section section--sand" aria-labelledby="diger-baslik">
+    <section class="section section--sand related-posts" aria-labelledby="diger-baslik">
       <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">Makaleler</p>
-          <h2 id="diger-baslik">Diğer yazılarımız</h2>
+        <div class="related-posts__head">
+          <div class="section-head">
+            <p class="eyebrow">Aile Hukuku</p>
+            <h2 id="diger-baslik">Diğer yazılarımız</h2>
+          </div>
+          <div class="carousel-nav" hidden>
+            <button class="carousel-btn" type="button" data-dir="-1" aria-label="Önceki yazılar" aria-controls="diger-yazilar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <button class="carousel-btn" type="button" data-dir="1" aria-label="Sonraki yazılar" aria-controls="diger-yazilar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
         </div>
-        <div class="grid grid--auto">
-          <article class="card post-card reveal">
+        <div class="carousel" id="diger-yazilar" role="region" aria-label="Diğer yazılarımız" tabindex="0">
+          <div class="carousel__track">
+          <article class="card post-card">
             <p class="post-card__cat">Aile Hukuku</p>
             <h3><a href="cekismeli-bosanma-davasi.html">Çekişmeli Boşanma Davası: Sebepler ve Süreç</a></h3>
             <p>Eşler boşanmanın kendisi veya sonuçları (velayet, nafaka, tazminat, mal paylaşımı) konusunda anlaşamıyorsa boşanma çekişmeli dava yoluyla görülür. Bu yazıda boşanma sebeplerini ve davanın nasıl ilerlediğini özetliyoruz.</p>
             <span class="post-card__more" aria-hidden="true">Yazıyı oku →</span>
           </article>
-          <article class="card post-card reveal">
+          <article class="card post-card">
             <p class="post-card__cat">Aile Hukuku</p>
             <h3><a href="nafaka-turleri.html">Nafaka Türleri: Tedbir, İştirak ve Yoksulluk Nafakası</a></h3>
             <p>Nafaka, boşanma sürecinde ve sonrasında eşlerin ve çocukların geçimini güvence altına alan bir ödeme yükümlülüğüdür. Bu yazıda nafaka türlerini, şartlarını ve sonradan değiştirilmesini özetliyoruz.</p>
             <span class="post-card__more" aria-hidden="true">Yazıyı oku →</span>
           </article>
-          <article class="card post-card reveal">
+          <article class="card post-card">
             <p class="post-card__cat">Aile Hukuku</p>
             <h3><a href="velayet-davasi.html">Velayet Davası: Velayet Kime Verilir, Nasıl Değiştirilir?</a></h3>
             <p>Boşanma sürecinin en hassas konusu çoğu zaman çocukların velayetidir. Bu yazıda mahkemenin velayet kararında neleri dikkate aldığını ve velayetin sonradan nasıl değiştirilebileceğini özetliyoruz.</p>
             <span class="post-card__more" aria-hidden="true">Yazıyı oku →</span>
           </article>
+          <article class="card post-card">
+            <p class="post-card__cat">Aile Hukuku</p>
+            <h3><a href="bosanma-davasi-ne-kadar-surer.html">Boşanma Davası Ne Kadar Sürer?</a></h3>
+            <p>Boşanma davasının süresi, davanın anlaşmalı mı çekişmeli mi olduğuna, delil durumuna ve mahkemenin iş yüküne göre büyük farklılık gösterir. Bu yazıda sürecin aşamalarını ve süreyi etkileyen etkenleri özetliyoruz.</p>
+            <span class="post-card__more" aria-hidden="true">Yazıyı oku →</span>
+          </article>
+          <article class="card post-card">
+            <p class="post-card__cat">Aile Hukuku</p>
+            <h3><a href="bosanmada-mal-paylasimi.html">Boşanmada Mal Paylaşımı Nasıl Yapılır?</a></h3>
+            <p>Boşanmada en çok merak edilen konulardan biri, evlilik süresince edinilen malların nasıl paylaşılacağıdır. Türk hukukunda paylaşım, eşlerin tabi olduğu mal rejimine göre yapılır. Bu yazıda temel kuralları özetliyoruz.</p>
+            <span class="post-card__more" aria-hidden="true">Yazıyı oku →</span>
+          </article>
+          </div>
         </div>
+        <div class="carousel-progress" aria-hidden="true"><span></span></div>
       </div>
     </section>
 
@@ -336,6 +361,6 @@
   </div>
 
   <script src="js/data.js?v=35"></script>
-  <script src="js/main.js?v=34" defer></script>
+  <script src="js/main.js?v=35" defer></script>
 </body>
 </html>

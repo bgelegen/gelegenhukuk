@@ -7,11 +7,11 @@ Kullanım: tools/uret.py bu dosyayı içe aktarır; doğrudan çalıştırılmaz
 import json
 
 SITE = "https://gelegenhukuk.com/"
-CSS_V = "55"
+CSS_V = "56"
 RESP_V = "44"
 PRINT_V = "40"
 DATA_V = "35"
-MAIN_V = "34"
+MAIN_V = "35"
 
 # Altbilgideki "Çalışma Alanları" listesi — tüm sayfalarda aynı
 FOOTER_ALANLAR = [

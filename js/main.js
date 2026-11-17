@@ -411,6 +411,67 @@
   }
 
   /* =========================================================
+     11) YAZI ŞERİDİ — "Diğer yazılarımız"
+         Kaydırma tarayıcının kendisine ait (parmak, tekerlek, klavye);
+         oklar bir kart ilerletir, uçlarda pasifleşir; alttaki çizgi konumu
+         gösterir. Hepsi sığıyorsa oklar ve çizgi gizlenir.
+     ========================================================= */
+  function initCarousel() {
+    $$(".related-posts").forEach((sec) => {
+      const track = $(".carousel__track", sec);
+      const nav = $(".carousel-nav", sec);
+      const bar = $(".carousel-progress", sec);
+      if (!track) return;
+      const prev = $('[data-dir="-1"]', sec);
+      const next = $('[data-dir="1"]', sec);
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      const step = () => {
+        const card = track.firstElementChild;
+        if (!card) return track.clientWidth;
+        const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+        return card.getBoundingClientRect().width + gap;
+      };
+
+      const update = () => {
+        const max = track.scrollWidth - track.clientWidth;
+        const scrollable = max > 2;
+        if (nav) nav.hidden = !scrollable;
+        if (bar) bar.hidden = !scrollable;
+        if (!scrollable) return;
+        const x = track.scrollLeft;
+        if (prev) prev.disabled = x <= 2;
+        if (next) next.disabled = x >= max - 2;
+        if (bar) {
+          const w = track.clientWidth / track.scrollWidth;
+          bar.style.setProperty("--w", (w * 100).toFixed(2) + "%");
+          bar.style.setProperty("--x", ((x / max) * (1 - w) * 100).toFixed(2) + "%");
+        }
+      };
+
+      [prev, next].forEach((btn) => btn && btn.addEventListener("click", () => {
+        const dir = Number(btn.dataset.dir) || 1;
+        track.scrollBy({ left: dir * step(), behavior: reduce ? "auto" : "smooth" });
+      }));
+      // Şeride odaklanınca sol/sağ ok tuşları da bir kart ilerletsin
+      const region = track.parentElement;
+      if (region) region.addEventListener("keydown", (e) => {
+        if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+        e.preventDefault();
+        track.scrollBy({ left: (e.key === "ArrowRight" ? 1 : -1) * step(), behavior: reduce ? "auto" : "smooth" });
+      });
+
+      let raf = 0;
+      track.addEventListener("scroll", () => {
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(update);
+      }, { passive: true });
+      window.addEventListener("resize", update);
+      update();
+    });
+  }
+
+  /* =========================================================
      BAŞLAT
      ========================================================= */
   function init() {
@@ -424,6 +485,7 @@
     initDataBinding();
     initMap();
     initArticle();
+    initCarousel();
   }
 
   if (document.readyState === "loading") {

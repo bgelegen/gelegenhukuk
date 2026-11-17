@@ -30,7 +30,7 @@
 
   <script>document.documentElement.classList.add("js");</script>
 
-  <link rel="stylesheet" href="css/style.css?v=55">
+  <link rel="stylesheet" href="css/style.css?v=56">
   <link rel="stylesheet" href="css/responsive.css?v=44">
   <link rel="stylesheet" href="css/print.css?v=40" media="print">
 
@@ -215,32 +215,45 @@
       </div>
     </section>
 
-    <section class="section section--sand" aria-labelledby="diger-baslik">
+    <section class="section section--sand related-posts" aria-labelledby="diger-baslik">
       <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">Makaleler</p>
-          <h2 id="diger-baslik">Diğer yazılarımız</h2>
+        <div class="related-posts__head">
+          <div class="section-head">
+            <p class="eyebrow">İş Hukuku</p>
+            <h2 id="diger-baslik">Diğer yazılarımız</h2>
+          </div>
+          <div class="carousel-nav" hidden>
+            <button class="carousel-btn" type="button" data-dir="-1" aria-label="Önceki yazılar" aria-controls="diger-yazilar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <button class="carousel-btn" type="button" data-dir="1" aria-label="Sonraki yazılar" aria-controls="diger-yazilar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
         </div>
-        <div class="grid grid--auto">
-          <article class="card post-card reveal">
+        <div class="carousel" id="diger-yazilar" role="region" aria-label="Diğer yazılarımız" tabindex="0">
+          <div class="carousel__track">
+          <article class="card post-card">
             <p class="post-card__cat">İş Hukuku</p>
             <h3><a href="ise-iade-davasi-sartlar-sureler.html">İşe İade Davası: Şartlar ve Süreler</a></h3>
             <p>İş sözleşmesi geçerli bir neden gösterilmeden feshedilen işçi, belirli şartlar altında işe iadesini talep edebilir. Süreç sıkı sürelere bağlıdır; bu yazıda şartları ve süreleri özetliyoruz.</p>
             <span class="post-card__more" aria-hidden="true">Yazıyı oku →</span>
           </article>
-          <article class="card post-card reveal">
+          <article class="card post-card">
             <p class="post-card__cat">İş Hukuku</p>
             <h3><a href="kidem-tazminati-sartlari.html">Kıdem Tazminatı Şartları ve Hesaplanması</a></h3>
             <p>Kıdem tazminatı, belirli bir süre çalışmış işçinin iş sözleşmesi kanunda sayılan sebeplerle sona erdiğinde işveren tarafından ödenen bir tazminattır. Bu yazıda hangi durumlarda kıdem tazminatı alınabileceğini ve nasıl hesaplandığını özetliyoruz.</p>
             <span class="post-card__more" aria-hidden="true">Yazıyı oku →</span>
           </article>
-          <article class="card post-card reveal">
+          <article class="card post-card">
             <p class="post-card__cat">İş Hukuku</p>
             <h3><a href="fazla-mesai-alacagi.html">Fazla Mesai Ücreti ve Fazla Mesai Alacağı</a></h3>
             <p>Uzun saatler çalışıp karşılığını alamamak, iş ilişkisinde en sık karşılaşılan uyuşmazlıklardan biridir. Bu yazıda fazla mesainin ne olduğunu, nasıl ücretlendirildiğini ve alacağın nasıl ispat edileceğini özetliyoruz.</p>
             <span class="post-card__more" aria-hidden="true">Yazıyı oku →</span>
           </article>
+          </div>
         </div>
+        <div class="carousel-progress" aria-hidden="true"><span></span></div>
       </div>
     </section>
 
@@ -326,6 +339,6 @@
   </div>
 
   <script src="js/data.js?v=35"></script>
-  <script src="js/main.js?v=34" defer></script>
+  <script src="js/main.js?v=35" defer></script>
 </body>
 </html>

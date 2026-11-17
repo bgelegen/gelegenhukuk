@@ -30,7 +30,7 @@
 
   <script>document.documentElement.classList.add("js");</script>
 
-  <link rel="stylesheet" href="css/style.css?v=55">
+  <link rel="stylesheet" href="css/style.css?v=56">
   <link rel="stylesheet" href="css/responsive.css?v=44">
   <link rel="stylesheet" href="css/print.css?v=40" media="print">
 
@@ -228,32 +228,45 @@
       </div>
     </section>
 
-    <section class="section section--sand" aria-labelledby="diger-baslik">
+    <section class="section section--sand related-posts" aria-labelledby="diger-baslik">
       <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">Makaleler</p>
-          <h2 id="diger-baslik">Diğer yazılarımız</h2>
+        <div class="related-posts__head">
+          <div class="section-head">
+            <p class="eyebrow">Miras Hukuku</p>
+            <h2 id="diger-baslik">Diğer yazılarımız</h2>
+          </div>
+          <div class="carousel-nav" hidden>
+            <button class="carousel-btn" type="button" data-dir="-1" aria-label="Önceki yazılar" aria-controls="diger-yazilar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <button class="carousel-btn" type="button" data-dir="1" aria-label="Sonraki yazılar" aria-controls="diger-yazilar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
         </div>
-        <div class="grid grid--auto">
-          <article class="card post-card reveal">
+        <div class="carousel" id="diger-yazilar" role="region" aria-label="Diğer yazılarımız" tabindex="0">
+          <div class="carousel__track">
+          <article class="card post-card">
             <p class="post-card__cat">Miras Hukuku</p>
             <h3><a href="mirasin-reddi-ve-mirascilik-belgesi.html">Mirasın Reddi ve Mirasçılık Belgesi</a></h3>
             <p>Bir yakının vefatından sonra mirasçıların ilk yapması gerekenler, mirasçılık belgesinin alınması ve terekenin borçlu olup olmadığının araştırılmasıdır. Bu yazıda mirasçılık belgesini ve mirasın reddini özetliyoruz.</p>
             <span class="post-card__more" aria-hidden="true">Yazıyı oku →</span>
           </article>
-          <article class="card post-card reveal">
+          <article class="card post-card">
             <p class="post-card__cat">Miras Hukuku</p>
             <h3><a href="vasiyetname-nasil-yapilir.html">Vasiyetname Nasıl Yapılır? Türleri ve Geçerlilik Şartları</a></h3>
             <p>Vasiyetname, kişinin ölümünden sonra malvarlığının nasıl paylaşılacağını belirlemesini sağlayan tek taraflı bir hukuki işlemdir. Geçerli olabilmesi için kanundaki şekil şartlarına sıkı sıkıya uyulmalıdır. Bu yazıda vasiyetname türlerini özetliyoruz.</p>
             <span class="post-card__more" aria-hidden="true">Yazıyı oku →</span>
           </article>
-          <article class="card post-card reveal">
+          <article class="card post-card">
             <p class="post-card__cat">Aile Hukuku</p>
             <h3><a href="anlasmali-bosanma-nasil-yapilir.html">Anlaşmalı Boşanma Nasıl Yapılır?</a></h3>
             <p>Eşlerin boşanma ve sonuçları üzerinde anlaştığı durumlarda anlaşmalı boşanma, en hızlı ve en az yıpratıcı yoldur. Bu yazıda şartları, gerekli belgeleri ve süreci özetliyoruz.</p>
             <span class="post-card__more" aria-hidden="true">Yazıyı oku →</span>
           </article>
+          </div>
         </div>
+        <div class="carousel-progress" aria-hidden="true"><span></span></div>
       </div>
     </section>
 
@@ -339,6 +352,6 @@
   </div>
 
   <script src="js/data.js?v=35"></script>
-  <script src="js/main.js?v=34" defer></script>
+  <script src="js/main.js?v=35" defer></script>
 </body>
 </html>

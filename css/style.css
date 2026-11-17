@@ -2041,3 +2041,53 @@ article.card.post-card { position: relative; }
 @media (min-width: 768px) and (max-width: 1365px) {
   .site-footer .footer-bottom { padding-bottom: 4.5rem; }
 }
+
+/* ---------------------------------------------------------------------------
+   "Diğer yazılarımız" şeridi
+   Masaüstünde 3, tablette 2 kart görünür; telefonda bir kart + yanındakinin
+   kenarı görünür (kaydırılabileceğini belli eder). Kaydırma yerel (parmak,
+   tekerlek, klavye) + ok düğmeleri; kartlar yerine oturarak (scroll-snap)
+   yumuşak geçer. Destekleyen tarayıcılarda şeride giren kart hafifçe belirir.
+   --------------------------------------------------------------------------- */
+.related-posts__head { display: flex; align-items: flex-end; justify-content: space-between;
+  gap: var(--sp-5); margin-bottom: var(--sp-7); }
+.related-posts__head .section-head { margin-bottom: 0; }
+.carousel-nav { display: flex; gap: var(--sp-2); flex: none; }
+.carousel-nav[hidden] { display: none; }
+.carousel-btn { width: 46px; height: 46px; display: grid; place-items: center; padding: 0;
+  border: 1px solid var(--c-navy-800); border-radius: 50%; background: transparent; color: var(--c-navy-800);
+  cursor: pointer; transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease),
+  opacity var(--dur) var(--ease); }
+.carousel-btn svg { width: 20px; height: 20px; }
+.carousel-btn:hover:not(:disabled) { background: var(--c-navy-800); color: var(--c-white); }
+.carousel-btn:focus-visible { outline: 2px solid var(--c-gold-500); outline-offset: 3px; }
+.carousel-btn:disabled { opacity: 0.28; cursor: default; }
+
+.carousel { --per: 1.12; --gap: var(--sp-5); position: relative; margin-inline: calc(var(--gutter) * -1); }
+.carousel:focus-visible { outline: 2px solid var(--c-gold-500); outline-offset: 4px; }
+.carousel__track { display: grid; grid-auto-flow: column; gap: var(--gap);
+  grid-auto-columns: calc((100% - var(--gap) * (var(--per) - 1)) / var(--per));
+  overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  padding: 4px var(--gutter) var(--sp-3); scroll-padding-inline: var(--gutter); scrollbar-width: none; }
+.carousel__track::-webkit-scrollbar { display: none; }
+.carousel__track > .post-card { scroll-snap-align: start; height: auto; }
+@media (min-width: 768px)  { .carousel { --per: 2; } }
+@media (min-width: 1024px) { .carousel { --per: 3; } }
+
+/* Konum çizgisi: şeridin ne kadarının görüldüğünü gösterir (JS günceller) */
+.carousel-progress { position: relative; height: 2px; margin-top: var(--sp-5); background: var(--c-line);
+  border-radius: 2px; overflow: hidden; }
+.carousel-progress[hidden] { display: none; }
+.carousel-progress span { position: absolute; inset: 0 auto 0 0; width: var(--w, 100%); left: var(--x, 0%);
+  background: var(--c-gold-500); border-radius: 2px; transition: left 0.35s var(--ease), width 0.35s var(--ease); }
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .carousel__track > .post-card { animation: kart-gir linear both; animation-timeline: view(inline);
+      animation-range: entry 0% entry 70%; }
+    @keyframes kart-gir { from { opacity: 0.25; transform: translateY(14px) scale(0.97); }
+                          to   { opacity: 1;    transform: none; } }
+  }
+}
+@media (prefers-reduced-motion: reduce) { .carousel__track { scroll-behavior: auto; } }
+@media (max-width: 599px) { .related-posts__head { align-items: flex-end; } .carousel-btn { width: 42px; height: 42px; } }

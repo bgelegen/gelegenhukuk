@@ -65,8 +65,9 @@ def alan_by_kat(kat):
     return next((a for a in ALANLAR if a["kategori"] == kat), None)
 
 
-def post_card(m, more="Yazıyı oku"):
-    return f"""          <article class="card post-card reveal">
+def post_card(m, more="Yazıyı oku", reveal=True):
+    sinif = "card post-card reveal" if reveal else "card post-card"
+    return f"""          <article class="{sinif}">
             <p class="post-card__cat">{m["cat"]}</p>
             <h3><a href="{m["slug"]}">{m["h1"]}</a></h3>
             <p>{m["lead"]}</p>
@@ -179,10 +180,12 @@ def makale_sayfasi(m):
          "author": {"@type": "Organization", "name": "Gelegen Hukuk Bürosu", "url": SITE},
          "publisher": KURULUS},
     ]}
-    # Aynı kategoriden diğer yazılar; yetmezse diğerlerinden tamamla
+    # Aynı alandaki diğer yazıların HEPSİ (şeritte 3'er görünür, kalanı kaydırılır).
+    # Alanda 3'ten az yazı varsa diğer alanlardan 3'e tamamlanır.
     digerleri = [x for x in MAKALELER if x["cat"] == m["cat"] and x is not m]
-    digerleri += [x for x in MAKALELER if x["cat"] != m["cat"]]
-    digerleri = digerleri[:3]
+    ayni_alan = len(digerleri)
+    if len(digerleri) < 3:
+        digerleri += [x for x in MAKALELER if x["cat"] != m["cat"]][:3 - len(digerleri)]
     body, basliklar = basliklara_kimlik(m["body"])
     toc = "\n".join(f'              <li><a href="#{k}">{t}</a></li>' for k, t in basliklar)
     alan_kart = ""
@@ -244,14 +247,27 @@ def makale_sayfasi(m):
       </div>
     </section>
 
-    <section class="section section--sand" aria-labelledby="diger-baslik">
+    <section class="section section--sand related-posts" aria-labelledby="diger-baslik">
       <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">Makaleler</p>
-          <h2 id="diger-baslik">Diğer yazılarımız</h2>
+        <div class="related-posts__head">
+          <div class="section-head">
+            <p class="eyebrow">{m["cat"] if ayni_alan else "Makaleler"}</p>
+            <h2 id="diger-baslik">Diğer yazılarımız</h2>
+          </div>
+          <div class="carousel-nav" hidden>
+            <button class="carousel-btn" type="button" data-dir="-1" aria-label="Önceki yazılar" aria-controls="diger-yazilar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <button class="carousel-btn" type="button" data-dir="1" aria-label="Sonraki yazılar" aria-controls="diger-yazilar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
         </div>
-        <div class="grid grid--auto">
-{"".join(post_card(x) for x in digerleri)}        </div>
+        <div class="carousel" id="diger-yazilar" role="region" aria-label="Diğer yazılarımız" tabindex="0">
+          <div class="carousel__track">
+{"".join(post_card(x, reveal=False) for x in digerleri)}          </div>
+        </div>
+        <div class="carousel-progress" aria-hidden="true"><span></span></div>
       </div>
     </section>
 """

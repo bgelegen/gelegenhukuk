@@ -2020,12 +2020,24 @@ article.card.post-card { position: relative; }
   color: var(--c-gold-600); }
 .toc-mobile[open] summary::after { content: "\2013"; }
 
-/* Altbilgi en alt satırı: siteyi geliştiren */
-.footer-credit { margin: var(--sp-3) 0 0; text-align: center; font-size: var(--fs-xs);
-  color: rgba(250, 248, 245, 0.42); }
-.footer-credit a { color: rgba(250, 248, 245, 0.62); text-decoration: none;
-  border-bottom: 1px solid rgba(205, 175, 115, 0.35); padding-bottom: 1px;
-  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease); }
-.footer-credit a:hover, .footer-credit a:focus-visible { color: var(--c-gold-400); border-bottom-color: var(--c-gold-400); }
-/* Telefonda sağ alttaki "yukarı çık" düğmesi en alt satırı kapatmasın */
-@media (max-width: 767px) { .footer-credit { margin-bottom: 4rem; } }
+/* Altbilgi en alt satırı: solda telif + KVKK, sağda siteyi geliştiren.
+   Telefonda (≤767px) üç öğe alt alta ortalanır. */
+.footer-bottom .footer-credit { color: rgba(250, 248, 245, 0.42); }
+.footer-credit a { color: rgba(250, 248, 245, 0.62); text-decoration: underline;
+  text-decoration-color: rgba(205, 175, 115, 0.45); text-decoration-thickness: 1px; text-underline-offset: 4px;
+  transition: color var(--dur) var(--ease), text-decoration-color var(--dur) var(--ease); }
+.footer-credit a:hover, .footer-credit a:focus-visible { color: var(--c-gold-400); text-decoration-color: var(--c-gold-400); }
+@media (max-width: 767px) {
+  .site-footer .footer-bottom { flex-direction: column; }      /* responsive.css'teki 480px satır düzenini ezer */
+  .site-footer .footer-bottom p + p::before { content: none; }
+  .footer-bottom .footer-credit { margin-bottom: 4rem; }   /* sağ alttaki "yukarı çık" düğmesi kapatmasın */
+}
+@media (min-width: 768px) {
+  .site-footer .footer-bottom { justify-content: flex-start; }
+  .footer-bottom .footer-credit { margin-left: auto; }
+  .footer-bottom .footer-credit::before { content: none; }
+}
+/* Tablet / dar masaüstü: sağ alttaki "yukarı çık" düğmesi sağdaki yazıyı kapatmasın */
+@media (min-width: 768px) and (max-width: 1365px) {
+  .site-footer .footer-bottom { padding-bottom: 4.5rem; }
+}

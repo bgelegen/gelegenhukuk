@@ -7,7 +7,7 @@ Kullanım: tools/uret.py bu dosyayı içe aktarır; doğrudan çalıştırılmaz
 import json
 
 SITE = "https://gelegenhukuk.com/"
-CSS_V = "53"
+CSS_V = "55"
 RESP_V = "44"
 PRINT_V = "40"
 DATA_V = "35"
@@ -168,8 +168,8 @@ def foot():
       <div class="footer-bottom">
         <p>© <span data-year>2026</span> Gelegen Hukuk Bürosu. Tüm hakları saklıdır.</p>
         <p><a href="kvkk.html">KVKK Aydınlatma Metni</a></p>
+        <p class="footer-credit">Design by <a href="https://batuhangelegen.dev" target="_blank" rel="noopener">Batuhan Gelegen</a></p>
       </div>
-      <p class="footer-credit">Design by <a href="https://batuhangelegen.dev" target="_blank" rel="noopener">Batuhan Gelegen</a></p>
     </div>
   </footer>
 

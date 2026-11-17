@@ -2091,3 +2091,36 @@ article.card.post-card { position: relative; }
 }
 @media (prefers-reduced-motion: reduce) { .carousel__track { scroll-behavior: auto; } }
 @media (max-width: 599px) { .related-posts__head { align-items: flex-end; } .carousel-btn { width: 42px; height: 42px; } }
+
+/* ---------------------------------------------------------------------------
+   Makaleler + makale/çalışma alanı sayfaları: sitenin geri kalanıyla aynı
+   yaslama kuralı — paragraflar ve madde listeleri iki yana yaslı, kelimeler
+   tireyle bölünmez (bkz. § p kuralı). Yukarıdaki sola yaslama kurallarını ezer.
+   İçindekiler listesi ve kısa etiketler gezinme öğesi olduğu için sola yaslı kalır.
+   Makale kartları (.post-card) sitedeki diğer kartlar gibi yaslanmaz (bkz. article.card p).
+   --------------------------------------------------------------------------- */
+.article-body p,
+.article-body ul > li,
+.article-body ol > li,
+.article-hero .article-hero__lead,
+.article-note p,
+.article-disclaimer p {
+  text-align: justify;
+  text-justify: inter-word;   /* serif makale yazısında harf aralığı açılması göze batıyordu */
+  text-wrap: pretty;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+}
+/* Telefonda madde satırları girinti yüzünden dar; uzun Türkçe kelimelerde harf
+   aralığı (inter-character) gözle görülür açılıyordu ("Ç a l ı ş m a s ı n ı n").
+   Avukat kartlarındaki çözümle aynı: dar ekranda maddeler sola yaslı, paragraflar yaslı kalır. */
+@media (max-width: 767px) {
+  .article-body ul > li,
+  .article-body ol > li { text-align: left; }
+  /* Makale yazısı büyük ve serif olduğundan telefonda satıra az harf düşüyor; harf
+     aralarına dağıtılan yaslama ("B o ş a n m a d a") burada gözle görülüyordu.
+     Telefonda boşluk kelime aralarına dağıtılır ve yazı bir tık küçültülür
+     (satıra daha çok kelime → daha küçük aralıklar). */
+  .article-body { font-size: 1rem; line-height: 1.78; }
+  .article-hero .article-hero__lead { font-size: 1.06rem; }
+}

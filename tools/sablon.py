@@ -7,7 +7,7 @@ Kullanım: tools/uret.py bu dosyayı içe aktarır; doğrudan çalıştırılmaz
 import json
 
 SITE = "https://gelegenhukuk.com/"
-CSS_V = "56"
+CSS_V = "60"
 RESP_V = "44"
 PRINT_V = "40"
 DATA_V = "35"

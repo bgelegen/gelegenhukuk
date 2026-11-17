@@ -176,7 +176,7 @@ def makale_sayfasi(m):
         {"@type": "Article", "headline": m["h1"], "description": m["desc"], "inLanguage": "tr-TR",
          "articleSection": m["cat"], "datePublished": m["tarih"], "dateModified": m["tarih"],
          "mainEntityOfPage": {"@type": "WebPage", "@id": SITE + m["slug"]},
-         "image": SITE + "assets/img/og-image.png",
+         "image": SITE + "assets/img/og-image.jpg",
          "author": {"@type": "Organization", "name": "Gelegen Hukuk Bürosu", "url": SITE},
          "publisher": KURULUS},
     ]}

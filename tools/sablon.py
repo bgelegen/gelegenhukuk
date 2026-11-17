@@ -7,7 +7,7 @@ Kullanım: tools/uret.py bu dosyayı içe aktarır; doğrudan çalıştırılmaz
 import json
 
 SITE = "https://gelegenhukuk.com/"
-CSS_V = "51"
+CSS_V = "53"
 RESP_V = "44"
 PRINT_V = "40"
 DATA_V = "35"
@@ -169,6 +169,7 @@ def foot():
         <p>© <span data-year>2026</span> Gelegen Hukuk Bürosu. Tüm hakları saklıdır.</p>
         <p><a href="kvkk.html">KVKK Aydınlatma Metni</a></p>
       </div>
+      <p class="footer-credit">Site tasarımı ve geliştirme: <a href="https://batuhangelegen.dev" target="_blank" rel="noopener">Batuhan Gelegen</a></p>
     </div>
   </footer>
 

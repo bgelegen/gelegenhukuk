@@ -76,6 +76,29 @@ def post_card(m, more="Yazıyı oku", reveal=True):
 """
 
 
+# ============================================================ ŞERİT (kaydırmalı kart listesi)
+def serit_nav(rid, ad):
+    """Şeridin sağ üstündeki ok düğmeleri. JS, şerit sığıyorsa gizler."""
+    return f"""<div class="carousel-nav" hidden>
+            <button class="carousel-btn" type="button" data-dir="-1" aria-label="Önceki: {ad}" aria-controls="{rid}">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <button class="carousel-btn" type="button" data-dir="1" aria-label="Sonraki: {ad}" aria-controls="{rid}">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>"""
+
+
+def serit(rid, ad, yazilar):
+    """Masaüstünde 3, tablette 2, telefonda 1 kart görünen kaydırmalı şerit + konum çizgisi."""
+    kartlar = "".join(post_card(x, reveal=False) for x in yazilar)
+    return f"""        <div class="carousel" id="{rid}" role="region" aria-label="{ad}" tabindex="0">
+          <div class="carousel__track">
+{kartlar}          </div>
+        </div>
+        <div class="carousel-progress" aria-hidden="true"><span></span></div>"""
+
+
 # ============================================================ ÇALIŞMA ALANI
 def alan_sayfasi(a):
     yazilar = [m for m in MAKALELER if m["cat"] == a["kategori"]]
@@ -247,27 +270,16 @@ def makale_sayfasi(m):
       </div>
     </section>
 
-    <section class="section section--sand related-posts" aria-labelledby="diger-baslik">
+    <section class="section section--sand related-posts" data-carousel aria-labelledby="diger-baslik">
       <div class="container">
         <div class="related-posts__head">
           <div class="section-head">
             <p class="eyebrow">{m["cat"] if ayni_alan else "Makaleler"}</p>
             <h2 id="diger-baslik">Diğer yazılarımız</h2>
           </div>
-          <div class="carousel-nav" hidden>
-            <button class="carousel-btn" type="button" data-dir="-1" aria-label="Önceki yazılar" aria-controls="diger-yazilar">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
-            </button>
-            <button class="carousel-btn" type="button" data-dir="1" aria-label="Sonraki yazılar" aria-controls="diger-yazilar">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
-            </button>
-          </div>
+          {serit_nav("diger-yazilar", "yazılar")}
         </div>
-        <div class="carousel" id="diger-yazilar" role="region" aria-label="Diğer yazılarımız" tabindex="0">
-          <div class="carousel__track">
-{"".join(post_card(x, reveal=False) for x in digerleri)}          </div>
-        </div>
-        <div class="carousel-progress" aria-hidden="true"><span></span></div>
+{serit("diger-yazilar", "Diğer yazılarımız", digerleri)}
       </div>
     </section>
 """
@@ -295,7 +307,24 @@ def makaleler_listesi():
                      if alan else "")
         kid = "kat-" + str(i + 1)
         sinif = "section section--sand" if i % 2 else "section"
-        bolumler += f"""
+        if len(yazilar) > 3:
+            # 3'ten fazla yazı: ilk 3 görünür, kalanı kaydırılarak gelir ("Diğer yazılarımız" ile aynı şerit)
+            bolumler += f"""
+    <section class="{sinif} related-posts" data-carousel aria-labelledby="{kid}">
+      <div class="container">
+        <div class="related-posts__head">
+          <div class="section-head">
+            <p class="eyebrow">{len(yazilar)} yazı</p>
+            <h2 id="{kid}">{kat}</h2>{alan_link}
+          </div>
+          {serit_nav(kid + "-serit", kat + " yazıları")}
+        </div>
+{serit(kid + "-serit", kat + " yazıları", yazilar)}
+      </div>
+    </section>
+"""
+        else:
+            bolumler += f"""
     <section class="{sinif}" aria-labelledby="{kid}">
       <div class="container">
         <div class="section-head reveal">

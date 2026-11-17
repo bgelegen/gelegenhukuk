@@ -449,16 +449,26 @@
         }
       };
 
-      [prev, next].forEach((btn) => btn && btn.addEventListener("click", () => {
-        const dir = Number(btn.dataset.dir) || 1;
-        track.scrollBy({ left: dir * step(), behavior: reduce ? "auto" : "smooth" });
-      }));
+      // Art arda hızlı basışlarda adım kaybolmasın: hedef konum, süren kayma
+      // bitmeden önce bir sonraki karta göre hesaplanır.
+      let hedef = null, sifirla = 0;
+      const git = (dir) => {
+        const st = step();
+        const max = track.scrollWidth - track.clientWidth;
+        const taban = hedef === null ? track.scrollLeft : hedef;
+        hedef = Math.min(max, Math.max(0, Math.round(taban / st) * st + dir * st));
+        track.scrollTo({ left: hedef, behavior: reduce ? "auto" : "smooth" });
+        clearTimeout(sifirla);
+        sifirla = setTimeout(() => { hedef = null; }, 700);   // scrollend desteklemeyen tarayıcılar için
+      };
+      track.addEventListener("scrollend", () => { hedef = null; });
+      [prev, next].forEach((btn) => btn && btn.addEventListener("click", () => git(Number(btn.dataset.dir) || 1)));
       // Şeride odaklanınca sol/sağ ok tuşları da bir kart ilerletsin
       const region = track.parentElement;
       if (region) region.addEventListener("keydown", (e) => {
         if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
         e.preventDefault();
-        track.scrollBy({ left: (e.key === "ArrowRight" ? 1 : -1) * step(), behavior: reduce ? "auto" : "smooth" });
+        git(e.key === "ArrowRight" ? 1 : -1);
       });
 
       let raf = 0;

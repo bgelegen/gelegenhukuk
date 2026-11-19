@@ -174,7 +174,7 @@ def merkez_sayfa():
           </article>
 """ for a in ALANLAR)
     html = head("Çalışma Alanları | Malatya Avukat | Gelegen Hukuk Bürosu",
-                "Gelegen Hukuk Bürosu'nun Malatya'da hizmet verdiği hukuk alanları: aile ve boşanma, ceza, iş, icra, gayrimenkul, miras, ticaret, idare ve vergi hukuku.",
+                "Gelegen Hukuk Bürosu'nun Malatya'daki çalışma alanları: aile, ceza, iş, icra, gayrimenkul, miras, ticaret, idare ve vergi hukuku.",
                 slug, ld, ogtitle="Çalışma Alanları | Gelegen Hukuk Bürosu")
     html += hero("Çalışma Alanları", [("index.html", "Anasayfa"), (None, "Çalışma Alanları")],
                  "Malatya merkezli büromuz, aşağıdaki alanlarda dava ve takip işlerini yürütmekte ve "
@@ -337,7 +337,7 @@ def makaleler_listesi():
     </section>
 """
     html = head("Makaleler | Malatya Gelegen Hukuk Bürosu",
-                "Boşanma, nafaka, velayet, kıdem tazminatı, işe iade, icra takibine itiraz, ortaklığın giderilmesi, kira, miras ve ceza hukuku üzerine bilgilendirici yazılar.",
+                "Boşanma, nafaka, velayet, kıdem tazminatı, işe iade, icra, kira, miras ve ceza hukuku üzerine bilgilendirici yazılar. Gelegen Hukuk.",
                 slug, ld, ogtitle="Makaleler | Gelegen Hukuk Bürosu", aktif=slug)
     html += hero("Makaleler", [("index.html", "Anasayfa"), (None, "Makaleler")],
                  "Sık karşılaşılan hukuki soruları, güncel mevzuat çerçevesinde ve yalnızca bilgilendirme "

@@ -36,7 +36,7 @@
       satir2: "G-\u206005 Blok, Dış Kapı No: 12, Kat: 2, Daire: 17",   // \u2060: "G-" ile "05" ayrı satıra düşmesin
       ilce: "Battalgazi",
       il: "Malatya",
-      postaKodu: "",              // biliniyorsa ekleyin (Battalgazi merkez 44xxx)
+      postaKodu: "44300",
       ulke: "Türkiye"
     },
 

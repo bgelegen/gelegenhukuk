@@ -10,7 +10,7 @@ SITE = "https://gelegenhukuk.com/"
 CSS_V = "60"
 RESP_V = "44"
 PRINT_V = "40"
-DATA_V = "35"
+DATA_V = "36"
 MAIN_V = "36"
 
 # Altbilgideki "Çalışma Alanları" listesi — tüm sayfalarda aynı
@@ -162,7 +162,7 @@ def foot():
           <ul class="footer-contact">
             <li><a href="tel:+905518214444" data-site="telefon">+90 (551) 821 44 44</a></li>
             <li><a href="mailto:gelegenhukuk@gmail.com" data-site="eposta">gelegenhukuk@gmail.com</a></li>
-            <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=38.34786793972292,38.32065000710417" target="_blank" rel="noopener noreferrer" data-site="adres">Saray Mahallesi, Murat Kurum Caddesi, G-&#8288;05 Blok, Dış Kapı No: 12, Kat: 2, Daire: 17, Battalgazi / Malatya</a></li>
+            <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=38.34786793972292,38.32065000710417" target="_blank" rel="noopener noreferrer" data-site="adres">Saray Mahallesi, Murat Kurum Caddesi, G-&#8288;05 Blok, Dış Kapı No: 12, Kat: 2, Daire: 17, 44300 Battalgazi / Malatya</a></li>
             <li>Pazartesi – Cuma: 09:00 – 18:00</li>
           </ul>
         </div>

@@ -7,7 +7,7 @@ Kullanım: tools/uret.py bu dosyayı içe aktarır; doğrudan çalıştırılmaz
 import json
 
 SITE = "https://gelegenhukuk.com/"
-CSS_V = "60"
+CSS_V = "61"
 RESP_V = "44"
 PRINT_V = "40"
 DATA_V = "36"
@@ -91,7 +91,7 @@ def head(title, desc, slug, jsonld, ogtype="website", ogtitle=None, ogdesc=None,
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="index.html" aria-label="Gelegen Hukuk Bürosu — Anasayfa">
-        <img class="brand__logo" src="assets/img/logo-sm.png" alt="Gelegen Hukuk Bürosu logosu" width="42" height="42">
+        <img class="brand__logo" src="assets/img/logo-sm.webp" alt="Gelegen Hukuk Bürosu logosu" width="42" height="42">
         <span class="brand__text">
           <span class="brand__name" translate="no">Gelegen</span>
           <span class="brand__sub">Hukuk Bürosu</span>
@@ -129,7 +129,7 @@ def foot():
       <div class="footer-grid">
         <div class="footer-about">
           <a class="brand" href="index.html">
-            <img class="brand__logo" src="assets/img/logo-sm.png" alt="Gelegen Hukuk Bürosu logosu" width="42" height="42">
+            <img class="brand__logo" src="assets/img/logo-sm.webp" alt="Gelegen Hukuk Bürosu logosu" width="42" height="42">
             <span class="brand__text">
               <span class="brand__name" translate="no">Gelegen</span>
               <span class="brand__sub">Hukuk Bürosu</span>
@@ -142,7 +142,7 @@ def foot():
         </div>
 
         <nav aria-label="Alt menü">
-          <h4>Sayfalar</h4>
+          <h3>Sayfalar</h3>
           <ul class="footer-links">
             <li><a href="index.html">Anasayfa</a></li>
             <li><a href="avukatlarimiz.html">Avukatlarımız</a></li>
@@ -153,14 +153,14 @@ def foot():
         </nav>
 
         <nav aria-label="Çalışma alanları">
-          <h4>Çalışma Alanları</h4>
+          <h3>Çalışma Alanları</h3>
           <ul class="footer-links">
 {footer_alanlar_html()}
           </ul>
         </nav>
 
         <div>
-          <h4>İletişim</h4>
+          <h3>İletişim</h3>
           <ul class="footer-contact">
             <li><a href="tel:+905518214444" data-site="telefon">+90 (551) 821 44 44</a></li>
             <li><a href="mailto:gelegenhukuk@gmail.com" data-site="eposta">gelegenhukuk@gmail.com</a></li>

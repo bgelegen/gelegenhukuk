@@ -1783,7 +1783,7 @@ body.is-locked .site-header { z-index: var(--z-drawer); }
   padding-block: var(--sp-9) var(--sp-6);
   font-size: var(--fs-sm);
 }
-.site-footer h4 {
+.site-footer h3 {
   color: var(--c-white);
   font-size: 1.05rem;
   font-style: italic;
@@ -2022,8 +2022,8 @@ article.card.post-card { position: relative; }
 
 /* Altbilgi en alt satırı: solda telif + KVKK, sağda siteyi geliştiren.
    Telefonda (≤767px) üç öğe alt alta ortalanır. */
-.footer-bottom .footer-credit { color: rgba(250, 248, 245, 0.42); }
-.footer-credit a { color: rgba(250, 248, 245, 0.62); text-decoration: underline;
+.footer-bottom .footer-credit { color: rgba(250, 248, 245, 0.6); }   /* 0.42 kontrast yetersizdi (3,9:1) */
+.footer-credit a { color: rgba(250, 248, 245, 0.78); text-decoration: underline;
   text-decoration-color: rgba(205, 175, 115, 0.45); text-decoration-thickness: 1px; text-underline-offset: 4px;
   transition: color var(--dur) var(--ease), text-decoration-color var(--dur) var(--ease); }
 .footer-credit a:hover, .footer-credit a:focus-visible { color: var(--c-gold-400); text-decoration-color: var(--c-gold-400); }

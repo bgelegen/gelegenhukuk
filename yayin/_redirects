@@ -1,0 +1,47 @@
+# =============================================================
+# Gelegen Hukuk — Netlify yönlendirmeleri
+# Uzantısız adresler (ör. /avukatlarimiz) asıl .html adresine kalıcı
+# olarak yönlenir. Netlify'ın eski "Pretty URLs" ayarı yüzünden arama
+# motorları her sayfayı iki adresle tanımıştı (Bing: "aynı başlık /
+# açıklamaya sahip sayfalar"). "301!" zorla yönlendirme: Netlify uzantısız
+# adresi .html dosyasından sunabildiği için zorlamadan kural atlanır.
+# Yeni sayfa eklenince buraya bir satır ekleyin.
+# =============================================================
+/anlasmali-bosanma-nasil-yapilir  /anlasmali-bosanma-nasil-yapilir.html  301!
+/avukatlarimiz  /avukatlarimiz.html  301!
+/bosanma-davasi-ne-kadar-surer  /bosanma-davasi-ne-kadar-surer.html  301!
+/bosanmada-mal-paylasimi  /bosanmada-mal-paylasimi.html  301!
+/calisma-alanlari  /calisma-alanlari.html  301!
+/cekismeli-bosanma-davasi  /cekismeli-bosanma-davasi.html  301!
+/fazla-mesai-alacagi  /fazla-mesai-alacagi.html  301!
+/gozalti-suresi-ve-supheli-haklari  /gozalti-suresi-ve-supheli-haklari.html  301!
+/hagb-nedir  /hagb-nedir.html  301!
+/hakkimizda  /hakkimizda.html  301!
+/icra-takibine-itiraz-nasil-yapilir  /icra-takibine-itiraz-nasil-yapilir.html  301!
+/idari-para-cezasina-itiraz  /idari-para-cezasina-itiraz.html  301!
+/ihbar-tazminati-ve-ihbar-sureleri  /ihbar-tazminati-ve-ihbar-sureleri.html  301!
+/iletisim  /iletisim.html  301!
+/iptal-davasi-nasil-acilir  /iptal-davasi-nasil-acilir.html  301!
+/ise-iade-davasi-sartlar-sureler  /ise-iade-davasi-sartlar-sureler.html  301!
+/kidem-tazminati-sartlari  /kidem-tazminati-sartlari.html  301!
+/kira-tespit-ve-tahliye-davasi  /kira-tespit-ve-tahliye-davasi.html  301!
+/kvkk  /kvkk.html  301!
+/maas-haczi  /maas-haczi.html  301!
+/makaleler  /makaleler.html  301!
+/malatya-bosanma-avukati  /malatya-bosanma-avukati.html  301!
+/malatya-ceza-avukati  /malatya-ceza-avukati.html  301!
+/malatya-gayrimenkul-avukati  /malatya-gayrimenkul-avukati.html  301!
+/malatya-icra-avukati  /malatya-icra-avukati.html  301!
+/malatya-idare-hukuku-avukati  /malatya-idare-hukuku-avukati.html  301!
+/malatya-is-hukuku-avukati  /malatya-is-hukuku-avukati.html  301!
+/malatya-miras-avukati  /malatya-miras-avukati.html  301!
+/malatya-ticaret-hukuku-avukati  /malatya-ticaret-hukuku-avukati.html  301!
+/miras-paylasimi-ve-miras-paylari  /miras-paylasimi-ve-miras-paylari.html  301!
+/mirasin-reddi-ve-mirascilik-belgesi  /mirasin-reddi-ve-mirascilik-belgesi.html  301!
+/nafaka-turleri  /nafaka-turleri.html  301!
+/ortakligin-giderilmesi-davasi  /ortakligin-giderilmesi-davasi.html  301!
+/tapu-iptal-ve-tescil-davasi  /tapu-iptal-ve-tescil-davasi.html  301!
+/tehdit-sucu-ve-cezasi  /tehdit-sucu-ve-cezasi.html  301!
+/trafik-kazasi-tazminati  /trafik-kazasi-tazminati.html  301!
+/vasiyetname-nasil-yapilir  /vasiyetname-nasil-yapilir.html  301!
+/velayet-davasi  /velayet-davasi.html  301!

@@ -21,6 +21,8 @@ FOOTER_ALANLAR = [
     ("malatya-icra-avukati.html", "İcra ve İflas Hukuku"),
     ("malatya-gayrimenkul-avukati.html", "Gayrimenkul Hukuku"),
     ("malatya-miras-avukati.html", "Miras Hukuku"),
+    ("malatya-ticaret-hukuku-avukati.html", "Ticaret ve Şirketler Hukuku"),
+    ("malatya-idare-hukuku-avukati.html", "İdare ve Vergi Hukuku"),
     ("calisma-alanlari.html", "Tüm çalışma alanları"),
 ]
 
